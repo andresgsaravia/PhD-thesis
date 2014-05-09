@@ -1,0 +1,28 @@
+\documentclass[letterpaper]{report}
+
+\usepackage{graphicx}
+
+\author{Andr\'{e}s Garc\'{i}a Saravia Ortiz de Montellano}
+\title{Thesis title here}
+
+\newcommand{\ket}[1]{\left | #1 \right\rangle}
+\newcommand{\bra}[1]{\left \langle #1 \right |}
+\newcommand{\braket}[2]{\left\langle #1|#2\right\rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\includeonly{file1,file2}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{intro}
+
+\appendix
+%\include{filename}
+
+\bibliography{biblio} 						%nombre del archivo con la bibliografa
+\bibliographystyle{unsrt}				%estilo de la bibliografa (unsrt = por orden de citacin)
+
+
+\end{document}
