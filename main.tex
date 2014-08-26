@@ -1,21 +1,31 @@
 \documentclass[letterpaper]{report}
 
-\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,lineno,hyperref}
+\modulolinenumbers[5]
 
 \author{Andr\'{e}s Garc\'{i}a Saravia Ortiz de Montellano}
-\title{Isotopic shifts in a three-sites Peierls-Hubbard model}
+\title{Polaronic effects in a three-sites Peierls-Hubbard model applied to cuprate superconductors}
 
 \newcommand{\ket}[1]{\left | #1 \right\rangle}
 \newcommand{\bra}[1]{\left \langle #1 \right |}
 \newcommand{\braket}[2]{\left\langle #1|#2\right\rangle}
+\AtBeginDocument{\let\textlabel\label}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\includeonly{file1,file2}
 
 \begin{document}
+\setcounter{page}{-100}
 \maketitle
+\thispagestyle{empty}
+\newpage
+\pagenumbering{Roman}
 \tableofcontents
+\newpage
 
+\linenumbers
+\pagenumbering{arabic}
 \input{intro}
 \input{model}
 \input{ground}
