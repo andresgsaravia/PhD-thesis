@@ -16,7 +16,7 @@ H = H_{el} + H_{ph} + H_{el-ph}
 \end{equation}
 
 \noindent corresponding to the electronic contribution, the phonon energies the electron-phonon coupling, respectively. 
-Explicitly the electronic part is a single band Hubbar model:
+Explicitly the electronic part is a single band Hubbard model:
 
 \begin{equation}\label{eq:electronic-part}
 H_{el} = \sum_{\sigma,i=1}^3 E_i n_{\sigma i} + U\sum_{i=1}^3 n_{i\downarrow}n_{i\uparrow} + t\sum_{\sigma}(c_{1\sigma}^\dagger c_{2\sigma} + c_{2\sigma}^\dagger c_{3\sigma} + H.c.)
@@ -244,7 +244,7 @@ H_{ph} = \hbar \omega_{ir} \left( a_{ir}^\dagger a_{ir} + \frac{1}{2}\right) + \
 
 \section{Choice of parameters}
 
-The parameters we used in $H_{el}$  are the same as those used in \cite{MirandaMena2006}: $E_0=0.5$ eV, $U=7$ eV and $t=0.5$ eV. These are representative values guided from local-density calculations \cite{Pickett1989}. In particular in Ref. \cite{DeWeert1989} reports the values $E_0$ = 0.35 eV, while $t=0.43-0.74$ eV, for Cu(1)-O(4) sites. Estimates for the on-site Coulomb repulsion in La$_2$CuO$_4$ place $U$ in the range $4.0-10.5$ eV, \cite{Hybertsen1989} consistent with our choice of $U=$7 eV.  The bare phonon frequencies are fixed to values found experimentally in optical and inelastic neutron scattering experiments $\omega_R = 500\ cm^{-1}$ and $\omega_{ir} = 612.4\ cm^{-1}$ for YBa$_2$Cu$_3$O$_7$. Since only the coupling between the asymmetric mode and the charge motion leads to a measurable lattice distortion, with two Cu–O bond lengths, we only consider the effect of the variation in the electron–lattice coupling constant with the antisymmetric mode, $\lambda_{ir}$,  and we set the electron-lattice coupling with the symmetric mode, $\lambda_R$, as zero. We note that this is simplest model possible for this cluster since we only use a single hopping parameter $t$ and the same on-site Coulomb repulsion at Cu(1) and O(4) sites with no nearest neighbor Coulomb repulsion. The inclusion of those considerations in the model, or other choices of parameters (e.g. $U = $4.4 eV) yields very similar results \cite{Salkola1994}.
+The parameters we used in $H_{el}$  are the same as those used in \cite{Mena2006}: $E_0=0.5$ eV, $U=7$ eV and $t=0.5$ eV. These are representative values guided from local-density calculations \cite{Pickett1989}. In particular in Ref. \cite{DeWeert1989} reports the values $E_0$ = 0.35 eV, while $t=0.43-0.74$ eV, for Cu(1)-O(4) sites. Estimates for the on-site Coulomb repulsion in La$_2$CuO$_4$ place $U$ in the range $4.0-10.5$ eV, \cite{Hybertsen1989} consistent with our choice of $U=$7 eV.  The bare phonon frequencies are fixed to values found experimentally in optical and inelastic neutron scattering experiments $\omega_R = 500\ cm^{-1}$ and $\omega_{ir} = 612.4\ cm^{-1}$ for YBa$_2$Cu$_3$O$_7$. Since only the coupling between the asymmetric mode and the charge motion leads to a measurable lattice distortion, with two Cu–O bond lengths, we only consider the effect of the variation in the electron–lattice coupling constant with the antisymmetric mode, $\lambda_{ir}$,  and we set the electron-lattice coupling with the symmetric mode, $\lambda_R$, as zero. We note that this is simplest model possible for this cluster since we only use a single hopping parameter $t$ and the same on-site Coulomb repulsion at Cu(1) and O(4) sites with no nearest neighbor Coulomb repulsion. The inclusion of those considerations in the model, or other choices of parameters (e.g. $U = $4.4 eV) yields very similar results \cite{Salkola1994}.
 
 We performed an exact diagonalization of the Hamiltonian matrix with a basis of 8649 states using a QR algorithm \cite{eigenweb}. The basis includes states of two holes on the three sites, 30 harmonic Raman phonons and 30 harmonic infrared phonons. Since we are performing a diagonalization of the full Hamiltonian matrix our results do not rely in approximations such as the adiabatic or the anti-adiabatic approximations. The  truncation of the basis to 30 phonons of each kind could introduce innacuracies, however we found this choice to be an adecuate description for the few lowest energy states we are considering up to electron-lattice couplings ~0.25 eV (see figure 3).
 
@@ -263,7 +263,7 @@ Reference & $U$ (eV) & $\epsilon$ (eV) & $t$ (eV) & $\omega_{ir}$ (cm$^{-1}$) & 
 \hline
 \cite{MustredeLeon1992} & 7.0 & 0.5 & 0.5 & 600 & 500 \\ 
 \cite{Salkola1994, Salkola1995} & 4.44 & 0.307 & 0.634 & 477.7 ($59.3/\hbar$ meV) & 576 ($71.5/\hbar$ meV) \\
-\cite{MustredeLeon1999, MirandaMena2006, MustredeLeon2008, MirandaMena2007} & 7.0 & 0.5 & 0.5 & 612.4 & 500 \\ 
+\cite{DeLeon1999, Mena2006, Leon2008, MirandaMena2007} & 7.0 & 0.5 & 0.5 & 612.4 & 500 \\ 
 \cite{MustredeLeon2000} & 4.44 & 0.307 & 0.634 & 600 & 500 \\
 \hline
 \end{tabular}
