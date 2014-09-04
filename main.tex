@@ -10,7 +10,7 @@
 \newcommand{\ket}[1]{\left | #1 \right\rangle}
 \newcommand{\bra}[1]{\left \langle #1 \right |}
 \newcommand{\braket}[2]{\left\langle #1|#2\right\rangle}
-% Use “\cite{NEEDED}” to get Wikipedia-style “citation needed” in document
+% Use “\cite{?}” to get Wikipedia-style “citation needed” in document
 \usepackage{ifthen}
 \let\oldcite=\cite
 \renewcommand\cite[1]{\ifthenelse{\equal{#1}{?}}{\textcolor{blue}{\ensuremath{\texttt{[citation~needed]}}}}{\oldcite{#1}}}

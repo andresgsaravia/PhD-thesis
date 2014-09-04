@@ -2,22 +2,79 @@
 \label{chap:introduction}
 
 % Superconductivity has been known for a long time but we don't have an explanation.
-% In BCS theory the lattice plays a fundamental role.
-% First it seemed that in High-Tc the lattice was not that important.
-% Electronic models have been largely unsuccessful so far.
-% Several experimental observations (lattice and electronic inhomogeneities, phonon spectra and isotopic effects) suggest that lattice plays a fundamental role, altough in a somewhat different fashion than BCS.
+Altough high temperature superconductivity has been known for almost three decades \cite{Bednorz1986}, a satisfactory explanation of this phenomenom still remains as one of the major unsolved problems in theoretical condensed matter physics. 
+
+% In BCS theory the lattice plays a fundamental role: phonons mediate the pairing between electrons.
+% First it seemed that in High-Tc the lattice was not that important (isotopic effects at optimal doping).
+% Electronic models haven't been completely successful.
+In contrast to the BCS theory \cite{?} there pairing mechanism in the \textit{unconventional superconductors} (cuprates, iron-based and heavy fermion \cite{Pfleiderer2009}) is unknown.
+Two leading theories: resonating-valence-bond \cite{?} and spin fluctuation \cite{Scalapino2012} rely heavily on magnetic interactions while mostly ignoring the lattice effects
+
+% Several experimental observations (lattice and electronic inhomogeneities, phonon spectra and isotopic effects) suggest that lattice plays a fundamental role, altough in a somewhat different fashion than BCS. It seems that below T* there are polaron formation forming the basis state from which superconductivity arises. 
+
+From <https://research-engine.appspot.com/37001/writings/6264610306916352>
+
+\begin{quote}
+The parent compounds of cuprate superconductors form ordered crystalline structures and exhibit antiferromagnetic order at low temperatures. 
+However,  in compounds like La<sub>1.85</sub>Sr<sub>0.15</sub>CuO<sub>4</sub> and La<sub>2</sub>CuO<sub>4.1</sub>, the dopant atoms necessary to achieve a superconducting compound are not placed at the crystal symmetry allowed sites yielding to intrinsically structurally inhomogeneous systems [^ Bianconni-Nature2010]. 
+While in other cases, like YBCO<sub>6+&delta;</sub>, extra dopant atoms reside in crystal symmetric positions but the departure from stoichiometry yields compositional disorder [^ Chen88] [^ Andersen90] with the same consequence. 
+In these systems the crystalline translational symmetry is broken. 
+Although from the structural inhomogeneity does not necessarily follow an inhomogeneous electronic ground state, for some regions of the phase diagram, depending on the dopant concentration, such state is realized. 
+This region of phase space has been identified as the pseudogap phase [^ Rev Mod Phys-Kresin] [^ Muller2007] [^ Timusk-physRep1999]. 
+An important consideration is that, although the dopant atoms are at fixed positions, the structural inhomogeneity has a dynamical character [^ MihailovicPRL2005] [^ Bianconni-PRL94] and is present even in compounds with perfect crystallographic symmetry like HoBa<sub>2</sub>Cu<sub>4</sub>O<sub>8</sub> [^ Rubio-Temprano2000]. 
+In addition to the breaking of the crystalline translational symmetry the pseudogap phase exhibits other broken symmetries. 
+Time-reversal symmetry breaking was found using angular resolved photoemission spectroscopy with circularly polarized photons in Bi<sub>2</sub>Sr<sub>2</sub>CaCu<sub>2</sub>O<sub>8+&delta;</sub> [^ Kamisnki2002]. 
+It was also found, by x-ray absorption spectroscopy, that the crystalline rotational symmetry is broken locally in La<sub>1.85</sub>Sr<sub>0.15</sub>CuO<sub>4</sub> with alternating regions of tetragonal and orthorhombic symmetry [^ Bianconni-PRL94].
+A perspective of the observation of broken symmetries in high-T<sub>c</sub> superconductors, emphasizing that some of these broken symmetries are hidden from common observational techniques, is discussed in ref. [^ Chakravarti2012]. 
+The clues provided by these broken symmetries should yield an understanding of the ground state in this pseudogap phase, its elementary excitations and the appearance of superconductivity at temperatures below the onset of the pseudogap. 
+\end{quote}
+
 % Electron-lattice correlations could be essential. Maybe in the form of polarons.
 % Such correlations can't be adressed with the usual (anti-)adiabatic approximations, so an exact treatment is necessary.
 % Exact treatments are computationally expensive so we need to narrow our scope.
 % There is evidence of polaronic behaviour in YBCO's O(4)-Cu(1)-O(4).
-% A Peierls-Hubbard model has been used there to explain the lattice distortion.
+% A Peierls-Hubbard model has been used there to explain the lattice distortion in terms of bipolarons.
 % We explore many other excitations in that model trying to reconcile its predictions with the experimental observations.
 % Particular emphasis is given to the isotopic effects because there is controversy around them and they probe the electron-lattice relationship.
+% We suggest a possible two-component superconductivity model involving bosonic bi-polaronic objects and free fermions. 
+% Chapter outline.
 
 
-\section{Experimental observations}
+ARPES review: \cite{Damascelli2003}
 
-There are a number of effects related to structural changes in the chain plane of the oxygen-deficient YBa$_{2}$Cu$_{3}$O$_{7-\delta}$ superconductor. 
+Pseudogap review: \cite{Timusk1999}
+
+
+\section{Dynamic local lattice distortions}
+
+From <https://research-engine.appspot.com/37001/writings/6264610306916352>
+
+\begin{quote}
+Early determinations of the crystal structure of cuprates by diffraction methods did not show significant distortions associated with either in-plane oxygen atoms or apical oxygen atoms [^ Caponni1987] [^ Schaffer 1988]. Moreover, the determination of  average bond lengths in diffraction has a precision of ~0.001Å [^ Micelli1988], significantly higher than the precision in bond length determination that local probes, like extended x-ray absorption fine structure spectroscopy (EXAFS) [^ Rehr1999]. For this reason, early reports of local lattice distortions related to the oxygen atoms  were controversial (see for example [^ Battlog92] [^ Kwei90]).
+
+One of the first observations of a local lattice distortion in cuprates was the report of a two-site distribution for the Cu(1)-apical oxygen in YBa<sub>2</sub>Cu<sub>3</sub>O<sub>7</sub>  appearing at temperatures above the superconducting transition temperature, T<sub>c</sub>, using Cu K-edge EXAFS [^ Mustre90] [^ Conradson90]. 
+
+This distribution showed two sites separated by ~0.11 Å that changed into a single site distribution in the vicinity of the superconducting transition temperature.  These measurements were carried out using polarized x-rays on magnetically oriented powders, an improvement in the technique which allowed to isolate the Cu(1)-axial oxygen [O(4)] (see Fig. 1) signal with an increased sensitivity not achievable for the Cu-O EXAFS signal in other cuprates (see below). This result was received with skepticism, based on earlier diffraction results [^ Battlog92] [^ Kwei90] [^ Sharma91] and optical spectroscopy [^ Cardona93]. However, it was later confirmed by EXAFS measurements in other oriented samples [^ Stern93] and single crystals [^ Bridges96], and also found in YBa<sub>2</sub>Cu<sub>3</sub>O<sub>6.7</sub>, YBa<sub>2</sub>Cu<sub>3</sub>O<sub>6.5</sub> and Co doped YBa<sub>2</sub>Cu<sub>3</sub>O<sub>7</sub> [^ Mustre91]. The explanation of the discrepancies between these results with diffraction and optical spectroscopical results lead to the interpretation of  this Cu(1)-O(4) distribution as a dynamical distortion of polaronic origin, as discussed in the next section [^ MustrePRL92].
+
+Similar two site distributions obtained from EXAFS spectra were found for the Cu(2)-O(4) distribution in Bi<sub>2</sub>Sr<sub>2</sub>CaCu<sub>2</sub>O<sub>8</sub> [^ Bianconni92] and in TlBa<sub>2</sub>Ca<sub>3</sub>Cu<sub>4</sub>O<sub>11</sub> [^ Allen91] starting at temperatures above T<sub>c</sub>. We note that in these compounds (and other cuprates) the average Cu(2)-O(4) bond length lies between 2.49 and 2.73 Å, which is much longer than the Cu(1)-O(4) bond length in YBa<sub>2</sub>Cu<sub>3</sub>O<sub>7</sub>  (~1.87 Å). This fact makes more difficult the identification of details of the O(4) distribution due to the stronger mixing of the Cu(2)-O(4) EXAFS signal with those of other atoms and the increased zero point motion of the O(4) atom due to weaker Cu(2)-O(4) bond compared with the Cu(1)-O(4) bond. For this reason in most EXAFS studies addressing the O(4) motion a gaussian single site broadened distribution has been used, reporting only changes in the width of the distribution as a function of temperature [^ Booth95] [^ Oyanagi07] [^ Oyanagi09].
+
+In plane  Cu(2)-O local lattice distortions were identified in La<sub>1.85</sub>Sr<sub>0.15</sub>CuO<sub>4</sub> appearing below 100 K [^ Bianconni-PRL94] [^ Oyanagi07],  in TIBa<sub>2</sub>CuO<sub>6</sub> below 120 K  [^ Mustre97]  and in La<sub>2</sub>CuO<sub>4.1</sub> below 150 K [^ Lanzara97] [^ chokis2005]. In this case the observation of such distortions in YBa<sub>2</sub>Cu<sub>3</sub>O<sub>7</sub> and related compounds becomes more difficult due the similarity  in Cu-O bond lengths in the Cu planes and Cu chains, whose contributions are mixed in the EXAFS signal [^ Mustre97] [^ Mustre 92A].
+
+Until now only in La<sub>1.85</sub>Sr<sub>0.15</sub>CuO<sub>4</sub> has been possible to identify local lattice distortions involving both in plane oxygen and apical oxygen atoms [^ Bianconni-PRL94]. We also stress that from all these EXAFS experiments it is only possible to probe with enough detail the nearest neighbor environment around the Cu atoms, thus the spatial extension of the distortions cannot be determined solely from these measurements. Additional structural information [^ Bianconni96] is needed to formulate models about the extension of the distortions as discussed in Ref. [^ Bianconni-PRL94].
+
+Pair distribution function (PDF) analysis of diffraction, x-ray and neutron inelastic scattering can additionally provide information about the intermediate range (up to 10-15 Å)  atomic structure, complementary to the information obtained from EXAFS[^ Egami03]. PDF results in La<sub>1-x</sub>Sr<sub>x</sub>CuO<sub>4</sub> [^ Bozin99] [^ Bozin00] indicate that the atomic structure in this material is a combination of nanoscale regions with different local Cu-O environments, in agreement with the model proposed in Ref. [^ Bianconni-PRL94]. A homogeneous structure only appears when dopant concentrations are above x = 0.25. In this region the electronic behavior can be described in terms of free fermion quasiparticles.
+
+To conclude this survey of local lattice distortion is important to note that the time scale of the EXAFS is such that dynamical distortions can be detected, which depending on the size of the distortion cannot be detected using elastic techniques like neutron diffraction (see section of Results). This can explain some of the differences between diffraction and EXAFS results.  Indeed it has been shown that the two-site O(4) distribution in in Tl<sub>2</sub>Ba<sub>2</sub>CaCu<sub>2</sub>O<sub>8</sub> could be only detected  in a pair distribution function obtained from neutron inelastic scattering but not with that obtained from neutron diffraction [^ Egami-physicac91].  Consequently, it is important to take into account both the spatial resolution and time resolution of the techniques used to study the actual atomic structure of these materials [^ MihailovicPRL2005]. In the next section we present a microscopic local model that can generate  dynamical local lattice distortions as those observed in these materials, and explain the isotopic effects observed in the pseudogap phase.
+\end{quote}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.8\textwidth]{images/YBCO_O-Cu-Ov2.jpg}
+\caption{\textbf{(a)} Crystal structure of YBa$_{2}$Cu$_{3}$O$_{7}$. The dashed line denotes de unit cell. \textbf{(b)} The two possible configurations in the O(4)-Cu(1)-O(4) cluster due to the split O-Cu bond distances (not to scale).
+}
+\label{fig:YBCO_structure}
+\end{figure}
+
 
 From \cite{Bahrs2004}
 
@@ -30,7 +87,12 @@ This correlation between structure and electrical properties has also been shown
 Other metastable effects are induced by illumination, such as persistent photoconductivity, where after exposure to visible light conductivity and, in superconducting samples, critical temperature show a metastable increase.
 \end{quote}
 
-\subsection{Structural inhomogeneity}
+\subsection{Stripes}
+
+Review: \cite{Kivelson2003}
+
+\section{Electronic inhomogeneity}
+
 
 See introduction of this article: \cite{Ivanov1995}
 
@@ -46,23 +108,12 @@ Time-reversal symmetry breaking was found using angular resolved photoemission s
 It was also found, by x-ray absorption spectroscopy, that the crystalline rotational symmetry is broken locally in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ with alternating regions of tetragonal and orthorhombic symmetry \cite{Bianconi1996}. 
 A perspective of the observation of broken symmetries in high-T$_{c}$ superconductors, emphasizing that some of these broken symmetries are hidden from common observational techniques, is discussed in ref.\cite{Chakravarty2011}. The clues provided by these broken symmetries should yield an understanding of the ground state in this pseudogap phase, its elementary excitations and the appearance of superconductivity at temperatures below the onset of the pseudogap. 
 
-\subsection{Dynamical local lattice distortions}
 
-Local lattice distortion were reported in a two-site distribution for the Cu(1)-apical oxygen in YBa$_{2}$Cu$_{3}$O$_{7}$  at temperatures above T$_{c}$ using Cu K-edge EXAFS \cite{MustredeLeon1990, Conradson1990}. 
-This results were controversial\cite{Kwei1990} since they seemed to contadict diffraction experiments (which have a precision of ~0.001Å\cite{Miceli1988}. 
-However the EXAFS results showed two sites separated by ~0.11Å that changed into a single site distribution near the superconducting transition temperature.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=0.8\textwidth]{images/YBCO_O-Cu-Ov2.jpg}
-\caption{\textbf{(a)} Crystal structure of YBa$_{2}$Cu$_{3}$O$_{7}$. The dashed line denotes de unit cell. \textbf{(b)} The two possible configurations in the O(4)-Cu(1)-O(4) cluster due to the split O-Cu bond distances (not to scale).
-}
-\label{fig:YBCO_structure}
-\end{figure}
+\section{Phonon spectra}
+\section{Specific heat}
+Specific heat: \cite{Loram1993}
 
 
-\subsection{Electronic inhomogeneity}
-\subsection{Phonon spectra}
 \subsection{Isotopic effects}
 
 It is possible to make a site-selective substitution $^{16}$O $\rightarrow$ $^{18}$O in YBCO \cite{Conder1993} allowing a precise study of the isotopic effects. 
@@ -72,3 +123,6 @@ The \textit{harmonic} approximation accounts well for the O(2)/O(3) vibrations b
 Noticeable isotopic shifts have been used to identify particular excitations as \textit{phononic} in origin (v.g. \cite{Thomsen1990}) however, we will argue, the converse is not true. 
 That is, there can be \textit{phononic} excitations without a measurable isotopic shift.
 
+\section{Ultrafast spectroscopy}
+
+V.g. \cite{Basov2005} \cite{Smallwood2012} ( http://www.photonics.com/Article.aspx?AID=51474 )
