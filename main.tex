@@ -1,7 +1,8 @@
 \documentclass[letterpaper]{report}
 
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx,lineno,hyperref,color}
+\usepackage{graphicx,lineno,color}
+\usepackage[hidelinks]{hyperref}
 \modulolinenumbers[5]
 
 \author{Andr\'{e}s Garc\'{i}a Saravia Ortiz de Montellano}
@@ -42,6 +43,8 @@
 \appendix
 %\include{filename}
 
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\bibname}
 \bibliography{biblio} 						%nombre del archivo con la bibliografa
 \bibliographystyle{unsrt}				%estilo de la bibliografa (unsrt = por orden de citacin)
 
