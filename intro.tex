@@ -1,8 +1,6 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
-% At some point I need to describe why we are intereste in the O(4)-Cu(1)-O(4) cluster and why we use the model we're using
-
 % Superconductivity has been known for a long time but we don't have an explanation.
 Altough high temperature superconductivity has been known for almost three decades \cite{Bednorz1986}, a satisfactory explanation of this phenomenom still remains as one of the major unsolved problems in theoretical condensed matter physics. 
 
@@ -71,7 +69,7 @@ Afterwards, in section \ref{sec:electronic_inhomogeneity}, we turn our attention
 In sections \ref{sec:phonon_spectra} and \ref{sec:specific_heat} we present some experimental anomalies in the phonon spectra and specific heat respectively and speculate about their possible origin in the mentioned inhomogeneities. 
 Next we duscuss some of the controversial experimental results in isotopic effects and ultrafast spectroscopy in sections \ref{sec:isotopic_effects} and \ref{sec:ultrafast_spect} respectively.
 
-In the last section of this introduction (sec. \ref{sec:scope}) we limit the scope of this thesis and present our motivation and approach at describing these dynamic effects.
+In the last part of this introduction we limit the scope of this thesis and present our motivation and approach at describing these dynamic effects (sec. \ref{sec:scope}) and provide an outline of the next chapters (sec. \ref{sec:outline})
 
 \section{Dynamic local lattice distortions}
 \label{sec:dynamic_dist}
@@ -183,6 +181,32 @@ V.g. \cite{Basov2005} \cite{Smallwood2012} ( http://www.photonics.com/Article.as
 
 \section{Scope of this thesis}
 \label{sec:scope}
+
+% Lattice inhomogeneities limit the applicability of $k$-space formalism.
+% Correlated electron-lattice motion prevents the use of Born-Openheimer approximation
+
+Quantum solid-state theory usually assumes a periodic potential however, since these materials are intrinsically inhomogeneous, it is possible that a successful model needs to abandon such assumption. 
+This calls into question the applicability of models based on the \textit{reciprocal space} formalism.
+Furthermore, some of the experimental results reviewed in the previous secions suggest that the polaronic behaviour must be taken into account.
+This correlated electron-lattice movement prevents the use of the Born-Oppenheimer approximation, which splits the system's wavefunction in electronic and lattice factors $\Psi = \psi_{electronic}\psi_{lattice}$.
+Some systems with an important electron-lattice interaction can be treated with perturbation theory either assuming a small (adiabatic) or strong (anti-adiabatic) interaction \cite{?}. 
+However, it seems that the electron-lattice interaction in the CuO planes for cuprate superconductors falls in the middle of such extremes \cite{MustredeLeon1992} preventing the use of any such approximation.
+
+We are prompted, therefore, to use an exact model free from the approximations described above. 
+The computational complexity of exact models forces us to restrict the system under study to a small subset of the whole compound.
+In this work we return to a model describing the peculiar polaronic behaviour of the O(4)-Cu(1)-O(4) cluster in YBa$_{2}$Cu$_{3}$O$_{7}$ approximating the cluster as a system with three sites and two holes \cite{MustredeLeon1992}.
+Such approximation is justified as the Cu(1)-O(4) bond length (1.83 \AA) is far shorter than the Cu(2)-O(4) bond length ($\sim$ 2.41 \AA) (see Fig. \ref{fig:YBCO_structure}), making charge transfer outside the cluster a much slower process than the charge dynamics inside the cluster. 
+This model provides a very simple framework to explore the charge dynamics influenced by the lattice vibrations and has successfully described the split O(4)-Cu(1)-O(4) distance observed by EXAFS experiments (see section \ref{sec:dynamic_dist} above).
+Although we cannot directly identify the three site cluster proposed in this model with a particular structure of the CuO plane, the general approach of charge transfer between hole rich regions and hole poor regions in the plane coupled to the lattice degrees of freedom is still valid, hence the general conclusions we draw from this model applicable to describe the structure of the CuO plane.
+
+It has been found that superconductivity occurs in the Cu(2)-O(2,3) planes rather than the Cu(1)-O(1,4) chains partially addressed by the model under study in this work.
+This raises a question about the relevance of the polaronic behaviour, es explored with this model, to superconductivity.
+It is indeed beyond the capability of such a simple model to address the nature of high-temperature superconductiity.
+However, it is possible that the polaronic objects in the Cu(1)-O(1,4) chains are capable of providing a pairing mechanism for the Cooper pairs in the Cu(2)-O(2,3) planes.
+This will point to a \textit{two component superconductivity} theory similar to some current proposals \cite{?}
+
+\section{Thesis outline}
+\label{sec:outline}
 
 In chapter \ref{chap:model} we describe in detail the three sites Peierls-Hubbard model used to describe the O-Cu-O cluster in YBCO with some of its generalities. 
 The rich phenomenologies of the ground and excited states of this model are explored in the remaining chapters. 
