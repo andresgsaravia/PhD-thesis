@@ -1,12 +1,21 @@
 \chapter{Peierls-Hubbard model}
 \label{chap:model}
 
-In the \textit{pseudogap} phase of cuprate superconductors the lattice shows a dynamical structure inhomogeneity which can be interpreted in terms of \textit{bipolaronic excitations}. 
-These excitations cannot be described with the methods based on the Born-Openheimer approximation.
-However we can approximate the local environment of the Cu(1)-O(4) in YBa$_{2}$Cu$_{3}$O$_{7}$ as a three site cluster with two holes.
-Such approximation is justified as the Cu(1)-O(4) bond length (1.83 \AA) is far shorter than the Cu(2)-O(4) bond length ($\sim$ 2.41 \AA) (see Fig. \ref{fig:YBCO_structure}), making charge transfer outside the cluster a much slower process than the charge dynamics inside the cluster. 
-This model was introduced in Ref. \cite{MustredeLeon1992} and provides a very simple framework to explore the charge dynamics influenced by the lattice vibrations. 
-Although we cannot directly identify the three site cluster proposed in this model with a particular structure of the CuO plane, the general approach of charge transfer between hole rich regions and hole poor regions in the plane coupled to the lattice degrees of freedom is still valid, hence the general conclusions we draw from this model applicable to describe the structure of the CuO plane.
+% As mentioned earlier \ref{sec:scope}: 
+% - Lattice inhomogeneities limit the applicability of $k$-space formalism.
+% - Correlated electron-lattice motion prevents the use of Born-Openheimer approximation
+% We propose a very simple but exact model that captures the polaronic behaviour of a CuO$_2$ cluster.
+% This model has been successfully used to explain the O-Cu split distance in YBCO
+
+% This chapter:
+% - Describes the model hamiltonian
+% - Describes a basis set
+% - Presents two useful projections (phonon coordinates and electron occupation)
+% - Describes how to calculate the split O-Cu distance 
+% - Proposes how to model the $^{16}$O$\rightarrow\ ^{18}$O substitution and defines a suitable \textit{isotopic shift}
+% - Justifies the choice of a specific parameter set
+% - Computational details
+
 
 \section{Description}
 
@@ -272,3 +281,6 @@ Reference & $U$ (eV) & $\epsilon$ (eV) & $t$ (eV) & $\omega_{ir}$ (cm$^{-1}$) & 
 The reported values by Salkola \textit{et al.}\cite{Salkola1994} \cite{Salkola1995} above seem wrong to me ($\omega_R > \omega_{ir}$) and they're different from what can be observed in their Fig. 1 at $\lambda_{IR}=0$.
 
 The only reference for the parameters in all those papers above is Picket \textit{et al.} (1989)
+
+\section{Computational details}
+\label{sec:comp_details}
