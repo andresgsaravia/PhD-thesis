@@ -259,10 +259,10 @@ With the atomic coordinates $x_i$, as defined in section \ref{sec:isotopic-model
 d= \left| (x_3 - x_2) - (x_2 - x_1) \right| = \left| x_1 + x_3 - 2x_2 \right|
 \end{equation}
 
-The $x_i$ coordinates are varying at all times but taking an instant in which $x_2=0$ and assuming, for example $|x_3|>|x_1|$, we can simplify it to
+The $x_i$ coordinates are varying at all times but taking an instant in which $x_2=0$ we can simplify (\ref{eq:bondDiff}) to
 
 \begin{equation}\label{eq:bondDiffSimpl}
-d=x_1+x_3
+d=\left|x_1+x_3\right|
 \end{equation}
 
 And, from $u_{ir}$'s definition in (\ref{eq:uir}),
@@ -271,18 +271,19 @@ And, from $u_{ir}$'s definition in (\ref{eq:uir}),
 u_{ir}=\frac{x_1+x_3}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
 \end{equation}
 
-Now we substitute (\ref{eq:bondDiffSimpl}) into (\ref{eq:uirSimpl}) to obtain
+Now using (\ref{eq:bondDiffSimpl}) and (\ref{eq:uirSimpl}) gives us
 
 \begin{equation}\label{eq:uirvsd}
-u_{ir}=\frac{d}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
+\left|u_{ir}\right|=\frac{d}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
 \end{equation}
 
 or, solving for $d$,
 
 \begin{equation}\label{eq:dvsuir}
-d=\sqrt{2}\left(1 + 2\frac{m_O}{m_{Cu}} \right)^{1/2}u_{ir}
+d=\sqrt{2}\left(1 + 2\frac{m_O}{m_{Cu}} \right)^{1/2}\left|u_{ir}\right|
 \end{equation}
 
+which is a relationship between the phonon coordinates, wich can be calculated from the model's eigenfunctions and the observable lattice distortion.
 
 \section{Projection into states with definite electron occupation numbers}
 
@@ -306,6 +307,7 @@ In order to consider the simplest possible model we make the further assumption 
 We also use a single hopping parameter $t$ and ignore hopping between the two oxygen sites. 
 Since only the coupling between the asymmetric mode and the charge motion leads to a measurable lattice distortion, with two Cu–O bond lengths, we only consider the effect of the variation in the electron–lattice coupling constant with the antisymmetric mode, $\lambda_{ir}$, and we set the electron-lattice coupling with the symmetric mode, $\lambda_R$ , as zero \cite{Salkola1995}. 
 The inclusion of those considerations in the model, or other choices of parameters (e.g. \cite{Salkola1994, Salkola1995}) yield very similar results.
+The relevant value for the coupling $\lambda_{ir}$ is determined using equation \ref{eq:dvsuir}; it is chosen such that the ground state has a maximum probability density at a $u_{ir}$ that reproduces the observed lattice distortion of 0.13 \AA \cite{?}.
 In this work we use the same parameters as \cite{Mena2006, DeLeon1999, Leon2008, MirandaMena2007}:
 
 \begin{itemize}
