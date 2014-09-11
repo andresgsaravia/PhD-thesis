@@ -93,37 +93,129 @@ t&0&0&0&t&0&t&0&0 \\
 that can be diagonalized The electronic excitations projected into the electron-occupation basis.
 
 
-\section{Oxygen isotopic substitution}
+\section{Isotopic substitutions}
 \label{sec:isotopic-model}
 
-To model the effect of changing the mass of one atom we model the motion of the nuclei as three masses attached by springs and find the normal modes using classical mechanics A classical model for the motion of the nuclei in the O-Cu-O cluster
+The effects of isotopic substitutions in cuprate superconductors have been extensively studied and reveal fundamental properties of the material (see section \ref{sec:isotopic_effects}). 
+It is, therefore, of interest to model these effects on the three sites cluster we are studying.
+Changing the atomic mass in any of the three sites of the model should change the phonon frequencies $(\omega_{ir},\omega_R$) in (\ref{eq:phonon-part}) and the coupling constants $(\lambda_{ir},\lambda_R)$ in (\ref{eq:coupling-part}).
 
-Definde the coordinates $x_i$ as the position of the atomic sites in the cluster with $i=1,3$ being the oxygen sites and $i=2$ the copper site.
+\subsection{A classical model for the atomic vibrations}
+
+To model the effect of this change in mass we describe the motion of the nuclei as three masses attached by springs (see figure \ref{fig:3-masses-2-springs}) and find the normal vibrational modes using classical mechanics.
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=0.8\textwidth]{images/3-masses-2-springs-linear.png}
 \caption{Diagram for 3 masses attached with springs representing the nuclei motion.}
-\label{fig:3-mases-2-springs}
+\label{fig:3-masses-2-springs}
 \end{figure}
 
-Considering the specific case for a O-Cu-O cluster, $m_1=m_3=m_O$, $m_2=m_{Cu}$ and $k_1=k_2\equiv k$, this model gives a symmetric and an antisymmetric frequencies (which we call \textit{Raman} and \textit{infrared} respectively) that depend on the masses: 
+Consider 3 masses $m_i,\ i=1,2,3$ attached linearly by two springs of constants $k_1$ and $k_2$ and rest length of $l_1$ and $l_2$ respectively (later we will let $ m_1=m_3$, $ k_1=k_2$ and $l_1=l_2$). 
+We will look only at the motion in the longitudinal direction so we attach a reference frame and call $ x_i$ ($i=1,2,3$) the coordinate describing the position of $m_i$.
+A lagrangian $L$ for this system is 
+
+\begin{align}
+L & = T-V\\
+  & = \frac{1}{2}\sum_{i=1}^3 m_i \dot{x}_i^2 - \frac{1}{2}k_1(l_1-(x_2-x_1))^2+\frac{1}{2}k_2(l_2-(x_3-x_2))^2
+\end{align}
+
+It will be more convenient to change the $x_i$ coordinates to another set reflecting only the displacements from the equilibrium position.
+That is, we define new coordinates $\eta_i$ such that $(x_1,x_2,x_3)=(\eta_1,l_1+\eta_2,l_1+l_2+\eta_3)$. 
+In this coordinate system the lagrangian looks simpler
+
+\begin{equation}
+L= \frac{1}{2}\sum_{i=1}^3 m_i \dot{\eta}_i^2-\frac{1}{2}k_1(\eta_1-\eta_2)^2+\frac{1}{2}k_2(\eta_2-\eta_3)^2
+\end{equation}
+
+The potential energy is a quadratic function of the $\eta_i$ displacements so we can write it in the general form $V=\frac{1}{2}\sum_{i,j}V_{ij}\eta_i\eta_j$ where $V_{ij}$ are the elements of the matrix defined as
+
+\begin{equation}
+(V_{ij})=\left( \begin{array}{ccc} k_1 & -k_1 & 0 \\ -k_1 & k_1+k_2 & -k_2 \\ 0 & -k_2 & k_2 \end{array} \right)
+\end{equation}
+
+The dynamics of the system is determined by the Euler-Lagrange equations,
+
+\begin{align}
+0 & = \frac{d}{dt}\frac{\partial L}{\partial \dot{\eta}_s}-\frac{\partial L}{\partial \eta_s} \label{eq:EulLag1} \\
+  & = m_s \ddot{\eta}_s + \sum_i V_{is} \eta_i \label{eq:EulLag2}
+\end{align}
+
+\noindent for $s=1,2,3$. 
+We can propose an oscillatory solution of the form $\eta_i=a_ie^{i\omega t}$, understanding that only the real part of this equations describe the real motion of the cluster. 
+Substituting this solution into the equations of motion (\ref{eq:EulLag2}), after removing the common exponential factor, gives
+
+\begin{equation}
+0=\sum_i V_{is}a_i-\omega^2m_sa_s
+\end{equation}
+
+which can be arranged as a matrix
+
+\begin{equation}
+\left( \begin{array}{c} 0\\ 0\\ 0 \end{array}\right) = (V_{ij}) \left(\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right) - \omega^2 \left( \begin{array}{ccc} m_1 & 0 & 0 \\ 0 & m_2 & 0 \\ 0 & 0 & m_3 \end{array}\right) \left(\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right)
+\end{equation}
+
+Substituting the actual values for $(V_{ij})$:
+
+\begin{equation}
+\left( \begin{array}{c} 0\\ 0\\ 0 \end{array}\right) 
+= \left( \begin{array}{ccc} k_1-\omega^2m_1 & -k_1 & 0 \\ -k_1 & k_1+k_2-\omega^2m_2 & -k_2 \\ 0 & -k_2 & k_2-\omega^2m_3 \end{array}\right) \left(\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right)
+\end{equation}
+
+In order to have a non-trivial solution we require the determinant of that matrix to be zero
+
+\begin{equation}\label{eq:det}
+\begin{split}
+0 = & (k_1-\omega^2m_1)(k_1+k_2-\omega^2m_2)(k_2-\omega^2m_3) \\
+    & -k_1^2(k_2-\omega^2m_3)-k_2^2(k_1-\omega^2m_1)
+\end{split}
+\end{equation}
+
+\noindent which is a third order alebraic equation for $\omega^2$ with 3 solutions for $\omega$.
+To simplify the calculation we take now into consideration the details of our problem, that is, we consider $m_1 = m_3 \equiv m_O$, $m_2 \equiv m_{Cu}$ and $k_1 = k_2 \equiv k$. 
+With this considerations, (\ref{eq:det}) simplifies to
+
+\begin{align}\label{eq:omegas}
+0 & = (k-\omega^2m_O)^2(2k-\omega^2m_{Cu})-2k^2(k-\omega^2m_O) \\
+  & = (k-\omega^2m_O)[(k-\omega^2m_O)(2k-\omega^2m_{Cu})-2k^2]
+\end{align}
+
+\noindent from which we can observe one solution
+
+\begin{equation}
+\omega^2= \frac{k}{m_O}
+\end{equation}
+
+\noindent corresponding to the symmetrical (Raman) vibrational mode, denoted by $\omega_{R}$ in \ref{eq:phonon-part}, since it doesn't depend on $m_{Cu}$.
+The other two frequencies are obtained from the remaining factor in \ref{eq:omegas},
+
+\begin{equation}
+\begin{split}
+0 & = (k-\omega^2m_O)(2k-\omega^2m_{Cu})-2k^2 \\
+  & = 2k^2-k\omega^2m_{Cu}-2k\omega^2m_O+\omega^4m_Om_{Cu}-2k^2 \\
+  & = \omega^2[\omega^2m_Om_{Cu}-k(m_{Cu}+2m_O)]
+\end{split}
+\end{equation}
+
+\noindent from here we obtain the uninteresting $\omega^2=0$ and
+
+\begin{equation}
+\omega^2 = k(m_{Cu}+2m_O)/m_Om_{Cu}
+\end{equation}
+
+This is the prequency of the asymmetric (infrared) vibrational mode, denoted by $\omega_{ir}$ in (\ref{eq:phonon-part}).
+Summarizing this part, we have found the dependendy of the phonon frequencies $\omega_{ir}$ and $\omega_R$ with the atomic masses for the oxygen $m_O$ and copper $m_{Cu}$ atoms in the following way
 
 \begin{equation}\label{eq:omegaR}
-\omega_{R}= \sqrt{k/m_O}
+\omega_{R}= \sqrt{\frac{k}{m_O}}
 \end{equation}
 \begin{equation}\label{eq:omegair}
-\omega_{ir} = \sqrt{k(m_{Cu}+2m_O)/m_Om_{Cu}}
+\omega_{ir} = \sqrt{\frac{k(m_{Cu}+2m_O)}{m_Om_{Cu}}}
 \end{equation}
 
-Also, the coupling parameters depend on $m_O$\cite{?}:
+\noindent for some constant $k$.
 
-\begin{equation}\label{eq:ir-coupl-isot}
-\lambda_{ir}\propto (m_O\omega_{ir})^{-1/2}
-\end{equation}
-\begin{equation}\label{eq:Ram-coupl-isot}
-\lambda_R\propto (m_O\omega_{R})^{-1/2}
-\end{equation}
+\subsection{Change in oxygen mass}
 
 It can be seen from (\ref{eq:omegaR},\ref{eq:omegair},\ref{eq:ir-coupl-isot},\ref{eq:Ram-coupl-isot}) that a change, for example, $^{16}$O $\rightarrow$ $^{18}$O ammounts to a change in the frequencies  $\omega_{ir}$, $\omega_R$ and the couplings $\lambda_{ir}$ and $\lambda_R$. Taking the actual values for copper and oxygen, $m_{Cu}=63.546u$, $m_{^{16}O}=15.995u$ and $m_{^{18}O}=17.999u$ Isotopic change in the O-Cu-O cluster quantum model we obtain:
 
@@ -145,7 +237,16 @@ m_{ir}=\frac{m_Om_{Cu}}{m_{Cu}+2m_O} \simeq 10.64\ u \simeq 1.7668 \times 10^{-2
 \end{equation}
 
 
-\subsection{Isotopic shift for the excited states}
+Also, the coupling parameters depend on $m_O$\cite{?}:
+
+\begin{equation}\label{eq:ir-coupl-isot}
+\lambda_{ir}\propto (m_O\omega_{ir})^{-1/2}
+\end{equation}
+\begin{equation}\label{eq:Ram-coupl-isot}
+\lambda_R\propto (m_O\omega_{R})^{-1/2}
+\end{equation}
+
+\subsection{Definition of isotopic shifts}
 
 We define the relative isotopic shift for an excited state $i$ as 
 
@@ -154,8 +255,6 @@ We define the relative isotopic shift for an excited state $i$ as
 \end{equation}
 
 where the energies $E_i$ are referred to the corresponding ground state.
-
-\subsection{Isotopic shift for the ground state}
 
 For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system Isotopic shift of polaron formation energy (that is, the system with $\lambda_{ir}=\lambda_R=0$).
 
