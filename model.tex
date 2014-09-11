@@ -214,20 +214,7 @@ Summarizing this part, we have found the dependendy of the phonon frequencies $\
 \end{equation}
 
 \noindent for some constant $k$.
-
-\subsection{Change in oxygen mass}
-
-It can be seen from (\ref{eq:omegaR},\ref{eq:omegair},\ref{eq:ir-coupl-isot},\ref{eq:Ram-coupl-isot}) that a change, for example, $^{16}$O $\rightarrow$ $^{18}$O ammounts to a change in the frequencies  $\omega_{ir}$, $\omega_R$ and the couplings $\lambda_{ir}$ and $\lambda_R$. Taking the actual values for copper and oxygen, $m_{Cu}=63.546u$, $m_{^{16}O}=15.995u$ and $m_{^{18}O}=17.999u$ Isotopic change in the O-Cu-O cluster quantum model we obtain:
-
-\begin{equation}\label{eq:omega-ir-isot}
-\omega^{(16)}_{IR} / \omega^{(18)}_{IR} \simeq 1.039
-\end{equation}
-\begin{equation}\label{eq:lambda-ir-isot}
-\lambda_R^{(16)} / \lambda_R^{(18)} \simeq 1.041
-\end{equation}
-
-In particular, the frequencies of the O-Cu-O cluster's two normal modes are given by (\ref{eq:omegaR},\ref{eq:omegair}). 
-From here we identify the reduced masses:
+Also, from here we identify the reduced masses for each vibrational mode
 
 \begin{equation}\label{eq:redMassR}
 m_R = m_O \simeq 16.0\ u \simeq 2.6568 \times 10^{-26} kg
@@ -236,6 +223,7 @@ m_R = m_O \simeq 16.0\ u \simeq 2.6568 \times 10^{-26} kg
 m_{ir}=\frac{m_Om_{Cu}}{m_{Cu}+2m_O} \simeq 10.64\ u \simeq 1.7668 \times 10^{-26}kg
 \end{equation}
 
+\subsection{Change in the coupling constants}
 
 Also, the coupling parameters depend on $m_O$\cite{?}:
 
@@ -245,6 +233,39 @@ Also, the coupling parameters depend on $m_O$\cite{?}:
 \begin{equation}\label{eq:Ram-coupl-isot}
 \lambda_R\propto (m_O\omega_{R})^{-1/2}
 \end{equation}
+
+
+\subsection{Effects of changing the oxygen mass}
+
+From the discussion in the previous sections, it can be seen that an oxygen isotpe substitution, $^{16}$O $\rightarrow$ $^{18}$O ammounts to a change in the frequencies  $(\omega_{ir}$, $\omega_R)$ and the coupling constants $(\lambda_{ir},\lambda_R)$.
+We now turn to the task of finding the ammount of such changes.
+Denoting as $\omega^{(16)}$ and $\omega^{(18)}$ the phonon frequencies for a cluster with $^{16}$O and $^{18}$O respectively, from (\ref{eq:omegair},\ref{eq:omegaR}) we can calculate the ratios
+
+\begin{align}
+\omega^{(16)}_{ir}/\omega^{(18)}_{ir}
+ & =\sqrt{\left(\frac{m_{^{18}O}}{m_{^{16}O}}\right)\left(\frac{m_{Cu}+2m_{^{16}O}}{m_{Cu}+2m_{^{18}O}}\right)} \\
+\omega^{(16)}_{R}/\omega^{(18)}_{R}
+ & =\sqrt{\frac{m_{^{18}O}}{m_{^{16}O}}}
+\end{align}
+
+Taking the actual values for copper and oxygen, $m_{Cu}=63.546u$, $m_{^{16}O}=15.995u$ and $m_{^{18}O}=17.999u$, we obtain
+
+\begin{equation}\label{eq:omega-ir-isot}
+\omega^{(16)}_{ir} / \omega^{(18)}_{ir} \simeq 1.039
+\end{equation}
+
+Similarly, for the coupling constants $\lambda_{ir}$ and $\lambda_R$, from (\ref{eq:ir-coupl-isot}, \ref{eq:Ram-coupl-isot}) we can observe that
+
+\begin{equation}\label{eq:lambda-ir-isot}
+\lambda_{ir}^{(16)}/\lambda_{ir}^{(18)}=\sqrt{\frac{m_{^{18}O}\omega_{ir}^{(18)}}{m_{^{16}O}\omega_{ir}^{(16)}}}\simeq 1.041
+\end{equation}
+
+\noindent and exactly the same for the Raman coupling constant
+
+\begin{equation}\label{eq:lambda-Ram-isot}
+\lambda_R^{(16)} / \lambda_R^{(18)} \simeq 1.041
+\end{equation}
+
 
 \subsection{Definition of isotopic shifts}
 
@@ -262,7 +283,7 @@ For the ground state we define the energy isotopic shift $\Delta_g$ in a similar
 \Delta_g = \frac{\Delta E_g(^{16}O)- \Delta E_g(^{18}O)}{\Delta E_g(^{16}O)} \times 100
 \end{equation}
 
-where $\Delta E_g \equiv E_g - E_g(\lambda_{ir}=0, \lambda_R=0)$. To calculate this energies we need to take into account the \textit{zero-point energy} in (\ref{eq:phononic-part}) which should have been written as 
+where $\Delta E_g \equiv E_g - E_g(\lambda_{ir}=0, \lambda_R=0)$. To calculate this energies we need to take into account the \textit{zero-point energy} in (\ref{eq:phonon-part}) which should have been written as 
 
 \begin{equation}\label{eq:phononic-part-complete}
 H_{ph} = \hbar \omega_{ir} \left( a_{ir}^\dagger a_{ir} + \frac{1}{2}\right) + \hbar \omega_R\left( a_R^\dagger a_R + \frac{1}{2} \right)
@@ -417,7 +438,7 @@ In this work we use the same parameters as \cite{Mena2006, DeLeon1999, Leon2008,
 \item Bare phonon frequency for the infrared mode: $\omega_{ir}=612.4$ cm$^{-1}$
 \end{itemize}
 
-These are the parameters used for this model in other publications\footnote{It seems that the reported values for the phonon frequencies in \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed in Fig. 1 of \cite{Salkola1994} at $\lambda_{IR}=0$.}.
+These are the parameters used for this model in other publications\footnote{It seems that the reported values for the phonon frequencies in \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed in Fig. 1 of \cite{Salkola1994} at $\lambda_{ir}=0$.}.
 
 \noindent\begin{tabular}{| l | c | c | c | c | c |}
 \hline
