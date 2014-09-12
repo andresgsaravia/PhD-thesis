@@ -12,7 +12,8 @@
 % - Describes a basis set
 % - Presents two useful projections (phonon coordinates and electron occupation)
 
-\section{Description}
+\section{Hamiltonian and basis set}
+\label{sec:hamiltonian-and-basis}
 
 The hamiltonian we used to describe two holes in the O(4)-Cu(1)-O(4) cluster with an electron-lattice correlated movement consists of three parts \cite{Salkola1994}:
 
@@ -53,45 +54,18 @@ For consistency with other works \cite{MustredeLeon1992,DeLeon1999,Leon2008,Mira
 
 % Describe how the different values for n_1, n_2, n_3 couple to phonons. Maybe include a figure here.
 
-\section{Basis set}
-\label{sec:basis-set}
+One simple basis set for this system can be denoted by is $\{\ket{e_1,e_2,ir,R}: e_1,e_2=1,2,3; ir,R=1,2,\ldots\}$ with $e_k$ being the position of the $k$-th hole, $ir$ the number of \textit{infrared} phonons and $R$ the number of \textit{Raman} phonons. 
+This basis is infinite dimensional however, as discussed in section \ref{sec:comp_details}, for the lower energy excitations the eigenvalues and eigenvectors are well described using a basis with only a few phononic labels.
 
-The basis is $\ket{e_1,e_2,i,R}$ with $e_k$ being the position of the $k$-th hole ($e_i=1,2,3$), $i$ the number of \textit{infrared} phonons and $R$ the number of \textit{Raman} phonons. 
-Formally, $i$ and $R$ should extend to infinity but the system converges to a stable behaviour (for the lower excitations) after considering just a few phonons. 
-Our tests show that 30 phonons of each kind are enough to stabilize our results\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}
+To build the hamiltonian we need to assign an integer label $l$ to each basis state. 
+This can be achieved with the relationship
 
-To build the hamiltonian we use a definite electron-ocuppation basis with the following labelling for each of the possible electron occupations:
+\begin{equation}
+  \label{eq:label}
+  l = e_1 + 3(e_2 - 1) + 9\ ir + 9\ R (n_{ir} +1)
+\end{equation}
 
-\begin{equation}\label{eq:basis-set}\begin{array}{cccc}
-1= & \uparrow \downarrow & - & - \\
-2= & \uparrow & \downarrow & - \\
-3= & \uparrow & - & \downarrow \\
-4= & \downarrow & \uparrow & - \\
-5= & - & \uparrow \downarrow & - \\
-6= & - & \uparrow & \downarrow \\
-7= & \downarrow & - & \uparrow \\
-8= & - & \downarrow & \uparrow \\
-9= & - & - & \uparrow \downarrow \end{array}\end{equation}
-
-
-\section{Electronic part}
-
-The electronic part $H_{el}$ is a 9x9 matrix
-
-\begin{equation}\label{eq:electronic-matrix}
-\left( \begin{array}{ccccccccc} 
-U+2\epsilon &\;\;t\;\;&\;\;0\;\;&\;\;t\;\;&0&\;\;0\;\;&\;\;0\;\;&\;\;0\;\;&0 \\
-t&0&t&0&t&0&0&0&0 \\
-0&t&2\epsilon &0&0&t&0&0&0 \\
-t&0&0&0&t&0&t&0&0 \\
-0&t&0&t&U-2\epsilon &t&0&t&0 \\
-0&0&t&0&t&0&0&0&t \\
-0&0&0&t&0&0&2\epsilon &t&0 \\
-0&0&0&0&t&0&t&0&t \\
-0&0&0&0&0&t&0&t&U+2\epsilon  \end{array} \right)\end{equation}
-
-that can be diagonalized The electronic excitations projected into the electron-occupation basis.
-
+\noindent with $n_{ir}$ being the total number of infrared phonons under consideration.
 
 \section{Isotopic substitutions}
 \label{sec:isotopic-model}
@@ -323,7 +297,7 @@ In a quantum harmonic oscillator an energy eigenfunction, $\ket{n}$, has a proje
 
 For an arbitrary wavefunction $\ket{\psi} = \sum_n \braket{n}{\psi} \ket{n}$ the projection in real space is $\braket{x}{\psi} = \sum_n \braket{n}{\psi} \braket{x}{n}$ with $\braket{x}{n}$ given by \ref{eq:harmOscProj}.
 
-For the model hamiltonian \ref{eq:full-hamiltonian}, as discussed in section \ref{sec:basis-set}, a possible basis set is given by the functions ${| e_1, e_2, ir, R \rangle}$ with $e_i$ the position of the $i$-th electron and $ir$, $R$ the number of infrared and Raman phonons respectively. 
+For the model hamiltonian \ref{eq:full-hamiltonian}, as discussed in section \ref{sec:hamiltonian-and-basis}, a possible basis set is given by the functions ${| e_1, e_2, ir, R \rangle}$ with $e_i$ the position of the $i$-th electron and $ir$, $R$ the number of infrared and Raman phonons respectively. 
 Thus an arbitrary wavefunction in this system, $\ket{\psi}$, can be expanded as
 
 \begin{equation}\label{eq:wf-phonon-base}
@@ -408,7 +382,7 @@ which is a relationship between the phonon coordinates, wich can be calculated f
 \section{Projection into states with definite electron occupation numbers}
 
 Eigenstates of the hamltonian \ref{eq:full-hamiltonian} have delocalized charges.
-To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:basis-set} by summing over phononic degrees of freedom.
+To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis} by summing over phononic degrees of freedom.
 That is, for a given eigenstate $\ket{\psi}$ we can find its probability of having its first hole in site $e_1$ and the second on site $e_2$ (with $e_1$, $e_2=1,2,3$) by making the projection
 
 \begin{equation}\label{eq:electron-occupation}
@@ -476,3 +450,5 @@ We performed an exact diagonalization of the Hamiltonian matrix with a basis of 
 The basis includes states of two holes on the three sites, 30 harmonic Raman phonons and 30 harmonic infrared phonons. 
 Since we are performing a diagonalization of the full Hamiltonian matrix our results do not rely in approximations such as the adiabatic or the anti-adiabatic approximations. 
 The  truncation of the basis to 30 phonons of each kind could introduce innacuracies, however we found this choice to be an adecuate description for the few lowest energy states we are considering up to electron-lattice couplings ~0.25 eV (see figure 3).
+
+Our tests show that 30 phonons of each kind are enough to stabilize our results\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}
