@@ -1,16 +1,19 @@
 \chapter{Peierls-Hubbard model}
 \label{chap:model}
 
-% As mentioned earlier \ref{sec:scope}: 
-% - Lattice inhomogeneities limit the applicability of $k$-space formalism.
-% - Correlated electron-lattice motion prevents the use of Born-Openheimer approximation
-% We propose a very simple but exact model that captures the polaronic behaviour of a CuO$_2$ cluster.
-% This model has been successfully used to explain the O-Cu split distance in YBCO
+As mentioned in section \ref{sec:scope}, treatments based in the adiabatic and antiadiabatic approximations are unable to describe properly the correlated electron-lattice motion in cuprate's Cu-O planes and chains.
+As an alternative to overcome this limitation we propose an exact treatment of a reduced system.
+In particular we focus on the O(4)-Cu(1)-O(4) cluster in YBa$_2$Cu$_3$O$_7$.
+A model hamiltonian combining a Hubbard hamiltonian for the electronic part, quantum harmonic oscillators for the two vibrational modes and a coupled electron-lattice motion has been used previously to describe the polaronic behaviour of this cluster.
+Since this thesis is based in a thorough analysis of this model hamiltonian we devote this chapter to give a detailed description of its components.
 
-% This chapter:
-% - Describes the model hamiltonian
-% - Describes a basis set
-% - Presents two useful projections (phonon coordinates and electron occupation)
+In section \ref{sec:hamiltonian-and-basis} we describe the hamitlonian and the basis used. 
+Section \ref{sec:isotopic-model} reviews a method of incorporating isotopic substitutions in this model and defines \textit{isotopic shifts} in this context.
+A method of calculating real-space lattice distortions is discussed in section \ref{sec:lattice-distortions}.
+Next, in section \ref{sec:electronic-projection}, we describe a projection into definite electronic occupation states.
+Section \ref{sec:model-parameters} reviews some literature suggesting possible choices of parameters and lists the parameters used in this work.
+We review in section \ref{sec:classification} a method for identifying and classifiying the different excitations in this model.
+Finally, section \ref{sec:comp_details} gives some computational details about our calculations.
 
 \section{Hamiltonian and basis set}
 \label{sec:hamiltonian-and-basis}
@@ -318,8 +321,9 @@ For the ground state we define the energy isotopic shift $\Delta_g$ in a similar
 where $\Delta E_g \equiv E_g - E_g(\lambda_{ir}=0, \lambda_R=0)$
 
 \section{Lattice distortions}
+\label{sec:lattice-distortions}
 
-To understand the lattice distortion for excitations in the model hamiltonian (\ref{eq:full-hamiltonian}) it is useful to find the projection of a given state toreal space atomic coordinates. 
+To understand the lattice distortion for excitations in the model hamiltonian (\ref{eq:full-hamiltonian}) it is useful to find the projection of a given state to real space atomic coordinates. 
 In a simple quantum harmonic oscillator with mass $m$ and frequency $\omega$ the creation and annihilation operators, $a^\dagger$ and $a$, are related to the real-space coordinate $x$ as
 
 \begin{equation}
@@ -450,6 +454,7 @@ Equation (\ref{eq:dvsuir}) allows a conection between this model hamiltonian and
 It is this relationship that helps fixing the variable coupling parameters $\lambda_{ir}$ and $\lambda_R$.
 
 \section{Projection into states with definite electron occupation numbers}
+\label{sec:electronic-projection}
 
 Eigenstates of the hamltonian \ref{eq:full-hamiltonian} have delocalized charges.
 To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis} by summing over phononic degrees of freedom.
@@ -461,6 +466,7 @@ That is, for a given eigenstate $\ket{\psi}$ we can find its probability of havi
 \end{equation}
 
 \section{Choice of parameters}
+\label{sec:model-parameters}
 
 To choose values for this model we take representative values guided from local-density approximations \cite{Pickett1989}. 
 In particular Ref. \cite{DeWeert1989}, using a tight-binding model, reports a band energy of $E_0$ = 0.35 eV and a hopping parameter of $t=0.43-0.74$ eV, for Cu(1)-O(4) sites.
@@ -503,7 +509,6 @@ As previously stated, some variation in the parameter space has been explored wi
 
 \section{Classification of the excitations}
 \label{sec:classification}
-
 
 As previously noted in section \ref{sec:hamiltonian-and-basis}, only for zero electron-lattice couplings the eigenstates of the many-body Hamiltonian (\ref{eq:full-hamiltonian}) can be described as a direct product of purely electronic and phononic states. 
 In this scenario each eigenstate has a sharp value for the phonon number operators $b_Rb^\dagger_R$ and $b_{ir}b^\dagger_{ir}$ allowing its identification as a \textit{phononic} state with a given number of phonons, an \textit{electronic} state or a simple product of those two.
