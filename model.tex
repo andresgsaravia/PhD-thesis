@@ -456,14 +456,34 @@ It is this relationship that helps fixing the variable coupling parameters $\lam
 \section{Projection into states with definite electron occupation numbers}
 \label{sec:electronic-projection}
 
-Eigenstates of the hamltonian \ref{eq:full-hamiltonian} have delocalized charges.
-To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis} by summing over phononic degrees of freedom.
-That is, for a given eigenstate $\ket{\psi}$ we can find its probability of having its first hole in site $e_1$ and the second on site $e_2$ (with $e_1$, $e_2=1,2,3$) by making the projection
+Eigenstates of the hamltonian \ref{eq:full-hamiltonian}, in general, have delocalized charges.
+To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
+The basis set we are using ($\{\ket{e_1,e_2,ir,R}\}$) has sharp values for the hole number operator on each site for a given number of infrared $ir$ and Raman $R$ phonons. 
+Thus, to find the probability $P(e_1,e_2)$ of finding one hole in site $e_1$ and the other on site $e_2$, we need only to sum over the infrared and Raman phonons of the system,
 
 \begin{equation}
   \label{eq:electron-occupation}
-  \braket{e_2,e_2}{\psi} = \sum_{i=0}^{N_{ir}}\sum_{R=0}^{N_R} \braket{e_1,e_2,i,R}{\psi}
+  P(e_1,e_2)=\sum_{ir,R} \left| \braket{e_1,e_2,ir,R}{\psi} \right|^2
 \end{equation}
+
+From the labeling convention stated in (\ref{eq:label}) we can visualize the nine possible combinations of hole occupancy. 
+Denoting, for example, $e_1$ as $\uparrow$ and $e_2$ as $\downarrow$ we have the following combinations:
+
+\begin{equation}\label{eq:basis-set}
+\begin{array}{cccc}
+1= & \uparrow \downarrow & - & - \\
+2= & \uparrow & \downarrow & - \\
+3= & \uparrow & - & \downarrow \\
+4= & \downarrow & \uparrow & - \\
+5= & - & \uparrow \downarrow & - \\
+6= & - & \uparrow & \downarrow \\
+7= & \downarrow & - & \uparrow \\
+8= & - & \downarrow & \uparrow \\
+9= & - & - & \uparrow \downarrow 
+\end{array}
+\end{equation}
+
+Since the model hamiltonian (\ref{eq:full-hamiltonian}) does not distinguish spin and the cluster is symmetrical, states (1, 9) are equivalent, as well as (2, 4, 6, 8) and (3, 7).
 
 \section{Choice of parameters}
 \label{sec:model-parameters}
