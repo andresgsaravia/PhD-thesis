@@ -1,17 +1,63 @@
-\documentclass[letterpaper]{book}
+%------------------------------------%
+%     Preamble                       %
+%------------------------------------%
 
+\documentclass[12pt,letterpaper,twoside,openright]{book}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx,color,amsmath,mdwlist}
+
+% Misc. packages
+\usepackage{graphicx,color,amsmath,mdwlist,fancyhdr,multicol}
 \usepackage[switch*,pagewise]{lineno}
 \modulolinenumbers[5]
+
+% PDF links and metadata
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdfauthor={Andr\'{e}s Garc\'{i}a Saravia Ortiz de Montellano},
+  pdftitle={Polaronic effects in cuprate superconductors from a three-sites Peierls-Hubbard model},
+  pdfsubject={PhD Thesis. Cinvestav-M\'{e}rida}}
 
 \author{Andr\'{e}s Garc\'{i}a Saravia Ortiz de Montellano}
 \title{Polaronic effects in cuprate superconductors from a three-sites Peierls-Hubbard model}
 
+% Subject index (Used with \index{term} inside the text)
+\usepackage{makeidx}
+\makeindex
+
+% Thesis formatting
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[LE,RO]{\bfseries\thepage} 
+\fancyhead[LO]{\bfseries\rightmark} 
+\fancyhead[RE]{\bfseries\leftmark} 
+\renewcommand{\headrulewidth}{0.5 pt}
+\renewcommand{\footrulewidth}{0pt} 
+\addtolength{\headwidth}{1.5cm}
+\addtolength{\headheight}{0.5 pt} 
+\fancypagestyle{plain}{
+  \fancyhead{} 
+  \renewcommand{\headrulewidth}{0 pt}} 
+\setlength{\topmargin}{0.75in}
+\setlength{\oddsidemargin}{0.5 true in} 
+\setlength{\evensidemargin}{0.05 true in} 
+\setlength{\textwidth}{6 true in} 
+\setlength{\textheight}{8 true in}
+\newcommand{\bs}{\bigskip}
+
+\fancypagestyle{fancyplain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+
+%------------------------------------%
+%     Custom commands                %
+%------------------------------------%
+
 \newcommand{\ket}[1]{\left | #1 \right\rangle}
 \newcommand{\bra}[1]{\left \langle #1 \right |}
 \newcommand{\braket}[2]{\left\langle #1|#2\right\rangle}
+
 % Use “\cite{?}” to get Wikipedia-style “citation needed” in document
 \usepackage{ifthen}
 \let\oldcite=\cite
@@ -19,19 +65,25 @@
 
 \AtBeginDocument{\let\textlabel\label}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\includeonly{file1,file2}
+%------------------------------------%
+%     Document                       %
+%------------------------------------%
 
 \begin{document}
+\renewcommand{\thepage}{\roman{page}}
+
+%\input{frontpage}
 \maketitle
 \thispagestyle{empty}
+
 \newpage
 \pagenumbering{Roman}
 \tableofcontents
 \newpage
 
 %\linenumbers
-\pagenumbering{arabic}
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
 \input{intro}
 \input{model}
 \input{ground}
@@ -43,10 +95,14 @@
 \appendix
 %\include{filename}
 
+% Bibliography
 \cleardoublepage
+\bibliography{biblio}
 \addcontentsline{toc}{chapter}{\bibname}
-\bibliography{biblio} 						%nombre del archivo con la bibliografa
-\bibliographystyle{unsrt}				%estilo de la bibliografa (unsrt = por orden de citacin)
+\bibliographystyle{unsrt}
 
+% Subject index
+\addcontentsline{toc}{chapter}{Subject index}
+\printindex
 
 \end{document}
