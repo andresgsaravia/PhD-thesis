@@ -1,15 +1,17 @@
 \chapter{Peierls-Hubbard model}
 \label{chap:model}
 
-As mentioned in section \ref{sec:scope}, treatments based in the adiabatic and antiadiabatic approximations are unable to describe properly the correlated electron-lattice motion in cuprate's Cu-O planes and chains.
-As an alternative to overcome this limitation we propose an exact treatment of a reduced system.
-In particular we focus on the O(4)-Cu(1)-O(4) cluster in YBa$_2$Cu$_3$O$_7$.
-A model hamiltonian combining a Hubbard hamiltonian for the electronic part, quantum harmonic oscillators for the two vibrational modes and a coupled electron-lattice motion has been used previously to describe the polaronic behaviour of this cluster.
-Since this thesis is based in a thorough analysis of this model hamiltonian we devote this chapter to give a detailed description of its components.
+As mentioned in section \ref{sec:scope}, treatments based in the adiabatic and antiadiabatic approximations are unable to describe properly the correlated electron-lattice motion in cuprate's Cu-O bonds.
+An alternative to overcome this limitation is an exact treatment of a reduced system.
+In this thesis we focus on the O(4)-Cu(1)-O(4) cluster in YBa$_2$Cu$_3$O$_7$.
+We approximate this local environment as a three site cluster with two holes. 
+Such approximation is justified as the Cu(1)-O(4) bond length (1.83 \AA) is far shorter than the Cu(2)-O(4) bond length ($\sim 2.41$ \AA) (see figure \ref{fig:YBCO_structure}), making charge transfer outside the cluster a much slower process than the charge dynamics inside the cluster. 
+Although we cannot directly identify the three site cluster proposed in this model with a particular structure of the CuO plane, the general approach of charge transfer between hole rich regions and hole poor regions in the plane coupled to the lattice degrees of freedom is still valid, hence the general conclusions we draw from this model applicable to describe the structure of the CuO plane.
 
+This thesis is based in a thorough analysis of that model hamiltonian so we devote this chapter to a detailed description of its components.
 In section \ref{sec:hamiltonian-and-basis} we describe the hamitlonian and the basis used. 
 Section \ref{sec:isotopic-model} reviews a method of incorporating isotopic substitutions in this model and defines \textit{isotopic shifts} in this context.
-A method of calculating real-space lattice distortions is discussed in section \ref{sec:lattice-distortions}.
+In section \ref{sec:lattice-distortions} we discuss a method of calculating real-space lattice distortions.
 Next, in section \ref{sec:electronic-projection}, we describe a projection into definite electronic occupation states.
 Section \ref{sec:model-parameters} reviews some literature suggesting possible choices of parameters and lists the parameters used in this work.
 We review in section \ref{sec:classification} a method for identifying and classifiying the different excitations in this model.
@@ -18,22 +20,20 @@ Finally, section \ref{sec:comp_details} gives some computational details about o
 \section{Hamiltonian and basis set}
 \label{sec:hamiltonian-and-basis}
 
-The hamiltonian we used to describe two holes in the O(4)-Cu(1)-O(4) cluster with an electron-lattice correlated movement consists of three parts \cite{Salkola1994}:
+To describe two holes in the O(4)-Cu(1)-O(4) cluster with an electron-lattice (phonon) correlated movement we use a hamiltonian consisting of three parts:
 
 \begin{equation}
   \label{eq:full-hamiltonian}
   H = H_{el} + H_{ph} + H_{el-ph}
 \end{equation}
 
-\noindent corresponding to the electronic contribution, the phonon energies and the electron-phonon (lattice) coupling, respectively. 
+\noindent corresponding to the electronic contribution, the phonon energies and the electron-phonon (lattice) coupling, respectively \cite{Salkola1994}. 
 The electron-phonon coupling term deviates this model from the Born-Oppenheimer (adiabatic) approximation and prevents the separation of hamiltionan eigenstates, $\Psi$, as products of purely electronic and phononic parts, $\Psi=\psi_{el}\psi_{ph}$, unless $H_{el-ph}=0$.
 Nonetheless, as it will be discussed in section \ref{sec:classification}, even for coupling values greater than zero the hamiltonian eigenstates can be interpreted as mainly \textit{electronic} or \textit{phononic} in nature.
 
 The electronic part is modeled as a single band Hubbard model for three sites with two holes in it. 
-We denote $n_{i\sigma}=c_{i\sigma}^\dagger c_{i\sigma}$ as the hole-number operator with $c_{i\sigma}^\dagger$ creating a hole with spin $\sigma = \uparrow, \downarrow$ and $c_{i\sigma}$ destroying it; the site index $i=1,2,3$ indicates the two oxygen sites when  $i=1,3$ and the only copper site when $i=2$. 
-The site energies are parametrized with $E_1=E_3=-E_2 \equiv E_0$. 
-$U$ is the on-site Coulomb interaction and $t$ is the hopping energy between two adjacent sites. 
-With these definitions, the electronic contribution is written as follows,
+We only consider the two holes as having opposite spin because the energies of states with two charges with the same spin are much greater.
+Explicitly, $H_{el}$ is written as
 
 \begin{equation}
   \label{eq:electronic-part}
@@ -42,8 +42,13 @@ With these definitions, the electronic contribution is written as follows,
         + t\sum_{\sigma} \left(c_{1\sigma}^\dagger c_{2\sigma} + c_{2\sigma}^\dagger c_{3\sigma} + H.c. \right)
 \end{equation}
 
-For the lattice  part of the Hamiltonian, $H_{ph}$, we consider both symmetric (Raman) and antisymmetric (infrared) modes described by boson operators $b_R$ and $b_{ir}$ and bare frequencies $\omega_R$ and $\omega_{ir}$ respectively,
- 
+\noindent where we denoted $n_{i\sigma}=c_{i\sigma}^\dagger c_{i\sigma}$ as the hole-number operator with $c_{i\sigma}^\dagger$ creating a hole with spin $\sigma = \uparrow, \downarrow$ and $c_{i\sigma}$ destroying it; the site index $i=1,2,3$ indicates the two oxygen sites [O(4)] when  $i=1,3$ and the only copper site [Cu(1)] when $i=2$. 
+The site energies are parametrized with $E_1=E_3=-E_2 \equiv E_0$. 
+$U$ is the on-site Coulomb interaction and $t$ is the hopping energy between two adjacent sites. 
+
+For the lattice  part of the Hamiltonian, $H_{ph}$, we consider both symmetric (Raman) and antisymmetric (infrared) modes described by boson operators $b_R$ and $b_{ir}$ and bare frequencies $\omega_R$ and $\omega_{ir}$ respectively\footnote{Unlike previous publications, here we include the \textit{zero-point energy} for both phonon modes. 
+For most cases this is not needed since the excitation's energies are calculated relative to the ground state but, in chapter \ref{chap:ground} we study the ground state energy itself where this contribution is important},
+
 \begin{equation}
  \label{eq:phonon-part}
  H_{ph} = \hbar \omega_{ir}\left(b_{ir}^\dagger b_{ir}+\frac{1}{2}\right) + \hbar \omega_R \left( b_R^\dagger b_R + \frac{1}{2}\right)
@@ -51,14 +56,14 @@ For the lattice  part of the Hamiltonian, $H_{ph}$, we consider both symmetric (
 
 % Figure with the two vibrational modes
  
-The electron-lattice coupling term, $H_{el-ph}$ is introduced through the change in interatomic distances generated by Coulomb repulsion between different sites coupled with the Raman and infrared phonon modes\footnote{This term is written slightly different in \cite{MustredeLeon1992} however, both versions can be related noticing that $3 (n_1+n_3-4/3)=n_1-2n_2+n_3$.},
+The electron-lattice coupling term, $H_{el-ph}$ is introduced through the change in interatomic distances generated by Coulomb repulsion between different sites coupled with the Raman and infrared phonon modes,
  
 \begin{equation}
   \label{eq:coupling-part}
   H_{el-ph} = \lambda_{ir}(b_{ir} + b_{ir}^\dagger)(n_3 - n_1) + \lambda_R (b_R + b_R^\dagger)(n_1 + n_3-s_0)
 \end{equation}
 
-Here $s_0$ is a constant used to avoid artificial shrinking of the cluster. 
+Here $s_0$ is a constant used to avoid artificial shrinking of the cluster\footnote{This term is written slightly different in some publications, like \cite{MustredeLeon1992}, however both versions can be related noticing that $3 (n_1+n_3-4/3)=n_1-2n_2+n_3$.}. 
 For consistency with other works \cite{MustredeLeon1992,DeLeon1999,Leon2008,MirandaMena2007} we fix $s_0=4/3$.
 
 % Describe how the different values for n_1, n_2, n_3 couple to phonons. Maybe include a figure here.
@@ -309,16 +314,16 @@ We define the relative isotopic shift for an excited state $i$ as
   \Delta_i = \frac{E_i(^{16}O)- E_i(^{18}O)}{E_i(^{16}O)} \times 100
 \end{equation}
 
-where the energies $E_i$ are referred to the corresponding ground state.
+\noindent where the energies $E_i$ are referred to the corresponding ground state.
 
-For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system Isotopic shift of polaron formation energy (that is, the system with $\lambda_{ir}=\lambda_R=0$).
+For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system, that is, the system with $\lambda_{ir}=\lambda_R=0$,
 
 \begin{equation}
   \label{eq:isot-shift-def-grd}
   \Delta_g = \frac{\Delta E_g(^{16}O)- \Delta E_g(^{18}O)}{\Delta E_g(^{16}O)} \times 100
 \end{equation}
 
-where $\Delta E_g \equiv E_g - E_g(\lambda_{ir}=0, \lambda_R=0)$
+\noindent where $\Delta E_g \equiv E_g - E_g(\lambda_{ir}=0, \lambda_R=0)$.
 
 \section{Lattice distortions}
 \label{sec:lattice-distortions}
@@ -501,13 +506,13 @@ The inclusion of those considerations in the model, or other choices of paramete
 The relevant value for the coupling $\lambda_{ir}$ is determined using equation \ref{eq:dvsuir}; it is chosen such that the ground state has a maximum probability density at a $u_{ir}$ that reproduces the observed lattice distortion of 0.13 \AA \cite{?}.
 In this work we use the same parameters as \cite{DeLeon1999, Leon2008, MirandaMena2007,Mena2006}, namely:
 
-\begin{itemize}
+\begin{itemize*}
 \item On-site Coulomb repulsion for O(4) and Cu(1) sites: $U=7$ eV
 \item Nearest-neighbor hopping: $t=0.5$ eV
 \item Band energy for O(4) and Cu(1) sites: $E_0=0.5$ eV
 \item Bare phonon frequency for the Raman mode: $\omega_R=500$ cm$^{-1}$
 \item Bare phonon frequency for the infrared mode: $\omega_{ir}=612.4$ cm$^{-1}$
-\end{itemize}
+\end{itemize*}
 
 As previously stated, some variation in the parameter space has been explored without changes in the basic phenomenology. Table \ref{tab:parameters} shows the parameters for this model used in other publications\footnote{It seems that the reported values for the phonon frequencies in \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed in Fig. 1 of \cite{Salkola1994} at $\lambda_{ir}=0$.}.
 
@@ -543,7 +548,7 @@ It is this mixing of electronic and lattice states that allows the exact treatme
 \label{sec:comp_details}
 
 We performed an exact diagonalization of the Hamiltonian matrix with a basis of 8649 states using a QR algorithm \cite{eigenweb}\footnote{The hamiltonian (\ref{eq:full-hamiltonian}) is a sparse matrix, so a more efficient approach is being taken in subsequent calculations, in extensions of this model, using Lanczos algorithm. In this work we used a QR algorithm because it was readily available and provided a large enough basis set to ensure convergence.}.
-The basis includes states of two holes on the three sites, 30 harmonic Raman phonons and 30 harmonic infrared phonons. 
-The  truncation of the basis to a finite number of phonons could introduce innacuracies, however we found this choice to be an adecuate choice to ensure convergence in the few lowest energy states we are considering and electron-lattice couplings up to $\sim0.25$x eV\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}.
+The basis includes up to 30 harmonic Raman and 30 harmonic infrared phonons. 
+The  truncation of the basis to a finite number of phonons could introduce innacuracies, however we found this choice to be an adecuate choice to ensure convergence in the few lowest energy states we are considering and electron-lattice couplings up to $\sim0.25$ eV\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}.
 
 % Maybe a plot here showing convergence in the energy of the ground state for different number of phonons?
