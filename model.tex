@@ -542,13 +542,8 @@ It is this mixing of electronic and lattice states that allows the exact treatme
 \section{Computational details}
 \label{sec:comp_details}
 
-% Size of the base
-% Convergence
-% Computational resources
-
-We performed an exact diagonalization of the Hamiltonian matrix with a basis of 8649 states using a QR algorithm \cite{eigenweb}. 
+We performed an exact diagonalization of the Hamiltonian matrix with a basis of 8649 states using a QR algorithm \cite{eigenweb}\footnote{The hamiltonian (\ref{eq:full-hamiltonian}) is a sparse matrix, so a more efficient approach is being taken in subsequent calculations, in extensions of this model, using Lanczos algorithm. In this work we used a QR algorithm because it was readily available and provided a large enough basis set to ensure convergence.}.
 The basis includes states of two holes on the three sites, 30 harmonic Raman phonons and 30 harmonic infrared phonons. 
-Since we are performing a diagonalization of the full Hamiltonian matrix our results do not rely in approximations such as the adiabatic or the anti-adiabatic approximations. 
-The  truncation of the basis to 30 phonons of each kind could introduce innacuracies, however we found this choice to be an adecuate description for the few lowest energy states we are considering up to electron-lattice couplings ~0.25 eV (see figure 3).
+The  truncation of the basis to a finite number of phonons could introduce innacuracies, however we found this choice to be an adecuate choice to ensure convergence in the few lowest energy states we are considering and electron-lattice couplings up to $\sim0.25$x eV\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}.
 
-Our tests show that 30 phonons of each kind are enough to stabilize our results\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}
+% Maybe a plot here showing convergence in the energy of the ground state for different number of phonons?
