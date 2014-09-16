@@ -426,18 +426,18 @@ Finally, the probability amplitude of finding a system in the state $\ket\psi$ w
 \noindent with $\braket{u_{ir},u_R}{ir,R}$ given by (\ref{eq:hermite-expansion}).
 
 The projection \ref{eq:phonon-coord-projection} allows us to calculate the probability amplitude of finding a specific distortion in the atomic coordinates for the O-Cu-O cluster.
-With the atomic coordinates $x_i$, as defined in section \ref{sec:isotopic-model}, the difference $d$ in O-Cu bond lengths is
+With the atomic coordinates $x_i$, as defined in section \ref{sec:isotopic-model}, the difference $d$ in between one O-Cu bond and the other is
 
 \begin{equation}
   \label{eq:bondDiff}
-  d= \left| (x_3 - x_2) - (x_2 - x_1) \right| = \left| x_1 + x_3 - 2x_2 \right|
+  d =  (x_3 - x_2) - (x_2 - x_1) = x_1 + x_3 - 2x_2 
 \end{equation}
 
 The $x_i$ coordinates are varying at all times but taking an instant in which $x_2=0$ we can simplify (\ref{eq:bondDiff}) to
 
 \begin{equation}
   \label{eq:bondDiffSimpl}
-  d=\left|x_1+x_3\right|
+  d = x_1+x_3
 \end{equation}
 
 From $u_{ir}$'s definition in (\ref{eq:uir}),
@@ -451,19 +451,19 @@ Now, using (\ref{eq:bondDiffSimpl}) and (\ref{eq:uirSimpl}), we find that
 
 \begin{equation}
   \label{eq:uirvsd}
-  \left|u_{ir}\right|=\frac{d}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
+  u_{ir} = \frac{d}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
 \end{equation}
 
 \noindent or, solving for $d$,
 
 \begin{equation}
   \label{eq:dvsuir}
-  d=\sqrt{2}\left(1 + 2\frac{m_O}{m_{Cu}} \right)^{1/2}\left|u_{ir}\right|
+  d=\sqrt{2}\left(1 + 2\frac{m_O}{m_{Cu}} \right)^{1/2}u_{ir}
 \end{equation}
 
 \noindent which is a relationship between the phonon coordinates, that can be calculated from the model's eigenfunctions, and the observable lattice distortion. 
 Equation (\ref{eq:dvsuir}) allows a conection between this model hamiltonian and a specific experimental observation. 
-It is this relationship that helps fixing the variable coupling parameters $\lambda_{ir}$ and $\lambda_R$.
+It is this relationship that helps fixing the free coupling parameters $\lambda_{ir}$ and $\lambda_R$ in this model.
 
 \section{Projection into states with definite electron occupation numbers}
 \label{sec:electronic-projection}
