@@ -318,19 +318,20 @@ We define the relative isotopic shift for an excited state $i$ as
 
 \begin{equation}
   \label{eq:isot-shift-def-exc}
-  \Delta_i = \frac{E_i(^{16}O)- E_i(^{18}O)}{E_i(^{16}O)} \times 100
+  \Delta_i = \frac{\omega_i(^{16}O)- \omega_i(^{18}O)}{\omega_i(^{16}O)} \times 100
 \end{equation}
 
-\noindent where the energies $E_i$ are referred to the corresponding ground state.
+\noindent where the energies $\omega_i$ are referred to the corresponding ground state.
 
 For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system, that is, the system with $\lambda_{ir}=\lambda_R=0$,
 
 \begin{equation}
   \label{eq:isot-shift-def-grd}
-  \Delta_g = \frac{\Delta E_g(^{16}O)- \Delta E_g(^{18}O)}{\Delta E_g(^{16}O)} \times 100
+  \Delta_g = \frac{\Delta\omega_g(^{16}O)- \Delta\omega_g(^{18}O)}{\Delta \omega_g(^{16}O)} \times 100
 \end{equation}
 
-\noindent where $\Delta E_g \equiv E_g - E_g(\lambda_{ir}=0, \lambda_R=0)$.
+\noindent where $\Delta\omega_g \equiv \omega_g - \omega_g(\lambda_{ir}=0, \lambda_R=0)$. 
+For the calculation of $\Delta_g$ it is essential to include the \textit{zero point energy} in the phononic part (\ref{eq:phonon-part}) which is usually not taken into account.
 
 \section{Lattice distortions}
 \label{sec:lattice-distortions}
