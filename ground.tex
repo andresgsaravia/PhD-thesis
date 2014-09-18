@@ -40,16 +40,34 @@ From this plots we observe that it is only in the narrow range  $\sim 0.12 < \la
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=1.0\textwidth]{images/uir-vs-coupl-d.png}
-  \caption{Projection into phonon coordinates with $u_R=0$ (left panel) and calculated cluster distortion $d$ (right panel) for different $\lambda_{ir}$ coupling values.}
+  \caption{Projection into phonon coordinates (left panel) and calculated cluster distortion $d$ (right panel) for different $\lambda_{ir}$ coupling values with $u_R=0$.}
   \label{fig:uir-vs-coupl}
 \end{figure}
 
 \section{Bipolaron binding energy}
 \label{sec:grd-binding-energy}
 
-The bipolaron formation energy is $E_p = E(\lambda_{ir}=0)- E(\lambda_{ir}=0.13$ eV$) \sim 42$ meV and corresponds to the bipolaron binding energy. 
-This value compares favorably with the value obtained from femtosecond time-domain spectroscopy ($E_p \sim 45$ meV for YBa$_2$Cu$_3$O$_7$ \cite{Demsar1999}. 
-We also find that if we consider a smaller electron-lattice coupling such that the distortion is 0.08 $\AA$, as that observed for in plane Cu(2)-O in La$_{1.85}$Sr$_{0.15}$CuO$_4$ \cite{Bianconi1996}, we obtain $E_p \sim 32$ meV, which is also comparable to estimates for the pseudogap formation energy in this system \cite{Kusar2005}.
+The energy of the ground state changes with the coupling parameter $\lambda_{ir}$.
+The change in energy, $\Delta\omega_{g}$, between the coupled and uncoupled systems can be identified as the \textit{formation energy}.
+In particular, in the region where there is bipolaronic objects present, $\Delta\omega_{g}$ can be interpreted as the \textit{bipolaron binding energy}. 
+In figure \ref{fig:bip-energy} we show the dependency of $\Delta\omega_{g}$ with $\lambda_{ir}$, where we defined
+
+\begin{equation}
+  \label{eq:pol-energy}
+  \Delta\omega_{g}(\lambda_{ir}) = \omega_{g}(\lambda_{ir} = 0) - \omega_{g}(\lambda_{ir})
+\end{equation}
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/polaron-formation.png}
+  \caption{Bipolaron formation energy as a function of the $\lambda_{ir}$ coupling. The vertical line is drawn at the relevant value $\lambda_{ir}=0.1263$ eV.}
+  \label{fig:bip-energy}
+\end{figure}
+
+We observe a monotonical behaviour with small dependency in the weak coupling regime becoming stronger with greater coupling values.
+In particular, for the $\lambda_{ir}=0.1263$ eV value, which reproduces the observed distortion, we find $\Delta\omega_{g}(0.1263$ eV$) = \sim 38$ meV.
+This value compares favorably with the value obtained from femtosecond time-domain spectroscopy ($\sim 45$ meV) for YBa$_2$Cu$_3$O$_7$ \cite{Demsar1999}. 
+We also find that if we consider a smaller electron-lattice coupling such that the distortion is 0.08 \AA, as that observed for in plane Cu(2)-O in La$_{1.85}$Sr$_{0.15}$CuO$_4$ \cite{Bianconi1996}, we obtain $E_p \sim 35$ meV, which is also comparable to estimates for the pseudogap formation energy in this system (see Fig. 4b in \cite{Kusar2005}).
 
 \section{Isotopic effects in bipolaron formation}
 \label{sec:grd-isotopic}
@@ -66,8 +84,8 @@ The following figure plots this isotopic shift:
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.8\textwidth]{images/isot_polaron_formation.jpg}
-  \caption{Isotopic shift of the polaron formation energy.}
+  \includegraphics[width=0.8\textwidth]{images/isot-polaron-formation.png}
+  \caption{Isotopic shift of the bipolaron formation energy. The vertical line is placed at the relevant value $\lambda_{ir}=0.1263$.}
   \label{fig:isot_polaron_formation}
 \end{figure}
 
