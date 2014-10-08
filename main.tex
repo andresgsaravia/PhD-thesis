@@ -26,7 +26,7 @@
 
 % Thesis formatting
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{}
 \fancyhead[LE,RO]{\bfseries\thepage} 
 \fancyhead[LO]{\bfseries\rightmark} 
 \fancyhead[RE]{\bfseries\leftmark} 
@@ -70,20 +70,24 @@
 %------------------------------------%
 
 \begin{document}
-\renewcommand{\thepage}{\roman{page}}
+\pagenumbering{alph}
+{\pagestyle{empty}
+  \input{frontpage_en}
+  \cleardoublepage
+  \input{frontpage_es}
+  \cleardoublepage}
 
-%\input{frontpage}
-\maketitle
-\thispagestyle{empty}
-
-\newpage
 \pagenumbering{Roman}
+\phantomsection
+\addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
-\newpage
+{\pagestyle{fancyplain}
+  \input{previous}
+  \cleardoublepage}
 
 %\linenumbers
-\renewcommand{\thepage}{\arabic{page}}
-\setcounter{page}{1}
+\pagenumbering{arabic}
+\pagestyle{fancy}
 \input{intro}
 \input{model}
 \input{ground}
