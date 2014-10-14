@@ -262,11 +262,12 @@ Since the model hamiltonian (\ref{eq:full-hamiltonian}) does not distinguish spi
 
 The effects of isotopic substitutions in cuprate superconductors have been extensively studied and can reveal fundamental properties of the material (see section \ref{sec:isotopic_effects}). 
 It is, therefore, of interest to model these effects on the three sites cluster we are studying.
-Changing the atomic mass in any of the three sites of the model should change the phonon frequencies $(\omega_{ir},\omega_R$) in (\ref{eq:phonon-part}) and the coupling constants $(\lambda_{ir},\lambda_R)$ in (\ref{eq:coupling-part}).
 
-To model the effect of this change in mass we describe the motion of the nuclei as three masses ($m_i,\ i=1,2,3$) attached by springs of constants $k_1$ and $k_2$ (see figure \ref{fig:3-masses-2-springs}) and find the normal vibrational modes using classical mechanics.
-In our particular case we are interested in $m_1=m_3$ and $k_1=k_2$.
-%
+Changing the atomic mass in any of the three atomic should change the phonon frequencies $(\omega_{ir},\omega_R$) in (\ref{eq:phonon-part}).
+To calculate this chagne in frequencies we continue to model the infrared and Raman vibrational modes in the O(4)-Cu(1)-O(4) cluster as harmonic oscillators.
+In this section we consider a classical model of three masses ($m_i,\ i=1,2,3$ with $i=1,3$ for the oxygen and $i=2$ for the copper atoms) attached by springs of constants $k_1$ and $k_2$ (see figure \ref{fig:3-masses-2-springs}) and find the dependency of the normal vibrational modes on the mass of each atom.
+In our particular case we are interested in $m_1=m_3$ and $k_1=k_2$, but we start from the slightly more general case.
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.6\textwidth]{images/3-masses-2-springs-linear.png}
@@ -274,11 +275,11 @@ In our particular case we are interested in $m_1=m_3$ and $k_1=k_2$.
   \label{fig:3-masses-2-springs}
 \end{figure}
 %
-We will look only at the motion in the longitudinal direction so we attach a reference frame and call $ x_i$ ($i=1,2,3$) the coordinate describing the position of $m_i$.
+We will look only at the motion in the longitudinal direction so we attach a reference frame and call, as before, $x_i$ ($i=1,2,3$) the coordinate describing the position of $m_i$.
 A lagrangian $L$ for this system is 
 %
 \begin{align}
-L & = T-V\\
+L & = T-V\\ 
   & = \frac{1}{2}\sum_{i=1}^3 m_i \dot{x}_i^2 - \frac{1}{2}k_1(l_1-(x_2-x_1))^2+\frac{1}{2}k_2(l_2-(x_3-x_2))^2
 \end{align}
 
@@ -409,7 +410,7 @@ Summarizing this part, we have found the dependency of the phonon frequencies $\
 \end{equation}
 %
 for some constant $k$.
-From here we identify the reduced masses for each vibrational mode
+From here we identify the reduced masses for each vibrational mode\footnote{We use $m_{Cu}=63.546u$, $m_{^{16}O}=15.995u$ and $m_{^{18}O}=17.999u$.}
 %
 \begin{equation}
   \label{eq:redMassR}
@@ -422,26 +423,16 @@ From here we identify the reduced masses for each vibrational mode
 \end{equation}
 
 From equations (\ref{eq:coupling-constants},\ref{eq:omegaR}, \ref{eq:omegair}) it can be seen that an oxygen isotpe substitution $^{16}$O $\rightarrow$ $^{18}$O ammounts to a change in the frequencies  $(\omega_{ir}$, $\omega_R)$ and the coupling constants $(\lambda_{ir},\lambda_R)$.
-Denoting as $\omega^{(16)}$ and $\omega^{(18)}$ the phonon frequencies for a cluster with $^{16}$O and $^{18}$O respectively, from (\ref{eq:omegair}, \ref{eq:omegaR}) we can find the ratios
+Denoting as $\omega^{(16)}$ and $\omega^{(18)}$ the phonon frequencies for a cluster with $^{16}$O and $^{18}$O respectively, we can find the ratios
 %
-\begin{align}
+\begin{align}\label{eq:omega-isot}
   \omega^{(16)}_{ir}/\omega^{(18)}_{ir}
   & =\sqrt{\left(\frac{m_{^{18}O}}{m_{^{16}O}}\right)\left(\frac{m_{Cu}+2m_{^{16}O}}{m_{Cu}+2m_{^{18}O}}\right)} \\
+  & \simeq 1.039 \\
   \omega^{(16)}_{R}/\omega^{(18)}_{R}
-  & =\sqrt{\frac{m_{^{18}O}}{m_{^{16}O}}}
+  & =\sqrt{\frac{m_{^{18}O}}{m_{^{16}O}}} \\
+  & \simeq 1.061
 \end{align}
-
-Taking the actual values for copper and oxygen, $m_{Cu}=63.546u$, $m_{^{16}O}=15.995u$ and $m_{^{18}O}=17.999u$, we obtain
-%
-\begin{equation}
-  \label{eq:omega-ir-isot}
-  \omega^{(16)}_{ir} / \omega^{(18)}_{ir} \simeq 1.039
-\end{equation}
-%
-\begin{equation}
-  \label{eq:omega-R-isot}
-  \omega^{(16)}_{R} / \omega^{(18)}_{R} \simeq 1.061
-\end{equation}
 %
 Similarly, for the coupling constants $\lambda_{ir}$ and $\lambda_R$, from (\ref{eq:coupling-constants}), we can observe that
 %
@@ -457,7 +448,7 @@ and equivalently for the Raman coupling constant
   \lambda_R^{(16)} / \lambda_R^{(18)} \sqrt{\frac{m_{^{18}O}\omega_{R}^{(18)}}{m_{^{16}O}\omega_{R}^{(16)}}} \simeq 1.0299
 \end{equation}
 
-Summarizing, to model an isotopic substitution $^{16}$O$\rightarrow ^{18}$O we need to adjust the vibrational frequencies and coupling constants according to equations (\ref{eq:omega-ir-isot}-\ref{eq:lambda-Ram-isot})
+Summarizing, to model an isotopic substitution $^{16}$O$\rightarrow ^{18}$O we need to adjust the vibrational frequencies and coupling constants according to equations (\ref{eq:omega-isot}-\ref{eq:lambda-Ram-isot})
 
 \section{Isotopic shifts}
 
@@ -469,16 +460,16 @@ As is customary in optical spectroscopies we will consider the relative isotopic
 \end{equation}
 %
 where the energies $\omega_i$ are referred to the corresponding ground state.
-From this definition, using (\ref{eq:omega-ir-isot}, \ref{eq:omega-R-isot}), we can calculate the isotopic shift predicted by harmonic potentials for the Raman and infrared modes
+From this definition, using (\ref{eq:omegaR}, \ref{eq:omegair}), we can calculate the isotopic shift predicted by harmonic potentials for the Raman and infrared modes
 %
 \begin{equation}
   \label{eq:isot-harm-R}
-  \Delta_{R} = 1 - \frac{\omega_{R}(^{18})}{\omega_{R}(^{16})} \times 100 = 5.75\% 
+  \Delta_{R} = 1 - \frac{\omega_{R}(^{18}O)}{\omega_{R}(^{16}O)} \times 100 = 5.75\% 
 \end{equation}
 %
 \begin{equation}
   \label{eq:isot-harm-ir}
-  \Delta_{ir} = 1 - \frac{\omega_{ir}(^{18})}{\omega_{ir}(^{16})} \times 100 = 3.75\%
+  \Delta_{ir} = 1 - \frac{\omega_{ir}(^{18}O)}{\omega_{ir}(^{16}O)} \times 100 = 3.75\%
 \end{equation}
 %
 For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system, that is, the system with $\lambda_{ir}=\lambda_R=0$,
