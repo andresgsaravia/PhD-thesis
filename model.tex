@@ -47,7 +47,7 @@ The site energies are parametrized with $E_1=E_3=-E_2 \equiv E_0$.\footnote{In \
 $U$ is the on-site Coulomb interaction and $t$ is the hopping energy between two adjacent sites. 
 
 For the lattice  part of the Hamiltonian, $H_{ph}$, we consider both symmetric (Raman) and antisymmetric (infrared) modes described by boson operators $b_R$ and $b_{ir}$ and bare frequencies $\omega_R$ and $\omega_{ir}$ respectively,\footnote{Unlike previous publications, here we include the \textit{zero-point energy} for both phonon modes. 
-For most cases this is not needed since the excitation's energies are calculated relative to the ground state but, in chapter \ref{chap:ground} we study the ground state energy itself where this contribution is important}
+For most cases this is not needed since the excitation's energies are calculated relative to the ground state but, in chapter \ref{chap:ground} we study the ground state energy itself where this contribution is important.}
 %
 \begin{equation}
  \label{eq:phonon-part}
@@ -81,8 +81,8 @@ Here $u_{ir}$ and $u_R$ are the \textit{phonon coordinates} for the infrared and
   u_{ir} \equiv \left(\frac{\hbar}{2 m_{ir} \omega_{ir}}\right)^{1/2}(b^\dagger_{ir}+b_{ir}) = \frac{ x_1 + x_3 - ( 2 m_O/m_{Cu})x_2}{(2 + 4 m_O/m_{Cu})^{1/2}}
 \end{equation}
 %
-with $m_{ir}$ and $m_R$ being the reduced mass for each mode (see (\ref{eq:redMassR}, \ref{eq:redMassIr})), $x_i=2$ the position of the central copper atom and $x_i=1,3$ the positions of the oxygen atoms.
-The constant $s_0$ is introduced to avoid artificial shrinking of the cluster\footnote{This term is written slightly different in some publications, like \cite{MustredeLeon1992}, however both versions can be related noticing that $3 (n_1+n_3-4/3)=n_1-2n_2+n_3$.}. 
+with $m_{ir}$ and $m_R$ being the reduced mass for each mode (see (\ref{eq:redMassR}, \ref{eq:redMassIr}) below), $x_i=2$ the position of the central copper atom and $x_i=1,3$ the positions of the oxygen atoms.
+The constant $s_0$ is introduced to avoid artificial shrinking of the cluster\footnote{This term is written slightly different in some publications, for example in \cite{MustredeLeon1992}, $H_{el-ph}$ is proportional to $n_1-n_2+n_3$. However both versions can be related noticing that $3 (n_1+n_3-4/3)=n_1-2n_2+n_3$.}. 
 For consistency with other works \cite{MustredeLeon1992,DeLeon1999,Leon2008,MirandaMena2007} we fix $s_0=4/3$. 
 Using the definitions (\ref{eq:uR}, \ref{eq:uir}) we can rewrite (\ref{eq:prev-coupling-part}) as
 %
@@ -100,23 +100,167 @@ With
 From the definition of $H_{el-ph}$ we can observe that the electrons will be coupled to the infrared (antisimmetric) mode only when one oxygen is located at the copper site and the other in an oxygen.
 However, there will be electron-lattice coupling with the Raman (symmetric) mode in all cases.
 
-One simple basis set for this system can be denoted by is $\{\ket{e_1,e_2,ir,R}: e_1,e_2=1,2,3; ir,R=1,2,\ldots\}$ with $e_k$ being the position of the $k$-th hole, $ir$ the number of \textit{infrared} phonons and $R$ the number of \textit{Raman} phonons. 
+One simple basis set for this system can be denoted as $\{\ket{e_1,e_2,ir,R}: e_1,e_2=1,2,3; ir,R=1,2,\ldots\}$ with $e_k$ being the position of the $k$-th hole, $ir$ the number of \textit{infrared} phonons and $R$ the number of \textit{Raman} phonons. 
 This basis is infinite dimensional however, as discussed in section \ref{sec:comp_details}, for the lower energy excitations the eigenvalues and eigenvectors are well described using a basis with only a few phononic labels.
 
-To build the hamiltonian we need to assign an integer label $l$ to each basis state. 
-This can be achieved with the mapping
+\section{Lattice distortions}
+\label{sec:lattice-distortions}
+
+With the atomic coordinates $x_i$ as defined before ($i=1,3$ for the oxygens and $i=2$ for the copper) the distance difference $d$ between one O-Cu bond and the other is
 %
 \begin{equation}
-  \label{eq:label}
-  l = e_1 + 3(e_2 - 1) + 9\ ir + 9\ R (N_{ir} +1)
+  \label{eq:bondDiff}
+  d =  (x_3 - x_2) - (x_2 - x_1) = x_1 + x_3 - 2x_2 
 \end{equation}
 %
-with $N_{ir}$ being the total number of infrared phonons under consideration.
+The $x_i$ coordinates are varying at all times but taking an instant in which $x_2=0$ we can simplify (\ref{eq:bondDiff}) to
+%
+\begin{equation}
+  \label{eq:bondDiffSimpl}
+  d = x_1+x_3
+\end{equation}
+%
+Which can be related to the phonon coordinate $u_{ir}$ by using (\ref{eq:uir}) with $x_2=0$,
+%
+\begin{equation}
+  \label{eq:uirSimpl}
+  u_{ir}=\frac{x_1+x_3}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
+\end{equation}
+%
+Substitution (\ref{eq:bondDiffSimpl}) into (\ref{eq:uirSimpl}) and solving for $d$ gives
+%
+\begin{equation}
+  \label{eq:dvsuir}
+  d=\sqrt{2}\left(1 + 2\frac{m_O}{m_{Cu}} \right)^{1/2}u_{ir}
+\end{equation}
+%
+which is a relationship between the phonon coordinates, that can be calculated from the model's eigenfunctions, and the observable lattice distortion.
+Equation (\ref{eq:dvsuir}) allows a conection between this model hamiltonian and a specific experimental observation. 
+It is this relationship that helps fixing the free coupling parameters $\lambda_{ir}$ and $\lambda_R$ in this model.
+
+In the remainder of this section we show how to find the most probable $u_{ir}$ value for a given state in the model hamiltonian (\ref{eq:full-hamiltonian}).
+To do this we first take as an example a simple quantum harmonic oscillator 
+%
+\begin{equation}
+  \label{eq:harmOscHam}
+  H=\hbar\omega \left(a^\dagger a + \frac{1}{2}\right)
+\end{equation}
+with mass $m$ and frequency $\omega$.
+The creation ($a^\dagger$) and annihilation ($a$) operators are related to the real-space position coordinate $u$ as
+%
+\begin{equation}
+  \label{eq:harmOscRel}
+  u=\sqrt{\frac{\hbar}{2m\omega}}\left(a+a^\dagger\right)
+\end{equation}
+
+An energy eigenfunction, $\ket{n}$ where $n$ labels the \textit{number of phonons}, has a projection into the real space coordinate $u$ given in terms of a Hermite polynomial $H_n(u)$ of degree $n$ in the following way,
+%
+\begin{equation}
+  \label{eq:harmOscProj}
+  \braket{u}{n} 
+  \equiv \psi_n(u) 
+  = \frac{1}{\sqrt{2^n n!}} \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}
+  \exp\left(-\frac{m \omega u^2}{2 \hbar}\right) H_n\left( \sqrt{\frac{m \omega}{\hbar}} u \right) 
+\end{equation}
+%
+An arbitrary wavefunction $\ket{\psi}$ can be expanded in terms of the energy eigenfuntions as $\ket{\psi} = \sum_n \braket{n}{\psi} \ket{n}$ and projected in real space: $\braket{u}{\psi} = \sum_n \braket{n}{\psi} \braket{u}{n}$ with $\braket{u}{n}$ given by (\ref{eq:harmOscProj}).
+
+Now, returning to the model hamiltonian (\ref{eq:full-hamiltonian}), as discussed in section \ref{sec:hamiltonian-and-basis}, a possible basis set is given by the functions ${| e_1, e_2, ir, R \rangle}$ with $e_i$ the position of the $i$-th electron and $ir$, $R$ the number of infrared and Raman phonons respectively. 
+Thus an arbitrary wavefunction in this system, $\ket{\psi}$, can be expanded in this basis as
+%
+\begin{equation}
+  \label{eq:wf-phonon-base}
+  \ket{\psi}=\sum_{e_1,e_2,ir,R} \braket{e_1,e_2,ir,R}{\psi}\ket{e_1,e_2,ir,R}
+\end{equation}
+%
+and we can make the partial projection into the phonon coordinates $(u_{ir},u_R)$ as defined by (\ref{eq:uR},\ref{eq:uir}) in the following way
+%
+\begin{equation}
+  \label{eq:wf-expansion}
+  \braket{u_{ir},u_R}{\psi}=\sum_{e_1,e_2,ir,R} \braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\ket{e_1,e_2}
+\end{equation}
+%
+where we have denoted $\braket{u_{ir},u_R}{e_1,e_2,ir,R}$ as $\braket{u_{ir},u_R}{ir,R}\ket{e_1,e_2}$. 
+The term $\braket{u_{ir},u_R}{ir,R}$ is similar to (\ref{eq:harmOscProj}) but considering both phonon modes:
+%
+\begin{equation}
+  \label{eq:hermite-expansion}
+  \braket{u_{ir},u_R}{ir,R}  = \frac{\left(m_{ir}m_R\right)^{1/4}}{\sqrt{2^{(ir+R)} ir!R!\pi\hbar}}
+  \exp\left(-\frac{\tilde{u}_{ir}^2 + \tilde{u}_R^2}{2}\right) 
+  H_{ir}\left(\tilde{u}_{ir} \right)H_{R}\left(\tilde{u}_{R} \right)
+\end{equation}
+%
+where we have defined the normalized coordinates,
+%
+\begin{equation}
+  \label{eq:uTildeDef}
+  \tilde{u}_j \equiv \sqrt{\frac{m_j\omega_j}{\hbar}}\ u_j
+\end{equation}
+%
+for $j=ir,R$. 
+The reduced mass constants $m_{ir},m_R$ are determined later in (\ref{eq:redMassR}, \ref{eq:redMassIr}) from section \ref{sec:isotopic-model}.
+
+Since we are interested in finding real-space distortions in the cluster we now use (\ref{eq:wf-expansion}) to find the probability amplitude of finding a state $\ket{\psi}$ proyected into phonon coordinates $(u_{ir},u_R)$ for a given charge occupation $(e_1,e_2)$:
+%
+\begin{equation}
+  \begin{split}
+    & \left|\braket{e_1,e_2,u_{ir},u_R}{\psi}\right|^2 \\
+    & \ \ = \left|\sum_{e_1',e_2',ir,R}\braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\braket{e_1,e_2}{e_1',e_2'}\right|^2 \\
+    & \ \ = \left|\sum_{ir,R}\braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\right|^2
+  \end{split}
+\end{equation}
+
+The probability amplitude of finding a system in the state $\ket\psi$ with phonon coordinates ($u_{ir},u_R$) irrespective of the electronic configuration is given by the sum over the electronic degrees of freedom on the previous equation,
+%
+\begin{equation}
+  \label{eq:phonon-coord-projection}
+  \begin{split}
+    \left|\psi(u_{ir}, u_R)\right|^2 & \equiv \sum_{e_1,e_2}\left|\braket{e_1,e_2,u_{ir},u_R}{\psi}\right|^2 \\
+    & = \sum_{e_1,e_2} \left|\sum_{ir,R}\braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\right|^2
+  \end{split}
+\end{equation}
+%
+with $\braket{u_{ir},u_R}{ir,R}$ given by (\ref{eq:hermite-expansion}).
+
+To find the most probable cluster distortion $d$ we can find the value of $u_{ir}$ that produces a maximum in the projection (\ref{eq:phonon-coord-projection}) and substitute it in (\ref{eq:dvsuir}). This is done in section \ref{sec:grd-phonon-proj} in the next chapter.
+
+\section{Projection into states with definite electron occupation numbers}
+\label{sec:electronic-projection}
+
+Eigenstates of the hamltonian (\ref{eq:full-hamiltonian}), in general, have delocalized charges.
+To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
+The basis set we are using ($\{\ket{e_1,e_2,ir,R}\}$) has sharp values for the hole number operator on each site for a given number of infrared $ir$ and Raman $R$ phonons. 
+Thus, to find the probability $P(e_1,e_2)$ of finding one hole in site $e_1$ and the other on site $e_2$, we need only to sum over the infrared and Raman phonons of the system,
+%
+\begin{equation}
+  \label{eq:electron-occupation}
+  P(e_1,e_2)=\sum_{ir,R} \left| \braket{e_1,e_2,ir,R}{\psi} \right|^2
+\end{equation}
+%
+From the labeling convention stated in (\ref{eq:label}) we can visualize the nine possible combinations of hole occupancy. 
+Denoting, for example, $e_1$ as $\uparrow$ and $e_2$ as $\downarrow$ we have the following combinations:
+%
+\begin{equation}
+  \label{eq:basis-set}
+  \begin{array}{cccc}
+    1= & \uparrow \downarrow & - & - \\
+    2= & \uparrow & \downarrow & - \\
+    3= & \uparrow & - & \downarrow \\
+    4= & \downarrow & \uparrow & - \\
+    5= & - & \uparrow \downarrow & - \\
+    6= & - & \uparrow & \downarrow \\
+    7= & \downarrow & - & \uparrow \\
+    8= & - & \downarrow & \uparrow \\
+    9= & - & - & \uparrow \downarrow 
+  \end{array}
+\end{equation}
+%
+Since the model hamiltonian (\ref{eq:full-hamiltonian}) does not distinguish spin and the cluster is symmetrical, states \{1, 9\} are equivalent, as well as \{2, 4, 6, 8\} and \{3, 7\}.
 
 \section{Isotopic substitutions}
 \label{sec:isotopic-model}
 
-The effects of isotopic substitutions in cuprate superconductors have been extensively studied and reveal fundamental properties of the material (see section \ref{sec:isotopic_effects}). 
+The effects of isotopic substitutions in cuprate superconductors have been extensively studied and can reveal fundamental properties of the material (see section \ref{sec:isotopic_effects}). 
 It is, therefore, of interest to model these effects on the three sites cluster we are studying.
 Changing the atomic mass in any of the three sites of the model should change the phonon frequencies $(\omega_{ir},\omega_R$) in (\ref{eq:phonon-part}) and the coupling constants $(\lambda_{ir},\lambda_R)$ in (\ref{eq:coupling-part}).
 
@@ -347,161 +491,6 @@ For the ground state we define the energy isotopic shift $\Delta_g$ in a similar
 where $\Delta\omega_g \equiv \omega_g - \omega_g(\lambda_{ir}=0, \lambda_R=0)$. 
 For the calculation of $\Delta_g$ it is essential to include the \textit{zero point energy} in the phononic part (\ref{eq:phonon-part}) which is usually not taken into account.
 
-\section{Lattice distortions}
-\label{sec:lattice-distortions}
-
-To understand the lattice distortion for excitations in the model hamiltonian (\ref{eq:full-hamiltonian}) it is useful to find the projection of a given state to real space atomic coordinates. 
-In a simple quantum harmonic oscillator with mass $m$ and frequency $\omega$ the creation and annihilation operators, $a^\dagger$ and $a$, are related to the real-space coordinate $x$ as
-%
-\begin{equation}
-  \label{eq:harmOscRel}
-  x=\sqrt{\frac{\hbar}{2m\omega}}\left(a+a^\dagger\right)
-\end{equation}
-
-If we assume that phonon modes in our model hamiltonian (\ref{eq:phonon-part}) behave as quantum harmonic oscillators, we can define symmilar real space operators ($u_r,u_{ir}$) in terms of the bosonic creation and annihilation operatos ($b^\dagger,b$) for both, infrared and Raman, vibrational modes. 
-These operators, called \textit{phonon coordinates}, are also related to the positions $x_i$ of the three sites in the cluster \cite{MustredeLeon1992},
-
-The reduced masses $m_R$ and $m_{ir}$ are determined in equations (\ref{eq:redMassR}, \ref{eq:redMassIr}).
-In a quantum harmonic oscillator an energy eigenfunction, $\ket{n}$, has a projection into the real space coordinate $x$ given in terms of a Hermite polynomial $H_n(x)$ of degree $n$ in the following way,
-%
-\begin{equation}
-  \label{eq:harmOscProj}
-  \braket{x}{n} 
-  \equiv \psi_n(x) 
-  = \frac{1}{\sqrt{2^n n!}} \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}
-  \exp\left(-\frac{m \omega x^2}{2 \hbar}\right) H_n\left( \sqrt{\frac{m \omega}{\hbar}} x \right) 
-\end{equation}
-%
-For an arbitrary wavefunction $\ket{\psi} = \sum_n \braket{n}{\psi} \ket{n}$ the projection in real space is $\braket{x}{\psi} = \sum_n \braket{n}{\psi} \braket{x}{n}$ with $\braket{x}{n}$ given by \ref{eq:harmOscProj}.
-
-For the model hamiltonian (\ref{eq:full-hamiltonian}), as discussed in section \ref{sec:hamiltonian-and-basis}, a possible basis set is given by the functions ${| e_1, e_2, ir, R \rangle}$ with $e_i$ the position of the $i$-th electron and $ir$, $R$ the number of infrared and Raman phonons respectively. 
-Thus an arbitrary wavefunction in this system, $\ket{\psi}$, can be expanded as
-%
-\begin{equation}
-  \label{eq:wf-phonon-base}
-  \ket{\psi}=\sum_{e_1,e_2,ir,R} \braket{e_1,e_2,ir,R}{\psi}\ket{e_1,e_2,ir,R}
-\end{equation}
-%
-and we can make the partial projection into the phonon coordinates $(u_{ir},u_R)$ as defined by (\ref{eq:uR},\ref{eq:uir})
-%
-\begin{equation}
-  \label{eq:wf-expansion}
-  \braket{u_{ir},u_R}{\psi}=\sum_{e_1,e_2,ir,R} \braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\ket{e_1,e_2}
-\end{equation}
-%
-where we have denoted $\braket{u_{ir},u_r}{e_1,e_2,ir,R}=\braket{u_{ir},u_R}{ir,R}\ket{e_1,e_2}$. 
-The term $\braket{u_{ir},u_r}{ir,R}$ is similar to (\ref{eq:harmOscProj}) but considering both phonon modes:
-%
-\begin{equation}
-  \label{eq:hermite-expansion}
-  \braket{u_{ir},u_r}{ir,R}  = \frac{\left(m_{ir}m_R\right)^{1/4}}{\sqrt{2^{(ir+R)} ir!R!\pi\hbar}}
-  \exp\left(-\frac{\tilde{u}_{ir}^2 + \tilde{u}_R^2}{2}\right) 
-  H_{ir}\left(\tilde{u}_{ir} \right)H_{R}\left(\tilde{u}_{R} \right)
-\end{equation}
-%
-where we have defined the normalized coordinates,
-%
-\begin{equation}
-  \label{eq:uTildeDef}
-  \tilde{u}_j \equiv \sqrt{\frac{m_j\omega_x}{\hbar}}\ u_j
-\end{equation}
-%
-for $j=ir,R$. 
-Now, from (\ref{eq:wf-expansion}), the probability amplitude of findind a state $\ket{\psi}$ proyected into phonon coordinates $(u_{ir},u_R)$ for a given site occupation $(e_1,e_2)$ is
-%
-\begin{equation}
-  \begin{split}
-    & \left|\braket{e_1,e_2,u_{ir},u_R}{\psi}\right|^2 \\
-    & \ \ = \left|\sum_{e_1',e_2',ir,R}\braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\braket{e_1,e_2}{e_1',e_2'}\right|^2 \\
-    & \ \ = \left|\sum_{ir,R}\braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\right|^2
-  \end{split}
-\end{equation}
-
-Finally, the probability amplitude of finding a system in the state $\ket\psi$ with phonon coordinates ($u_{ir},u_R$) irrespective of the electronic configuration is given by the sum over the electronic degrees of freedom on the previous equation,
-%
-\begin{equation}
-  \label{eq:phonon-coord-projection}
-  \begin{split}
-    \left|\psi(u_{ir}, u_R)\right|^2 & \equiv \sum_{e_1,e_2}\left|\braket{e_1,e_2,u_{ir},u_R}{\psi}\right|^2 \\
-    & = \sum_{e_1,e_2} \left|\sum_{ir,R}\braket{e_1,e_2,ir,R}{\psi}\braket{u_{ir},u_R}{ir,R}\right|^2
-  \end{split}
-\end{equation}
-%
-with $\braket{u_{ir},u_R}{ir,R}$ given by (\ref{eq:hermite-expansion}).
-
-The projection \ref{eq:phonon-coord-projection} allows us to calculate the probability amplitude of finding a specific distortion in the atomic coordinates for the O-Cu-O cluster.
-With the atomic coordinates $x_i$, as defined in section \ref{sec:isotopic-model}, the difference $d$ in between one O-Cu bond and the other is
-%
-\begin{equation}
-  \label{eq:bondDiff}
-  d =  (x_3 - x_2) - (x_2 - x_1) = x_1 + x_3 - 2x_2 
-\end{equation}
-%
-The $x_i$ coordinates are varying at all times but taking an instant in which $x_2=0$ we can simplify (\ref{eq:bondDiff}) to
-%
-\begin{equation}
-  \label{eq:bondDiffSimpl}
-  d = x_1+x_3
-\end{equation}
-%
-From $u_{ir}$'s definition in (\ref{eq:uir}),
-%
-\begin{equation}
-  \label{eq:uirSimpl}
-  u_{ir}=\frac{x_1+x_3}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
-\end{equation}
-%
-Now, using (\ref{eq:bondDiffSimpl}) and (\ref{eq:uirSimpl}), we find that
-%
-\begin{equation}
-  \label{eq:uirvsd}
-  u_{ir} = \frac{d}{\left( 2+4 m_O/m_{Cu} \right)^{1/2}}
-\end{equation}
-%
-or, solving for $d$,
-%
-\begin{equation}
-  \label{eq:dvsuir}
-  d=\sqrt{2}\left(1 + 2\frac{m_O}{m_{Cu}} \right)^{1/2}u_{ir}
-\end{equation}
-%
-which is a relationship between the phonon coordinates, that can be calculated from the model's eigenfunctions, and the observable lattice distortion. 
-Equation (\ref{eq:dvsuir}) allows a conection between this model hamiltonian and a specific experimental observation. 
-It is this relationship that helps fixing the free coupling parameters $\lambda_{ir}$ and $\lambda_R$ in this model.
-
-\section{Projection into states with definite electron occupation numbers}
-\label{sec:electronic-projection}
-
-Eigenstates of the hamltonian \ref{eq:full-hamiltonian}, in general, have delocalized charges.
-To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
-The basis set we are using ($\{\ket{e_1,e_2,ir,R}\}$) has sharp values for the hole number operator on each site for a given number of infrared $ir$ and Raman $R$ phonons. 
-Thus, to find the probability $P(e_1,e_2)$ of finding one hole in site $e_1$ and the other on site $e_2$, we need only to sum over the infrared and Raman phonons of the system,
-%
-\begin{equation}
-  \label{eq:electron-occupation}
-  P(e_1,e_2)=\sum_{ir,R} \left| \braket{e_1,e_2,ir,R}{\psi} \right|^2
-\end{equation}
-%
-From the labeling convention stated in (\ref{eq:label}) we can visualize the nine possible combinations of hole occupancy. 
-Denoting, for example, $e_1$ as $\uparrow$ and $e_2$ as $\downarrow$ we have the following combinations:
-%
-\begin{equation}
-  \label{eq:basis-set}
-  \begin{array}{cccc}
-    1= & \uparrow \downarrow & - & - \\
-    2= & \uparrow & \downarrow & - \\
-    3= & \uparrow & - & \downarrow \\
-    4= & \downarrow & \uparrow & - \\
-    5= & - & \uparrow \downarrow & - \\
-    6= & - & \uparrow & \downarrow \\
-    7= & \downarrow & - & \uparrow \\
-    8= & - & \downarrow & \uparrow \\
-    9= & - & - & \uparrow \downarrow 
-  \end{array}
-\end{equation}
-%
-Since the model hamiltonian (\ref{eq:full-hamiltonian}) does not distinguish spin and the cluster is symmetrical, states (1, 9) are equivalent, as well as (2, 4, 6, 8) and (3, 7).
-
 \section{Choice of parameters}
 \label{sec:model-parameters}
 
@@ -562,5 +551,15 @@ It is this mixing of electronic and lattice states that allows the exact treatme
 We performed an exact diagonalization of the Hamiltonian matrix with a basis of 8649 states using a QR algorithm \cite{eigenweb}\footnote{The hamiltonian (\ref{eq:full-hamiltonian}) is a sparse matrix, so a more efficient approach is being taken in subsequent calculations, in extensions of this model, using Lanczos algorithm. In this work we used a QR algorithm because it was readily available and provided a large enough basis set to ensure convergence.}.
 The basis includes up to 30 harmonic Raman and 30 harmonic infrared phonons. 
 The  truncation of the basis to a finite number of phonons could introduce innacuracies, however we found this choice to be an adecuate choice to ensure convergence in the few lowest energy states we are considering and electron-lattice couplings up to $\sim0.25$ eV\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}.
+
+To build the hamiltonian matrix we need to assign an integer label $l$ to each basis state. 
+This can be achieved with the mapping
+%
+\begin{equation}
+  \label{eq:label}
+  l = e_1 + 3(e_2 - 1) + 9\ ir + 9\ R (N_{ir} +1)
+\end{equation}
+%
+with $N_{ir}$ being the total number of infrared phonons under consideration.
 
 % Maybe a plot here showing convergence in the energy of the ground state for different number of phonons?
