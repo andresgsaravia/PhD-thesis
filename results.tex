@@ -6,24 +6,34 @@
 \section{Classification of the excitations}
 \label{sec:classification}
 
-As previously noted in section \ref{sec:hamiltonian-and-basis}, only for zero electron-lattice couplings the eigenstates of the many-body Hamiltonian (\ref{eq:full-hamiltonian}) can be described as a direct product of purely electronic and phononic states. 
-In that scenario each eigenstate has a sharp value for the phonon number operators $b_Rb^\dagger_R$ and $b_{ir}b^\dagger_{ir}$ allowing its identification as a \textit{phononic} state with a given number of phonons (an eigenstate of $H_{ph}$), an \textit{electronic} state (an eigenstate of $H_{el}$) or a product of those two.
-However, for electron-lattice couplings larger than zero, the phonon number operator has some dispersion and the eigenstates are no longer purely phononic or electronic in nature.
-In figure \ref{fig:electr-proj} we show the first electronic state for different $\lambda_{ir}$ values
-
+As previously noted in section \ref{sec:hamiltonian-and-basis}, only for zero charge-lattice couplings the eigenstates of the many-body Hamiltonian (\ref{eq:full-hamiltonian}) can be described as a direct product of purely electronic (an eigenstate of $H_{el}$) and phononic (an eigenstate of $H_{ph}$) states. 
+That is, when the coupling parameters are zero the phonon number opreators $b_Rb^\dagger_R$ and $b_{ir}b^\dagger_{ir}$ have integer values with zero dispersion.
+Increasing the value of the coupling parameters produces eigenstates with different mean phonon values and some finite dispersion.
+In this scenario, the eigenstates are not striclty \textit{phononic}, \textit{electronic} or a product of both. 
+The transition from this purely electronic or phononic states to a mixture of both, as a function of the coupling parameter $\lambda_{ir}$ is smooth.
+That is, a hamiltonian with a small $\lambda_{ir}$ value will have only slighty different eigenstates from the uncoupled hamiltonian.
+This mixed eigenstates can be thought of as largely phononic or electronic in nature.
+For large coupling values the eigenstates are very different and can not be easily related to they uncoupled counterparts.
+In figure \ref{fig:electr-proj} we show the first electronic state, for different $\lambda_{ir}$ values, projected with the first electronic state in the uncoupled system.
+From this projection we can see that for small coupling values the electronic eigenstate remains largely unchanged.
+In the middle coupling regime the change is strongest and then approaches zero at larger couplings.
+This means that for small enough coupling values, this state remains \textit{electronic} in nature.
+The vertical line in \ref{fig:electr-proj} at $\lambda_{ir}=0.1263$ eV, as will be discussed in section \ref{sec:grd-phonon-proj}, represents the $\lambda_{ir}$ value that reproduces the experimentally observed cluster distortion.
+At this coupling value the electronic eigenstate has a projection with its uncoupled counterpart of $\sim 0.75$ which indicates that, although it has been changed considerably by the charge-lattice coupling, remains mostly electronic in nature.
+Similar phenomenology can be observed for the rest of the excitations in this model.
+%
 \begin{figure}
   \centering
   \input{images/electrProj}
   \caption[Projection of the first \textit{electronic} state with itself at $\lambda_{ir}=0$.]
-  {Projection of the first \textit{electronic} state with itself at $\lambda_{ir}=0$. 
-    The vertical line denotes the experimentally relevant value $\lambda_{ir}=0.1265$ eV.}
+  {Projection of the first \textit{electronic} state with itself at $\lambda_{ir}=0$.
+    The vertical line denotes the experimentally relevant value $\lambda_{ir}=0.1263$ eV.}
   \label{fig:electr-proj}
 \end{figure}
 
-% - Following the eigenvalue, mean ir (Ram) and their dispersions we can track them with increasing coupling (plot?)
-% Maybe include the plot projecting the electronic state at \lambda_{ir}>0 with itself at \lambda_{ir}=0
+Even though the eigenstates, for finite charge-lattice couplings, are not be strictly electronic or phononic we will continue to refer to them as such since that interpretation remains useful in the regime of interest to us.
 
-
+\section{Infrared spectra}
 Section about the states with 2 and 3 infrared phonons and their particular behaviour.
 
 \section{Energy renormalization}
