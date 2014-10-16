@@ -459,8 +459,8 @@ As is customary in optical spectroscopies we will consider the relative isotopic
   \Delta_i = \frac{\omega_i(^{16}O)- \omega_i(^{18}O)}{\omega_i(^{16}O)} \times 100
 \end{equation}
 %
-where the energies $\omega_i$ are referred to the corresponding ground state.
-From this definition, using (\ref{eq:omegaR}, \ref{eq:omegair}), we can calculate the isotopic shift predicted by harmonic potentials for the Raman and infrared modes
+where the energies $\omega_i$ are calculated relative to the corresponding ground state.
+From this definition, using (\ref{eq:omegaR}, \ref{eq:omegair}), we can calculate the isotopic shift predicted by harmonic potentials for the Raman and infrared modes:
 %
 \begin{equation}
   \label{eq:isot-harm-R}
@@ -472,6 +472,10 @@ From this definition, using (\ref{eq:omegaR}, \ref{eq:omegair}), we can calculat
   \Delta_{ir} = 1 - \frac{\omega_{ir}(^{18}O)}{\omega_{ir}(^{16}O)} \times 100 = 3.75\%
 \end{equation}
 %
+Strong deviations from these values are indicative of a more complex behaviour.
+
+% Discuss how anharmonic potentials give only positive isotopic shifts so negative values could mean polaronic behaviour.
+
 For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system, that is, the system with $\lambda_{ir}=\lambda_R=0$,
 %
 \begin{equation}
@@ -494,8 +498,8 @@ The bare phonon frequencies are fixed to values found experimentally in optical 
 In order to consider the simplest possible model we make the further assumption of taking the on-site Coulomb repulsion in the copper and oxygen sites to be equal with no nearest neighbor Coulomb repulsion. 
 We also use a single hopping parameter $t$ and ignore hopping between the two oxygen sites. 
 Since only the coupling between the asymmetric mode and the charge motion leads to a measurable lattice distortion, with two Cu–O bond lengths, we only consider the effect of the variation in the electron–lattice coupling constant with the antisymmetric mode, $\lambda_{ir}$, and we set the electron-lattice coupling with the symmetric mode, $\lambda_R$ , as zero \cite{Salkola1995}. 
-The inclusion of those considerations in the model, or other choices of parameters (e.g. \cite{Salkola1994, Salkola1995}) yield very similar results.
-The relevant value for the coupling $\lambda_{ir}$ is determined using equation \ref{eq:dvsuir}; it is chosen such that the ground state has a maximum probability density at a $u_{ir}$ that reproduces the observed lattice distortion of 0.13 \AA \cite{?}.
+The inclusion of those considerations in the model, or other choices of parameters produce very similar results (e.g. \cite{Salkola1994, Salkola1995}).
+The relevant value for the coupling $\lambda_{ir}$ is determined using equation \ref{eq:dvsuir}; it is chosen such that the ground state has a maximum probability density at a $u_{ir}$ that reproduces the observed lattice distortion of 0.13 \AA\ \cite{MustredeLeon1991}.
 In this work we use the same parameters as \cite{DeLeon1999, Leon2008, MirandaMena2007,Mena2006}, namely:
 
 \begin{itemize*}
@@ -506,7 +510,7 @@ In this work we use the same parameters as \cite{DeLeon1999, Leon2008, MirandaMe
 \item Bare phonon frequency for the infrared mode: $\omega_{ir}=612.4$ cm$^{-1}$
 \end{itemize*}
 
-As previously stated, some variation in the parameter space has been explored without changes in the basic phenomenology. Table \ref{tab:parameters} shows the parameters for this model used in other publications\footnote{It seems that the reported values for the phonon frequencies in \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed in Fig. 1 of \cite{Salkola1994} at $\lambda_{ir}=0$.}.
+As previously stated, some variation in the parameter space has been explored without changes in the basic phenomenology. Table \ref{tab:parameters} shows the parameters for this model used in other publications\footnote{It seems that the reported values for the phonon frequencies in \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed, for example, in Fig. 1 of \cite{Salkola1994} at $\lambda_{ir}=0$.}.
 
 \begin{table}[h]
   \centering
@@ -528,11 +532,11 @@ As previously stated, some variation in the parameter space has been explored wi
 \label{sec:classification}
 
 As previously noted in section \ref{sec:hamiltonian-and-basis}, only for zero electron-lattice couplings the eigenstates of the many-body Hamiltonian (\ref{eq:full-hamiltonian}) can be described as a direct product of purely electronic and phononic states. 
-In this scenario each eigenstate has a sharp value for the phonon number operators $b_Rb^\dagger_R$ and $b_{ir}b^\dagger_{ir}$ allowing its identification as a \textit{phononic} state with a given number of phonons, an \textit{electronic} state or a simple product of those two.
+In that scenario each eigenstate has a sharp value for the phonon number operators $b_Rb^\dagger_R$ and $b_{ir}b^\dagger_{ir}$ allowing its identification as a \textit{phononic} state with a given number of phonons (an eigenstate of $H_{ph}$), an \textit{electronic} state (an eigenstate of $H_{el}$) or a product of those two.
 However, for electron-lattice couplings larger than zero, the phonon number operator has some dispersion and the eigenstates are no longer purely \textit{phononic} or \textit{electronic} in nature.
 It is this mixing of electronic and lattice states that allows the exact treatment used in this work to explore a phenomenology not reachable with the adiabatic and anti-adiabatic approximations.
 
-% - Following the eigenvalue, mean ir (Ram) and their dispersions we can track them with increasing couling (plot?)
+% - Following the eigenvalue, mean ir (Ram) and their dispersions we can track them with increasing coupling (plot?)
 % Maybe include the plot projecting the electronic state at \lambda_{ir}>0 with itself at \lambda_{ir}=0
 
 
