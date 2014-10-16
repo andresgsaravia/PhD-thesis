@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 
 % Misc. packages
-\usepackage{graphicx,color,amsmath,mdwlist,fancyhdr,multicol}
+\usepackage{graphicx,color,amsmath,mdwlist,fancyhdr,multicol,wrapfig}
 \usepackage[switch*,pagewise]{lineno}
 \modulolinenumbers[5]
 
@@ -107,8 +107,10 @@
 \addcontentsline{toc}{chapter}{\bibname}
 \bibliographystyle{unsrt}
 
-% Subject index
-\addcontentsline{toc}{chapter}{Subject index}
-\printindex
+% Lists and indices
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of figures}
+\listoffigures
 
 \end{document}
