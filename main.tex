@@ -10,6 +10,8 @@
 \usepackage[switch*,pagewise]{lineno}
 \modulolinenumbers[5]
 
+\usepackage[titletoc]{appendix}
+
 % PDF links and metadata
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
@@ -95,8 +97,9 @@
 \input{electronic}
 \input{conclusion}
 
-\appendix
-%\include{filename}
+\begin{appendices}
+  \input{compute_details}
+\end{appendices}
 
 % Bibliography
 \cleardoublepage
