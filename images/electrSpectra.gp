@@ -1,10 +1,10 @@
-# Plot for the first two columns in the "../datasets/polaronFormation.txt" data file
-# Output is produced in "../images/polaronFormation.tex"
+# Plot for the electronic excitations only in the"../datasets/energies.txt" data
+# Output is produced in "../images/electrSpectra.tex"
 reset
 set encoding utf8
-set t epslatex color colortext size 12cm,7cm
+set t epslatex color colortext size 12cm,8cm
 cd '../'                 # We need to move to the main.tex path to avoid some silly issues...
-set output 'images/polaronFormation.tex'
+set output 'images/electrSpectra.tex'
 
 # color definitions
 set border linewidth 1.5
@@ -25,16 +25,18 @@ set format y '\scriptsize %g'
 set style line 12 lc rgb'#808080' lt 0 lw 1
 set grid back ls 12
 
-
 set xlabel '$\lambda_{ir}$ (eV)'
-set ylabel '$\Delta\omega_g\ (meV)$' offset 3
+set ylabel '$\omega_i$ (cm$^{-1}$)'
 set xrange[0:0.25]
 set xtics 0.02
-set yrange[-600:10]
-set ytics 100
+set yrange[1000:2000]
+set ytics 250
 
 set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
-set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.12
-plot 'datasets/polaronFormation.txt'  u 1:($2*1000) with lines notitle ls 6
+set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
+plot 'datasets/energies.txt'  u 1:8   with lines notitle ls 2,\
+     'datasets/energies.txt'  u 1:13  with lines notitle ls 5,\
+     'datasets/energies.txt'  u 1:14  with lines notitle ls 6,\
+     1376.41780 notitle lc '#AAAAAA'
 
 set output

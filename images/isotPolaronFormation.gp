@@ -19,13 +19,15 @@ set style line 7 lc rgb '#9400d3' lt 1 lw 2
 set style line 11 lc rgb '#505050' lt 1
 set border 3 back ls 11
 set tics nomirror out scale 0.75
+set format x '\scriptsize %g'
+set format y '\scriptsize %g'
 # Grid
 set style line 12 lc rgb'#808080' lt 0 lw 1
 set grid back ls 12
 
 
 set xlabel '$\lambda_{ir}$ (eV)'
-set ylabel '$\Delta_g (meV)$
+set ylabel '$\Delta_g\ (meV)$' offset 3
 set xrange[0:0.25]
 set xtics 0.05
 set yrange[5:11]
