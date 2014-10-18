@@ -1,10 +1,10 @@
-# Plot for the "../datasets/electrProj.txt" data
-# Output is produced in "../images/electrProj.tex"
+# Plot for the infrared excitations only in the"../datasets/energies.txt" data
+# Output is produced in "../images/irSpectra.tex"
 reset
 set encoding utf8
-set t epslatex color colortext size 12cm,7cm
+set t epslatex color colortext size 12cm,8cm
 cd '../'                 # We need to move to the main.tex path to avoid some silly issues...
-set output 'images/electrProj.tex'
+set output 'images/irSpectra.tex'
 
 # color definitions
 set border linewidth 1.5
@@ -25,14 +25,20 @@ set grid back ls 12
 
 
 set xlabel '$\lambda_{ir}$ (eV)'
-set ylabel '$\left|\braket{\psi (\lambda_{ir}=0)}{\psi (\lambda_{ir})}\right|$'
+set ylabel '$\omega_i$ (cm$^{-1}$)'
 set xrange[0:0.25]
 set xtics 0.05
-set yrange[0:1.05]
-set ytics 0.2
+set yrange[0:2000]
+set ytics 250
 
 set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
-plot 'datasets/electrProj.txt'  u 1:3 with lines notitle ls 6
+plot 'datasets/energies.txt'  u 1:4  with lines notitle ls 2,\
+     'datasets/energies.txt'  u 1:6  with lines notitle ls 2,\
+     'datasets/energies.txt'  u 1:7  with lines notitle ls 5,\
+     'datasets/energies.txt'  u 1:10 with lines notitle ls 2,\
+     'datasets/energies.txt'  u 1:11 with lines notitle ls 5,\
+     'datasets/energies.txt'  u 1:12 with lines notitle ls 6,\
+     612.4 notitle lw 1 
 
 set output
