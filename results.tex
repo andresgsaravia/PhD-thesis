@@ -1,7 +1,16 @@
 \chapter{Results}
 \label{chap:results}
 
-% Talk about the calculations we did: parameters as before described with variable \lambda_{ir}; mean phonons, projections, see appendix A, etc...
+We performed a series of diagonalizations of the hamiltonian (\ref{eq:full-hamiltonian}) using the parameters described in section \ref{sec:model-parameters} with variable charge-lattice coupling with the asymmetric (infrared) mode, $\lambda_{ir}$. 
+We took $\lambda_{ir}$ values in the representative range from 0 eV to 0.25 eV. 
+This range allowed us to explore the behaviour in the small, middle and strong coupling regimes. 
+Besides the eigenvalues and eigenvectors of the hamiltonian we also calculated the mean (infrared and Raman) phonons with their dispersions and the projections into phonon coordinates $(u_{ir}, u_R)$ as discussed in section \ref{sec:lattice-distortions}.
+
+We start this chapter with section \ref{sec:classification} describing the general nature of the different excitations. 
+In section \ref{sec:irSpectra} we calculate some features that should be present in the infrared spectra followed, in section \label{sec:irIsotopicShifts}, by a description of the effects that the isotopic $^{16}$O$\rightarrow ^{18}$O has in the spectra. 
+Finally we conclude in section \label{sec:irPhononProj} with some observations about the projections into the phonon coordinates.
+
+In appendix \ref{chap:comp_details} we discuss more details about the calculations, such as the algorithm used and the errors introduced by the truncation in the basis.
 
 \section{Classification of the excitations}
 \label{sec:classification}
@@ -33,6 +42,7 @@ Even though the eigenstates, for finite charge-lattice couplings, are not strict
 \end{figure}
 
 \section{Infrared spectra}
+\label{sec:irSpectra}
 
 Figure \ref{fig:irSpectra} shows the infrared-active excitations for a range of $\lambda_{ir}$ values.
 Note that, due to dipole selection rules, the excitation with two infrared phonons (green) is not visible with infared spectroscopy.
@@ -50,16 +60,9 @@ Note that, due to dipole selection rules, the excitation with two infrared phono
 
 At large $\lambda_{ir}$ we recover the harmonic behaviour. This is analog to have a spring with a displaced equilibrium position.
 
-\section{Projection into phonon coordinates}
-
-\begin{figure}
-  \centering
-  \input{images/phononProj2-3ir}
-  \caption{Projection into phonon coordinates of the states with two (top) and three (bottom) infrared phonons.}
-  \label{fig:phononProj2-3ir}
-\end{figure}
 
 \section{Isotopic shifts}
+\label{sec:irIsotopicShifts}
 
 The isotopic shifts are different:
 
@@ -68,4 +71,14 @@ The isotopic shifts are different:
   \includegraphics[width=0.8\textwidth]{images/isot-2_3ir.jpg}
   \caption{Isotopic shifts}
   \label{fig:isot-2_3ir}
+\end{figure}
+
+\section{Projection into phonon coordinates}
+\label{sec:irPhononProj}
+
+\begin{figure}
+  \centering
+  \input{images/phononProj2-3ir}
+  \caption{Projection into phonon coordinates of the states with two (top) and three (bottom) infrared phonons.}
+  \label{fig:phononProj2-3ir}
 \end{figure}
