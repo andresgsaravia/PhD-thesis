@@ -90,3 +90,6 @@ sympy-plots-for-*.tex/
 
 # final document
 main.pdf
+
+# Emacs autosaves
+.#*
