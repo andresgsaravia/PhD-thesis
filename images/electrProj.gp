@@ -27,7 +27,7 @@ set grid back ls 12
 
 
 set xlabel '$\lambda_{ir}$ (eV)'
-set ylabel '$\left|\braket{\psi (\lambda_{ir}=0)}{\psi (\lambda_{ir})}\right|$'
+set ylabel '$\left|\braket{\psi_{el} (\lambda_{ir}=0)}{\psi_{el} (\lambda_{ir})}\right|$'
 set xrange[0:0.25]
 set xtics 0.02
 set yrange[0:1.05]

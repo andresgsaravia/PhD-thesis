@@ -15,24 +15,24 @@ In appendix \ref{chap:comp_details} we discuss more details about the calculatio
 \section{Classification of the excitations}
 \label{sec:classification}
 
-As previously noted in section \ref{sec:hamiltonian-and-basis}, only for zero charge-lattice couplings the eigenstates of the many-body Hamiltonian (\ref{eq:full-hamiltonian}) can be described as a direct product of purely electronic (an eigenstate of $H_{el}$) and phononic (an eigenstate of $H_{ph}$) states. 
+As previously noted in section \ref{sec:hamiltonian-and-basis}, only for zero charge-lattice couplings the eigenstates of the many-body Hamiltonian (\ref{eq:full-hamiltonian}) can be described as a direct product of an electronic (an eigenstate of $H_{el}$) and a phononic (an eigenstate of $H_{ph}$) state.
 That is, when the coupling parameters are zero the phonon number opreators $b_Rb^\dagger_R$ and $b_{ir}b^\dagger_{ir}$ have integer values with zero dispersion.
 Increasing the value of the coupling parameters produces eigenstates with different mean phonon values and some finite dispersion.
-In this scenario, the eigenstates are not striclty \textit{phononic}, \textit{electronic} or a product of both. 
-The transition from this purely electronic or phononic states to a mixture of both, as a function of the coupling parameter $\lambda_{ir}$ is smooth.
+In this scenario, the eigenstates can not be separated as a product of phononic and electronic states.
+The deviation from this product of purely electronic and phononic states, as a function of the coupling parameter $\lambda_{ir}$, is smooth.
 That is, a hamiltonian with a small $\lambda_{ir}$ value will have only slighty different eigenstates from the uncoupled hamiltonian.
-This mixed eigenstates can be thought of as largely phononic or electronic in nature.
-For large coupling values the eigenstates are very different and can not be easily related to they uncoupled counterparts.
-In figure \ref{fig:electr-proj} we show the first electronic state, for different $\lambda_{ir}$ values, projected with the first electronic state in the uncoupled system.
-From this projection we can see that for small coupling values the electronic eigenstate remains largely unchanged.
-In the middle coupling regime the change is strongest and then approaches zero at larger couplings.
+This mixed eigenstates, in the small couping regime, can be thought of as largely \textit{phononic} or \textit{electronic} in nature.
+For larger coupling values the eigenstates are very different from their uncoupled counterparts.
+As an illustration of this we show, in figure \ref{fig:electr-proj}, the first electronic excitation for different $\lambda_{ir}$ values, $\psi_{el}(\lambda_{ir})$ projected with itself for the uncoupled system ($\lambda_{ir}=0$).
+From this projection we can see that for small coupling values $\psi_{el}$ remains largely unchanged.
 This means that for small enough coupling values, this state remains \textit{electronic} in nature.
-The vertical line in \ref{fig:electr-proj} at $\lambda_{ir}=0.1263$ eV, as will be discussed in section \ref{sec:grd-phonon-proj}, represents the $\lambda_{ir}$ value that reproduces the experimentally observed cluster distortion.
-At this coupling value the electronic eigenstate has a projection with its uncoupled counterpart of $\sim 0.75$ which indicates that, although it has been changed considerably by the charge-lattice coupling, remains mostly electronic in nature.
-Similar phenomenology can be observed for the rest of the excitations in this model.
-Even though the eigenstates, for finite charge-lattice couplings, are not strictly electronic or phononic we will continue to refer to them as such since that interpretation remains useful in the regime of interest to us.
+In the middle coupling regime the change is strongest with the projection approaching asymptotically to large couplings.
+The vertical line in \ref{fig:electr-proj} at $\lambda_{ir}=0.1263$ eV, as will be discussed in section \ref{sec:grd-phonon-proj}, represents the $\lambda_{ir}$ value that reproduces the experimentally observed cluster distortion of 0.13 \AA.
+At this coupling value the electronic eigenstate has a projection with its uncoupled counterpart near $\sim 0.75$ which indicates that, although it has been somewhat changed, it remains mostly \textit{electronic} in nature.
+Similar observations can be made for the rest of the excitations in this model.
+For this reason even though the eigenstates, for finite charge-lattice couplings, are not strictly electronic or phononic we will continue to refer to them as such since that interpretation remains useful in the regime of interest to us.
 %
-\begin{figure}
+\begin{figure}[h]
   \centering
   \input{images/electrProj}
   \caption[Projection of the first \textit{electronic} state with itself at $\lambda_{ir}=0$.]
@@ -41,13 +41,19 @@ Even though the eigenstates, for finite charge-lattice couplings, are not strict
   \label{fig:electr-proj}
 \end{figure}
 
+Given the possibility of making such a distinction for the different excitations we will discuss \textit{phononic} and \textit{electronic} excitations separatedly. 
+Since we are setting the charge-lattice coupling parameter to the symmetrical (Raman) vibrational mode ($\lambda_R$) as zero and these excitations are unchanged by an increase in $\lambda_{ir}$ all excitations will have a definite eigenvalue for the Raman number operator $b_R^\dagger b_R$. 
+An excitation which, at $\lambda_{ir}=0$, has an eigenvalue of zero for the infrared number operator $b_{ir}^\dagger b_{ir}$ and the electronic part of the hamiltonian $H_{el}$ (i.e. a purely \textit{Raman} excitation) will remain unchanged with a variation of $\lambda_{ir}$.
+We will obviate any discussion about these excitations and ignore them for the rest of this thesis. 
+
+
 \section{Infrared spectra}
 \label{sec:irSpectra}
 
 Figure \ref{fig:irSpectra} shows the infrared-active excitations for a range of $\lambda_{ir}$ values.
 Note that, due to dipole selection rules, the excitation with two infrared phonons (green) is not visible with infared spectroscopy.
 
-\begin{figure}
+\begin{figure}[h]
   \centering
   \input{images/irSpectra}
   \caption[Infrared-active excitations as a function of electron-lattice coupling.]
