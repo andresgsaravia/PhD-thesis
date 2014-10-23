@@ -1,5 +1,5 @@
 # Plot for the isotopic effect of electronic excitations in the"../datasets/isotShifts.txt" data
-# Output is produced in "../images/electrShifts.tex"
+# Output is produced in "../images/electrIsot.tex"
 reset
 set encoding utf8
 set t epslatex color colortext size 12cm,8cm
@@ -26,7 +26,7 @@ set style line 12 lc rgb'#808080' lt 0 lw 1
 set grid back ls 12
 
 set xlabel '$\lambda_{ir}$ (eV)'
-set ylabel '$\omega_i$ (cm$^{-1}$)'
+set ylabel '$\Delta_i$' offset 3
 set xrange[0:0.25]
 set xtics 0.02
 set yrange[-2:2]
