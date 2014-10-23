@@ -36,7 +36,6 @@ set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
 plot 'datasets/isotShifts.txt'  u 1:8   with lines notitle ls 2,\
      'datasets/isotShifts.txt'  u 1:9   with lines notitle ls 5,\
-     'datasets/isotShifts.txt'  u 1:10  with lines notitle ls 6,\
-     0.1263 notitle lc '#AAAAAA'
+     'datasets/isotShifts.txt'  u 1:10  with lines notitle ls 6
 
 set output
