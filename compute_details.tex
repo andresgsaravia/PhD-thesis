@@ -12,7 +12,7 @@
 
 We performed an exact diagonalization of the Hamiltonian matrix with a basis of 8649 states using a QR algorithm \cite{eigenweb}\footnote{The hamiltonian (\ref{eq:full-hamiltonian}) is a sparse matrix, so a more efficient approach is being taken in subsequent calculations, in extensions of this model, using Lanczos algorithm. In this work we used a QR algorithm because it was readily available and provided a large enough basis set to ensure convergence.}.
 The basis includes up to 30 harmonic Raman and 30 harmonic infrared phonons. 
-The  truncation of the basis to a finite number of phonons could introduce innacuracies, however we found this choice to be an adecuate choice to ensure convergence in the few lowest energy states we are considering and electron-lattice couplings up to $\sim0.25$ eV\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see section \ref{sec:polaron-isotopic-shift}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}.
+The  truncation of the basis to a finite number of phonons could introduce innacuracies, however we found this choice to be an adecuate choice to ensure convergence in the few lowest energy states we are considering and electron-lattice couplings up to $\sim0.25$ eV\footnote{There is another numerical instability present in the calculation of the isotopic shift of the first excitation (see the top panel of figure \ref{fig:irIsot}) but this seems to be due to floating point errors in the calculations since all numbers are very close to zero.}.
 
 To build the hamiltonian matrix we need to assign an integer label $l$ to each basis state. 
 This can be achieved with the mapping
