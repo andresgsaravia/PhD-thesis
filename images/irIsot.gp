@@ -41,7 +41,7 @@ set origin 0,0.55
 set bmargin 1
 set xlabel ''
 set format x ''
-set ylabel '$\Delta_i$' offset 3
+set ylabel '$\Delta_i$ (\%)' offset 3
 set yrange[-25:5.2]
 set ytics 5
 plot 'datasets/isotShifts.txt'  u 1:2 with lines notitle ls 2 
@@ -51,7 +51,7 @@ set size 1,0.55
 set bmargin 4
 set xlabel '$\lambda_{ir}$ (eV)'
 set format x '\scriptsize %g'
-set ylabel '$\Delta_i$' offset 2
+set ylabel '$\Delta_i$ (\%)' offset 2
 set origin 0,0
 set yrange[0:7.9]
 set ytics 1
