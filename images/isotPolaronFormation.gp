@@ -29,7 +29,7 @@ set grid back ls 12
 set xlabel '$\lambda_{ir}$ (eV)'
 set ylabel '$\Delta_g\ (meV)$' offset 3
 set xrange[0:0.25]
-set xtics 0.05
+set xtics 0.02
 set yrange[5:11]
 set ytics 1
 
