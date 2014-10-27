@@ -6,10 +6,8 @@ We took $\lambda_{ir}$ values in the representative range from 0 eV to 0.25 eV.
 This range allowed us to explore the behaviour of the system in the small, middle and strong coupling regimes. 
 Besides the eigenvalues and eigenvectors of the hamiltonian we also calculated the mean phonons with their dispersions and the projections into phonon coordinates $(u_{ir}, u_R)$ (see section \ref{sec:lattice-distortions}).
 
-In this chapter we turn our attention to the ground and first excited states of the system since only the first excitation in the (\ref{eq:full-hamiltonian}) hamiltonian has a sufficiently low energy to be significantly occuppied in the temperature range where the pseudogap phase is present (see Figure \ref{fig:irSpectra}).
-All other excitations have an energy above $T=\omega_i/k_B \sim 550$ K.
-Thus the atomic motion in the cluster can be described by a two-level Hamiltonian $\tilde{H}=(\omega_1/2)\sigma_z$,  such that $\tilde{H}\ket{\psi_1}=+(\omega_1/2)\ket{\psi_1}$ and $\tilde{H}\ket{\psi_o}=-(\omega_1/2)\ket{\psi_0}$, where $\sigma_z$ is a Pauli spin matrix and $\ket{\psi_0},\ket{\psi_1}$ denote the (symmetric) ground state and (antisymmetric) first excited state, respectively, separated by a \textit{polaron tunneling} energy $\hbar\omega_1$ \cite{MustredeLeon1990}.
-
+In this chapter we turn our attention to the ground and first excited states of the system since only the first excitation in the (\ref{eq:full-hamiltonian}) hamiltonian has a sufficiently low energy to be significantly occuppied in the temperature range where the pseudogap phase is present.
+All other excitations have an energy above $T=\omega_i/k_B \sim 550$ K (see Figure \ref{fig:irSpectra}).
 First we calculate the difference in Cu-O bond lengths (if any) as a function of the $\lambda_{ir}$ coupling parameter.
 With this we can find the $\lambda_{ir}$ value that reproduces the 0.13 \AA\ observed cluster distortion \cite{MustredeLeon1990}.
 From the projection into phonon coordinates we can observe if this distortion is static or dynamic for the different $\lambda_{ir}$ values \cite{MustredeLeon1992}.
@@ -39,15 +37,18 @@ Only in the small range $\sim 0.12 - 0.16$ eV the bond distortion has set it and
 \end{figure}
 
 In the right panel of figure \ref{fig:uirCoupl} we show the cluster distortion $d$ assuming the system is found in a maximum value of the projection into phonon coordinates.
-Here we can see that the observed cluster distortion of $\sim 0.13$ \AA\ \cite{MustredeLeon1990} is reproduced in the intermedite coupling values. 
+We observe that the distortion only sets in for $\lambda_{ir} > \sim 0.12$ eV and monotonically increases with $\lambda_{ir}$.
+The two branches in this plot represent the two possible cluster distortions with the longer distance being in either of the CuO bonds.
+The measured cluster distortion of $\sim 0.13$ \AA\ \cite{MustredeLeon1990} is reproduced in the intermedite coupling values. 
 In particular, $\lambda_{ir}=0.1263$ eV reproduces that distortion.
 
-Figure \ref{fig:phononProjGrdPol} shows the ground and first excitted states projected into phonon coordinates $(u_R,u_{ir})$ for $\lambda_{ir}$ values in the three regimes.
+The first excitation is an (antisymmetric) infrared-active state with one infrared phonon.
+Contrary to the ground state, the antisymmetry of this excitation implies that it is zero at $u_{ir}=0$ for all $\lambda_{ir}$.
+Also, the calculations show that increasing $\lambda_{ir}$ reduces the energy of this excitation asymptotically to zero (see Figure \ref{fig:irSpectra}) increasing its natural length scale. 
+In Figure \ref{fig:phononProjGrdPol} we show the ground and first excited states projected into phonon coordinates $(u_R,u_{ir})$ for $\lambda_{ir}$ values in the three regimes.
 The projection along $u_R$, as previously stated, is a simple gaussian in all cases.
-In the middle coupling regime, with $\lambda_{ir}=0.1263$ eV, there are clearly two peaks present although they are not fully separated.
-Since the probability amplitude is not neglible between the two maxima the system can \textit{tunnel} between both possible configurations with the longer distance in the first oxygen or the second bond.
-This observation can be interpreted as a dynamic distortion in the cluster that can only be experimentally identifyied with a technique with a similar timescale (see discussion in secion \ref{sec:dynamic_dist}). 
-For greater coupling values the two peaks are completely separated and the distortion becomes static.
+In the middle coupling regime, with $\lambda_{ir}=0.1263$ eV, there are clearly two peaks present although, for the ground state, they are not fully separated.
+For large coupling values the two peaks are fully separated in both states (static distortion) and the projections become very similar.
 
 \begin{figure}[ht]
   \centering
@@ -57,47 +58,40 @@ For greater coupling values the two peaks are completely separated and the disto
   \label{fig:phononProjGrdPol}
 \end{figure}
 
+The polaron-tunneling energy $\omega_1$, at the relevant $\lambda_{ir}=0.1263$ eV is 141.39 cm$^{-1}$ (corresponding to a characteristinc temperature $T=\hbar\omega_1 / k_B \sim 204$ K).
+Thus the atomic motion in the cluster, in the temperature range where the pseudogap is present, can be described by a two-level Hamiltonian $\tilde{H}=(\omega_1/2)\sigma_z$,  such that $\tilde{H}\ket{\psi_1}=+(\omega_1/2)\ket{\psi_1}$ and $\tilde{H}\ket{\psi_o}=-(\omega_1/2)\ket{\psi_0}$, where $\sigma_z$ is a Pauli spin matrix and $\ket{\psi_0},\ket{\psi_1}$ denote the (symmetric) ground state and (antisymmetric) first excited state, respectively, separated by a \textit{polaron tunneling} energy $\hbar\omega_1$ \cite{MustredeLeon1990}.
+
 % Figure of projection into definite electron-occupation basis for both, the ground and polaron-tunneling state
 
-The polaron-tunneling energy $\hbar\omega_T$, at the relevant $\lambda_{ir}=0.1263$ eV is 141.39 cm$^{-1}$.
-
 \section{Bipolaron binding energy}
-\label{sec:grd-binding-energy}
+\label{sec:PolBindingEnergy}
 
-The energy of the ground state changes with the coupling parameter $\lambda_{ir}$.
-The change in energy, $\Delta\omega_{g}$, between the coupled and uncoupled systems can be identified as the \textit{formation energy}.
-In particular, in the region where there is bipolaronic objects present, $\Delta\omega_{g}$ can be interpreted as the \textit{bipolaron binding energy}. 
-In figure \ref{fig:polaronFormation} we show the dependency of $\Delta\omega_{g}$ with $\lambda_{ir}$, where we defined
-
-\begin{equation}
-  \label{eq:pol-energy}
-  \Delta\omega_{g}(\lambda_{ir}) = \omega_{g}(\lambda_{ir} = 0) - \omega_{g}(\lambda_{ir})
-\end{equation}
+The energy of the ground state also changes with the coupling parameter $\lambda_{ir}$.
+The change in energy between the coupled and uncoupled systems, $\Delta\omega_{g}$, can be identified, in the region where there are bipolaronic objects present, as the \textit{bipolaron binding energy}.
+In figure \ref{fig:polaronFormation} we show the dependency of $\Delta\omega_{g}$ with $\lambda_{ir}$.
 
 \begin{figure}[ht]
   \centering
   \input{images/polaronFormation}
-  \caption{Bipolaron formation energy as a function of the $\lambda_{ir}$ coupling. The vertical line is drawn at the relevant value $\lambda_{ir}=0.1263$ eV.}
+  \caption[Bipolaron formation energy as a function of the $\lambda_{ir}$ coupling. ]
+  {Bipolaron formation energy as a function of the $\lambda_{ir}$ coupling. The vertical line is drawn at the relevant value $\lambda_{ir}=0.1263$ eV.}
   \label{fig:polaronFormation}
 \end{figure}
 
-We observe a monotonical behaviour with small dependency in the weak coupling regime becoming stronger with greater coupling values.
-In particular, for the $\lambda_{ir}=0.1263$ eV value, which reproduces the observed distortion, we find $\Delta\omega_{g}(0.1263$ eV$) = \sim 38$ meV.
+We observe a monotonical behaviour with a small change in the weak coupling regime becoming stronger with greater coupling values.
+In particular, for the $\lambda_{ir}=0.1263$ eV value, which reproduces the observed distortion, we find $\Delta\omega_{g} \sim 38$ meV.
 This value compares favorably with the value obtained from femtosecond time-domain spectroscopy ($\sim 45$ meV) for YBa$_2$Cu$_3$O$_7$ \cite{Demsar1999}. 
-We also find that if we consider a smaller electron-lattice coupling such that the distortion is 0.08 \AA, as that observed for in plane Cu(2)-O in La$_{1.85}$Sr$_{0.15}$CuO$_4$ \cite{Bianconi1996}, we obtain $E_p \sim 35$ meV, which is also comparable to estimates for the pseudogap formation energy in this system (see Fig. 4b in \cite{Kusar2005}).
+We also find that if we consider a smaller electron-lattice coupling such that the distortion is 0.08 \AA, as that observed for in plane Cu(2)-O in La$_{1.85}$Sr$_{0.15}$CuO$_4$ \cite{Bianconi1996}, we obtain $\Delta\omega_{g} \sim 37$ meV, which is also comparable to estimates for the pseudogap formation energy in this system (see Fig. 4b in \cite{Kusar2005}).
 
-\section{Isotopic effects in bipolaron formation}
-\label{sec:grd-isotopic}
-
-We turn our attention now to the isotopic shift, $\Delta_g$, of $\omega_g$ under the $^{16}$O$\rightarrow ^{18}$O substitution as defined in (\ref{eq:isot-shift-def-grd}).
+We also calculated the isotopic shift, $\Delta_g$, of $\omega_g$ under the $^{16}$O$\rightarrow ^{18}$O substitution as defined in (\ref{eq:isot-shift-def-grd}).
 Figure \ref{fig:isotPolaronFormation} shows $\Delta_g$ as a function of $\lambda_{ir}$.
-Contrary to other isotopic shifts, it does not change sign.
-However it shows a maximum in the middle coupling regime, reminiscent of the maximums, minimums and inflection points in the isotopic shifts of all other excitations.
+Contrary to other isotopic shifts, it does not change sign, however it shows a maximum in the middle coupling regime, reminiscent of the maximums, minimums and inflection points in the isotopic shifts of all other excitations.
 
 \begin{figure}[ht]
   \centering
   \input{images/isotPolaronFormation}
-  \caption{Isotopic shift of the bipolaron formation energy. The vertical line is placed at the relevant value $\lambda_{ir}=0.1263$.}
+  \caption[Isotopic shift of the bipolaron formation energy.]
+  {Isotopic shift of the bipolaron formation energy. The vertical line is placed at the relevant value $\lambda_{ir}=0.1263$.}
   \label{fig:isotPolaronFormation}
 \end{figure}
 
