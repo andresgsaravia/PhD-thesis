@@ -6,57 +6,58 @@ We took $\lambda_{ir}$ values in the representative range from 0 eV to 0.25 eV.
 This range allowed us to explore the behaviour of the system in the small, middle and strong coupling regimes. 
 Besides the eigenvalues and eigenvectors of the hamiltonian we also calculated the mean phonons with their dispersions and the projections into phonon coordinates $(u_{ir}, u_R)$ (see section \ref{sec:lattice-distortions}).
 
-In this chapter we turn our attention to the ground and first excited states of the system.
-We will show that in the temperature range of interest only these states have a significant occupation.
-Thus the atomic motion in the O(4)-Cu(1)-O(4) cluster can be described by a two level hamiltonian with its levels separated by an energy equal to the difference in energy between the ground and first excites states.
+In this chapter we turn our attention to the ground and first excited states of the system since only the first excitation in the (\ref{eq:full-hamiltonian}) hamiltonian has a sufficiently low energy to be significantly occuppied in the temperature range where the pseudogap phase is present (see Figure \ref{fig:irSpectra}).
+All other excitations have an energy above $T=\omega_i/k_B \sim 550$ K.
+Thus the atomic motion in the cluster can be described by a two-level Hamiltonian $\tilde{H}=(\omega_1/2)\sigma_z$,  such that $\tilde{H}\ket{\psi_1}=+(\omega_1/2)\ket{\psi_1}$ and $\tilde{H}\ket{\psi_o}=-(\omega_1/2)\ket{\psi_0}$, where $\sigma_z$ is a Pauli spin matrix and $\ket{\psi_0},\ket{\psi_1}$ denote the (symmetric) ground state and (antisymmetric) first excited state, respectively, separated by a \textit{polaron tunneling} energy $\hbar\omega_1$ \cite{MustredeLeon1990}.
+
 First we calculate the difference in Cu-O bond lengths (if any) as a function of the $\lambda_{ir}$ coupling parameter.
 With this we can find the $\lambda_{ir}$ value that reproduces the 0.13 \AA\ observed cluster distortion \cite{MustredeLeon1990}.
-From the projection into phonon coordinates we can observe if this distortion is static or dynamic for the different $\lambda_{ir}$ values. 
+From the projection into phonon coordinates we can observe if this distortion is static or dynamic for the different $\lambda_{ir}$ values \cite{MustredeLeon1992}.
 The presence of a dynamic cluster distortion signals a correlated movement between atomic centers and charged particles, that is, it signals a polaronic behaviour.
-The difference between the ground state energy in the absence of electron-lattice interaction ($\lambda_{ir}=0$) and its value for the coupling value where this polaronic behaviour sets can be identified as the \textit{bipolaron binding energy}.
+The difference between the ground state energy in the absence of charge-lattice interaction ($\lambda_{ir}=0$) and its value for the coupling value where this polaronic behaviour sets can be identified as the \textit{bipolaron binding energy}.
 We estimate this binding energy for the experimentally relevant $\lambda_{ir}$ value and compare it to other calculations.
-Finally we model an isotopic oxygen substitution $^{16}$O$\rightarrow ^{18}$O and calculate its effects in the bipolaron binding energy
+Finally we model an isotopic oxygen substitution $^{16}$O$\rightarrow ^{18}$O and calculate its effects in the bipolaron binding energy.
 
 \section{Cu(1)-O(4) local distortion}
 \label{sec:grd-phonon-proj}
 
-% Why we care about the polaron-tunneling state? (first ir-excitation) 
-
-From \cite{MustredeLeon1990}
-
-The motion of the O(4) atom in the deep, double well potential $V(z)$ can be described by a two-level Hamiltonian $H=(\omega_T/2)\sigma_z$,  such that $H\ket{A}=+(\omega_T/2)\ket{A}$ and $H\ket{S}=-(\omega_T/2)\ket{S}$, where $\sigma_z$ is a Pauli spin matrixm and $\ket{S},\ket{A}$ denote the (symmetric) ground state and (antisymmetric) first excited state, respectively, separated by an energy $\hbar\omega_T=\hbar\omega_1-\hbar\omega_0$.
-
 The wavefunction projection into phonon coordinates (\ref{eq:phonon-coord-projection}) gives information about the coodinates of the three atoms in the CuO$_2$ cluster.
-In particular, the phonon coordinate\footnote{The phonon coordinates are  defined in (\ref{eq:uR}, \ref{eq:uir}).} $u_{ir}$ is directly proportional to the distance distortion in the CuO$_2$ cluster, $d$, as shown in (\ref{eq:dvsuir}).
-Figure \ref{fig:phononProjGrd} shows the ground state projected into phonon coordinates $(u_R,u_{ir})$ for three representative electron-lattice coupling values $\lambda_{ir}=0, 0.13$ and 0.25 eV.
-The projection along $u_R$ is harmonic in all cases.
-From the $\lambda_{ir}=0$ case the wavefunction's projection has a maximum at $u_{ir}=0$ impliying, as expected, there is no distortion in the cluster.
-In the middle coupling regime, exemplified in Fig. \ref{fig:phononProjGrd} by $\lambda_{ir}=0.13$ eV, there are clearly two peaks present although they are not fully separated.
+In particular, the infrared phonon coordinate $u_{ir}$ is directly proportional to the bond distortion in the CuO$_2$ cluster, $d$, as shown in (\ref{eq:dvsuir}).
+Since the ground state has zero Raman phonons and we have set $\lambda_R=0$, its projection into $u_R$ will remain unchanged and given by a simple gaussian distribution.
+Thus, setting $u_R=0$, we projected the ground state into $u_{ir}$ for different $\lambda_{ir}$ values.
+In the left panel of Figure \ref{fig:uirCoupl} we show a plot of these projections.
+The projection has a gaussian shape for $\lambda_{ir}=0$ however, as $\lambda_{ir}$ increases it smoothly develops into two separated peaks.
+For a small range in the middle coupling values there are clearly two peaks but they are not separated. 
+Since the system will tend to be near the maximum values of this projections this results can be interpreted as follows: in the small coupling range the bond distances remain equal albeit with an increased uncertainty; in the middle coupling range two Cu-O distances develop but the system can \textit{tunnel} between them, that is, the distortion is \textit{dynamic}; finally in the strong coupling range the two peaks are fully separated and the distortion become \textit{static}.
+Only in the small range $\sim 0.12 - 0.16$ eV the bond distortion has set it and its dynamical in nature.
+%
+\begin{figure}[ht]
+  \centering
+  \input{images/uirCoupl}
+  \caption{Projection into phonon coordinates (left panel) and calculated cluster distortion $d$ (right panel) for different $\lambda_{ir}$ coupling values with $u_R=0$.}
+  \label{fig:uirCoupl}
+\end{figure}
+
+In the right panel of figure \ref{fig:uirCoupl} we show the cluster distortion $d$ assuming the system is found in a maximum value of the projection into phonon coordinates.
+Here we can see that the observed cluster distortion of $\sim 0.13$ \AA\ \cite{MustredeLeon1990} is reproduced in the intermedite coupling values. 
+In particular, $\lambda_{ir}=0.1263$ eV reproduces that distortion.
+
+Figure \ref{fig:phononProjGrdPol} shows the ground and first excitted states projected into phonon coordinates $(u_R,u_{ir})$ for $\lambda_{ir}$ values in the three regimes.
+The projection along $u_R$, as previously stated, is a simple gaussian in all cases.
+In the middle coupling regime, with $\lambda_{ir}=0.1263$ eV, there are clearly two peaks present although they are not fully separated.
 Since the probability amplitude is not neglible between the two maxima the system can \textit{tunnel} between both possible configurations with the longer distance in the first oxygen or the second bond.
 This observation can be interpreted as a dynamic distortion in the cluster that can only be experimentally identifyied with a technique with a similar timescale (see discussion in secion \ref{sec:dynamic_dist}). 
 For greater coupling values the two peaks are completely separated and the distortion becomes static.
 
 \begin{figure}[ht]
   \centering
-  \input{images/phononProjGrd}
-  \caption{Ground state's projection into phonon coordinates for three different values of the coupling parameter $\lambda_{ir}$.}
-  \label{fig:phononProjGrd}
+  \input{images/phononProjGrdPol}
+  \caption[Ground and first excited states projected into phonon coordinates.]
+  {Projection into phonon coordinates for the ground (top) and first excited (bottom) states for three different values of the coupling parameter $\lambda_{ir}$.}
+  \label{fig:phononProjGrdPol}
 \end{figure}
 
-Since the projection into $u_R$ does not change, giving that we are considering only $\lambda_R=0$, we calculated the projections with $u_R=0$ with variable $u_{ir}$ for different coupling values.
-The left panel of figure \ref{fig:uir-vs-coupl} shows a plot of this comparison.
-From here we can see that the distortion only sets in for $\lambda_{ir}$ greater than $\sim 0.12$ eV and becomes static (the two peaks are fully separated) for $\lambda_{ir}$ greater that $\sim 0.16$ eV.
-In the right panel of figure \ref{fig:uir-vs-coupl} we show the cluster distortion $d$ calculated from the maxima of the previous projection.
-Here we can see that the observed cluster distortion of $\sim 0.13$ \AA\ \cite{MustredeLeon1990} is reproduced in the intermedite coupling values. 
-In particular, $\lambda_{ir}=0.1263$ eV reproduces that distortion.
-From this plots we observe that it is only in the narrow range  $\sim 0.12 < \lambda_{ir} < \sim 0.16$ that a dynamical cluster distortion is present. 
-
-\begin{figure}[ht]
-  \centering
-  \input{images/uirCoupl}
-  \caption{Projection into phonon coordinates (left panel) and calculated cluster distortion $d$ (right panel) for different $\lambda_{ir}$ coupling values with $u_R=0$.}
-  \label{fig:uir-vs-coupl}
-\end{figure}
+% Figure of projection into definite electron-occupation basis for both, the ground and polaron-tunneling state
 
 The polaron-tunneling energy $\hbar\omega_T$, at the relevant $\lambda_{ir}=0.1263$ eV is 141.39 cm$^{-1}$.
 
@@ -100,21 +101,5 @@ However it shows a maximum in the middle coupling regime, reminiscent of the max
   \label{fig:isotPolaronFormation}
 \end{figure}
 
-% Figure of projection into definite electron-occupation basis for both, the ground and polaron-tunneling state
 
-\section{Polaron tunneling}
 
-% Only the ground state and the first ir-excitation are appreciably occupied at the temperatures of interest thus the O(4) motion needs to be described quantum mechanically.
-% prove? What is the energy difference (in Kelvin) between the ground state and all the excitations?
-% in cite{MustredeLeon1992a} they call $\hbar \omega_T = \Delta\epsilon = \epsilon_1 - \epsilon_0 \sim 80$ K the ``interwell tunneling frequency''
-
-% \hbar\omega_T is the tunneling frequency between the two minima
-
-\section{Projection into phonon coordinates}
-
-\begin{figure}[ht]
-  \centering
-  \input{images/phononProjPol}
-  \caption{Polaron tunneling state's projection into phonon coordinates.}
-  \label{fig:phononProjPol}
-\end{figure}
