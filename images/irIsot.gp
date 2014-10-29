@@ -29,7 +29,6 @@ set tmargin 0
 
 # Labels and range
 set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
-set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
 set xrange[0:0.25]
 set xtics 0.02
 
@@ -44,7 +43,8 @@ set format x ''
 set ylabel '$\Delta_i$ (\%)' offset 3
 set yrange[-25:5.2]
 set ytics 5
-plot 'datasets/isotShifts.txt'  u 1:2 with lines notitle ls 2 
+set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
+plot 'datasets/isot1ir.mat'  u 1:2 with lines notitle ls 2 
 
 # Bottom plot: all other ir
 set size 1,0.55
@@ -53,11 +53,12 @@ set xlabel '$\lambda_{ir}$ (eV)'
 set format x '\scriptsize %g'
 set ylabel '$\Delta_i$ (\%)' offset 2
 set origin 0,0
-set yrange[0:7.9]
+set yrange[0:8.9]
 set ytics 1
-plot 'datasets/isotShifts.txt'  u 1:3 with lines notitle ls 2,\
-     'datasets/isotShifts.txt'  u 1:4 with lines notitle ls 5,\
-     'datasets/isotShifts.txt'  u 1:7 with lines notitle ls 6 
+set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.07
+plot 'datasets/isot1ir1Ram.mat'  u 1:2 with lines notitle ls 2,\
+     'datasets/isotShifts.txt'  u 1:3 with lines notitle ls 5,\
+     'datasets/isotShifts.txt'  u 1:4 with lines notitle ls 6 
 
 unset multiplot
 set output
