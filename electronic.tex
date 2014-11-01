@@ -1,25 +1,33 @@
 \chapter{Electronic excitations}
 \label{chap:electronic}
 
-We call \textit{electronic} excitations those that, at $\lambda_{ir}=0$, arise from $H_{el}$ in (\ref{eq:full-hamiltonian}). This part of the hamiltonian
+We now turn our attention to the other kind of excitations present in the model hamiltonian (\ref{eq:full-hamiltonian}), namely, the \textit{electronic} excitations that, in the absence of charge-lattice coupling, arise from the $H_{el}$ term (\ref{eq:electronic-part}).
+These excitations are inactive in infrared and Raman spectroscopies but could be accessible by electronic probes.
 
-\begin{equation}\label{eq:Hel} H_{el} = \sum_n \epsilon_n \rho_n + \sum_{ \langle nm \rangle \sigma } t (c_{n \sigma }^\dagger c_{m \sigma } + H.c.) + U\sum_n \rho_{n\downarrow}\rho_{n\uparrow} \end{equation}
-
-can be represented  as a 9x9 matrix:
-
+Unlike $H_{ph}$, the electronic term $H_{el}$ is not infinite dimentional since it depends only on the position of the charges in the atomic sites. 
+Using the labelling convention stated in (\ref{eq:basis-set}), it can be expressed as the following 9x9 matrix:
+%
 \begin{equation}\label{eq:Hel-matrix} \left( \begin{array}{ccccccccc} 
-U+2\epsilon &\;\;t\;\;&\;\;0\;\;&\;\;t\;\;&0&\;\;0\;\;&\;\;0\;\;&\;\;0\;\;&0 \\
+U+2E_0 &\;\;t\;\;&\;\;0\;\;&\;\;t\;\;&0&\;\;0\;\;&\;\;0\;\;&\;\;0\;\;&0 \\
 t&0&t&0&t&0&0&0&0 \\
-0&t&2\epsilon &0&0&t&0&0&0 \\
+0&t&2E_0 &0&0&t&0&0&0 \\
 t&0&0&0&t&0&t&0&0 \\
-0&t&0&t&U-2\epsilon &t&0&t&0 \\
+0&t&0&t&U-2E_0 &t&0&t&0 \\
 0&0&t&0&t&0&0&0&t \\
-0&0&0&t&0&0&2\epsilon &t&0 \\
+0&0&0&t&0&0&2E_0 &t&0 \\
 0&0&0&0&t&0&t&0&t \\
-0&0&0&0&0&t&0&t&U+2\epsilon  \end{array} \right)\end{equation}
+0&0&0&0&0&t&0&t&U+2E_0  \end{array} \right)\end{equation}
+%
+This matrix is easily diagonalized to see that its first excited state has an energy of $\sim 1376$ cm$^{-1}$ above the ground state which is a considerable higher than the phononic energies of 500 and 612.4 cm$^{-1}$.
 
-and easily diagonalized to see that its first excited state has an energy of ~1376 cm$^{-1}$ above the  ground state.
+Since $H_{el-ph}$ mixes electronic and phononic degrees of freedom, a change in the coupling parameter $\lambda_{ir}$ also changes the properties of these excitations.
+Similar to the phononic excitations analyzed in the previous chapter, for $\lambda_{ir}>0$, these excitations do not remain eigenstates of $H_{el}$ however, as discussed in section \ref{sec:classification}, in the middle coupling regime they remain mainly electronic in nature so we continue to refer them as such.
 
+In Figure \ref{fig:electrSpectra} we show the energy of the three lowest electronic excitations as a function of $\lambda_{ir}$.
+All energies show a monotonically decreasing behaviour with $\lambda_{ir}$, reminiscent of the phononic excitations in Figure \ref{fig:irSpectra} with little change in the small and strong coupling regimes but considerable change is in the middle coupling regime.
+The first excitation starts at $\sim 1376$ cm$^{-1}$ for $\lambda_{ir}=0$ and converges to $\sim 1122$ cm$^{-1}$ for large $\lambda_{ir}$.
+The electronic excitation with one additional infrared phonon also converges to this energy and the presence of a Raman phonon only increases the energy by $\omega_R=500$ cm$^{-1}$ for every $\lambda_{ir}$.
+%
 \begin{figure}[ht]
   \centering
   \input{images/electrSpectra}
@@ -29,6 +37,8 @@ and easily diagonalized to see that its first excited state has an energy of ~13
     The vertical line is placed at the relevant value $\lambda_{ir}=0.1263$ eV.}
   \label{fig:electrSpectra}
 \end{figure}
+
+At $\lambda_{ir}=0.1263$ eV the first electronic excitation has the lower energy of $\sim 1282$ cm$^{-1}$ however the excitation with one additional infrared phonon has an energy of $\sim 1373$ cm$^{-1}$ which is very close to the $\sim 1376$ cm$^{-1}$ value for the first excitation at $\lambda_{ir}=0$.
 
 \section{Projection into definite electronic occupation states}
 
