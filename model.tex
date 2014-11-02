@@ -12,7 +12,7 @@ This thesis is based in a thorough analysis of that model hamiltonian so we devo
 In section \ref{sec:hamiltonian-and-basis} we describe the hamitlonian and the basis used. 
 Section \ref{sec:isotopic-model} reviews a method of incorporating isotopic substitutions in this model and defines \textit{isotopic shifts} in this context.
 In section \ref{sec:lattice-distortions} we discuss a method of calculating real-space lattice distortions.
-Next, in section \ref{sec:electronic-projection}, we describe a projection into definite electronic occupation states.
+Next, in section \ref{sec:chargeLocalization}, we describe a projection into definite charge occupation states.
 Section \ref{sec:model-parameters} reviews some literature suggesting possible choices of parameters and lists the parameters used in this work.
 We review in section \ref{sec:classification} a method for identifying and classifiying the different excitations in this model.
 Finally, appendix \ref{chap:comp_details} gives some computational details about our calculations.
@@ -225,11 +225,11 @@ with $\braket{u_{ir},u_R}{ir,R}$ given by (\ref{eq:hermite-expansion}).
 
 To find the most probable cluster distortion $d$ we can find the value of $u_{ir}$ that produces a maximum in the projection (\ref{eq:phonon-coord-projection}) and substitute it in (\ref{eq:dvsuir}). This is done in section \ref{sec:grd-phonon-proj} in the next chapter.
 
-\section{Projection into states with definite electron occupation numbers}
-\label{sec:electronic-projection}
+\section{Charge localization}
+\label{sec:chargeLocalization}
 
 Eigenstates of the hamltonian (\ref{eq:full-hamiltonian}), in general, have delocalized charges.
-To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite electron occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
+To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite charge occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
 The basis set we are using ($\{\ket{e_1,e_2,ir,R}\}$) has sharp values for the hole number operator on each site for a given number of infrared $ir$ and Raman $R$ phonons. 
 Thus, to find the probability $P(e_1,e_2)$ of finding one hole in site $e_1$ and the other on site $e_2$, we need only to sum over the infrared and Raman phonons of the system,
 %
