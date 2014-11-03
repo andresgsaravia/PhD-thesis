@@ -40,26 +40,26 @@ set size 1,0.45
 set origin 0,0.55
 set xlabel ''
 set format x ''
-set ylabel '$P(1,2)$' offset 3
-set yrange[0.19:0.25]
-set ytics 0.01
+set ylabel '$P(1,2)$ (\%)' offset 3
+set yrange[19:25]
+set ytics 1
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
-plot 'datasets/electronicOccupations.txt'  u 1:3 with lines notitle ls 6,\
-     'datasets/electronicOccupations.txt'  u 1:7 with lines notitle ls 2,\
-     'datasets/electronicOccupations.txt'  u 1:11 with lines notitle ls 8
+plot 'datasets/electronicOccupations.txt'  u 1:($3*100) with lines notitle ls 6,\
+     'datasets/electronicOccupations.txt'  u 1:($7*100) with lines notitle ls 2,\
+     'datasets/electronicOccupations.txt'  u 1:($11*100) with lines notitle ls 8
 
 # Right plot: Occupation for (e1,e2) = (1,3)
 set size 1,0.55
 set xlabel '$\lambda_{ir}$ (eV)'
 set format x '\scriptsize %g'
-set ylabel '$P(1,3)$' offset 3
+set ylabel '$P(1,3)$ (\%)' offset 3
 set origin 0,0
-set yrange[0:0.12]
-set ytics 0.02
+set yrange[0:12]
+set ytics 2
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
-plot 'datasets/electronicOccupations.txt'  u 1:4 with lines notitle ls 6,\
-     'datasets/electronicOccupations.txt'  u 1:8 with lines notitle ls 2,\
-     'datasets/electronicOccupations.txt'  u 1:12 with lines notitle ls 8
+plot 'datasets/electronicOccupations.txt'  u 1:($4*100) with lines notitle ls 6,\
+     'datasets/electronicOccupations.txt'  u 1:($8*100) with lines notitle ls 2,\
+     'datasets/electronicOccupations.txt'  u 1:($12*100) with lines notitle ls 8
 
 unset multiplot
 set output
