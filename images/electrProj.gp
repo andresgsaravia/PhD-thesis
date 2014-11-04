@@ -33,7 +33,7 @@ set xtics 0.02
 set yrange[0:1.05]
 set ytics 0.2
 
-set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
+set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1 lt 2 lc rgb '#000000
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
 plot 'datasets/electrProj.txt'  u 1:3 with lines notitle ls 6
 

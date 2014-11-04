@@ -18,7 +18,7 @@ set style line 7 lc rgb '#9400d3' lt 1 lw 2
 set style line 8 lc rgb '#000000' lt 1 lw 2
 # Axes
 set style line 11 lc rgb '#505050' lt 1
-set border 3 back ls 11
+set border 2 back ls 11
 set tics nomirror out scale 0.75
 set format y '\scriptsize %g'
 # Grid
@@ -29,7 +29,7 @@ set rmargin 1
 set tmargin 0
 
 # Labels and range
-set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
+set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1 lt 2 lc rgb '#000000
 set xrange[0:0.25]
 set xtics 0.02
 
@@ -57,7 +57,8 @@ set origin 0,0
 set yrange[0:12]
 set ytics 2
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
-plot 'datasets/electronicOccupations.txt'  u 1:($4*100) with lines notitle ls 6,\
+plot 0 ls 11 notitle,\
+     'datasets/electronicOccupations.txt'  u 1:($4*100) with lines notitle ls 6,\
      'datasets/electronicOccupations.txt'  u 1:($8*100) with lines notitle ls 2,\
      'datasets/electronicOccupations.txt'  u 1:($12*100) with lines notitle ls 8
 
