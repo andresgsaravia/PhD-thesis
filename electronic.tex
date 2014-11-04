@@ -48,8 +48,9 @@ The presence of a Raman phonon rigidly increases the energies by $\omega_R=500$ 
 \end{figure}
 
 At $\lambda_{ir}=0.1263$ eV the first electronic excitation has the lower energy of $\sim 1282$ cm$^{-1}$ however the excitation with one additional infrared phonon has an energy of $\sim 1373$ cm$^{-1}$ which is very close to the $\sim 1376$ cm$^{-1}$ value for the first excitation at $\lambda_{ir}=0$.
-
+Wa
 \section{Partial charge localization}
+\label{sec:partialChargeLocalization}
 
 We use (\ref{eq:electronOccupation}) to find the probability $P(e_1,e_2)$ of finding an excitation with the first and second charges at sites $e_1$ and $e_2$ respectively where $e_i=1,3$ denotes a charge at the oxygen sites and $e_i=2$ at the copper site.
 In Figure \ref{fig:electronicOccupations} we show the probabilites for one charge in an oxygen and the other in the copper (top panel) as well as both charges in the opposing oxygen sites (bottom panel).
@@ -70,16 +71,31 @@ For all three eigenstates the general trend is similar; there is a monotonic inc
 This can be interpreted as a partial charge localization in the cluster, although there is still some charge movement \cite{GarciaSaraviaOrtizdeMontellano2013}.
 
 \section{Projection into phonon coordinates}
+\label{sec:elPhononProj}
+
+We also investigated the projection into phonon coordinates for the first electronic excitation in the model.
+In Figure \ref{fig:phononProjElectr} we show these projections for $\lambda_{ir}=$0, 0.1263 and 0.25 eV corresponding to values in the weak, middle and strong coupling regimes.
+Similar to the other excitations, the projection along $u_R$ remains unchanged in the form of a gaussian function.
+At $\lambda_{ir}=0$ eV the projection along $u_{ir}$ has also a gaussian shape however, for the coupling value that reproduces the cluster distortion ($\lambda_{ir}=0.1263$ eV), it develops a double peak structure reminiscent of the ground state in Figure \ref{fig:phononProjGrdPol} although with somewhat more defined peaks.
+For large $\lambda_{ir}$ the two peaks are completely separated each one similar to the $\lambda_{ir}=0$ eV case but displaced in origin.
+This behaviour at large coupling values is similar to what was observed for all the other excitations in which the uncoupled scenario is recovered with a displaced origin.
 
 \begin{figure}[ht]
   \centering
   \input{images/phononProjElectr}
-  \caption{Electronic state projected into phonon coordinates for three representative electron-lattice coupling ($\lambda_{ir}$) values.}
+  \caption[Projection into phonon coordinates of the electronic excitation.]
+  {Projection into phonon coordinates of the electronic excitation for three representative $\lambda_{ir}$ values.}
   \label{fig:phononProjElectr}
 \end{figure}
 
 \section{Isotopic shift}
+\label{sec:elIsotShift}
 
+We also investigated the effect of an oxygen isotopic change $^{16}$O$\rightarrow ^{18}$O in the eigenvalues of the electronic excitations.
+In Figure \ref{fig:electrIsot} we show a plot of the isotopic shift $\Delta_g$ as defined in (\ref{eq:isot-shift-def-grd}) for the first electronic excitation as well as the excitation with an additional infrared phonon for a range of $\lambda_{ir}$ values.
+Since the electronic excitations are unaffected by changes in the phonon energies when $\lambda_{ir}=0$ eV, the isotopic shift of the first electronic excitation is zero and the shift for the excitation with one additional infarred phonon is what could be expected from the harmonic behaviour of the system.
+Interestingly, the isotopic shift decreases to a minimum close to the relevant $\lambda_{ir}=0.1263$ eV value and then increases again becoming almost linear for $\lambda_{ir}>0.18$ eV.
+%
 \begin{figure}[ht]
   \centering
   \input{images/electrIsot}
@@ -90,3 +106,6 @@ This can be interpreted as a partial charge localization in the cluster, althoug
   \label{fig:electrIsot}
 \end{figure}
 
+For both excitatons shown in Figure \ref{fig:electrIsot} the isotopic shift becomes negative in the middle coupling regime similarly to the first infrared excitation at these values (see top panel of Figure \ref{fig:irIsot}) although with a reduced magnitude.
+In contrast, for larger $\lambda_{ir}$ these shifts seem to increase indefinetly not stabilizing to any value.
+Although the calculations seem to converge well in our test for the $\lambda_{ir}$ range we are considering, we should note that there could be some convergence issues at large $\lambda_{ir}$ due to the truncation of the basis.

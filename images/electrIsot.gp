@@ -17,7 +17,7 @@ set style line 6 lc rgb '#0000ff' lt 1 lw 2
 set style line 7 lc rgb '#9400d3' lt 1 lw 2
 # Axes
 set style line 11 lc rgb '#505050' lt 1
-set border 3 back ls 11
+set border 2 back ls 11
 set tics nomirror out scale 0.75
 set format x '\scriptsize %g'
 set format y '\scriptsize %g'
@@ -32,10 +32,12 @@ set xtics 0.02
 set yrange[-2:2]
 set ytics 0.5
 
-set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1
+set arrow 1 from 0.1263, graph 0 to 0.1263, graph 1 nohead lw 1 lt 2 lc rgb '#000000'
 set label 1 '\scriptsize$\lambda_{ir}=0.1263$' at graph 0.52, graph 0.92
-plot 'datasets/isotShifts.txt'  u 1:8   with lines notitle ls 2,\
-     'datasets/isotShifts.txt'  u 1:9   with lines notitle ls 5,\
-     'datasets/isotShifts.txt'  u 1:10  with lines notitle ls 6
+plot 0 ls 11 notitle,\
+     'datasets/isotShifts.txt'  u 1:5   with lines notitle ls 2,\
+     'datasets/isotShifts.txt'  u 1:6   with lines notitle ls 6
+#     'datasets/isotShifts.txt'  u 1:10  with lines notitle ls 6
 
 set output
+set t pop
