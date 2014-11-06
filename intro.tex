@@ -1,22 +1,18 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
-% - Superconductivity has been known for a long time but we don't have an explanation.
-
 Altough high temperature superconductivity has been known for almost three decades \cite{Bednorz1986}, a satisfactory explanation of this phenomenom still remains as one of the major unsolved problems in theoretical condensed matter physics. 
 It is known that, similarly to BCS theory \cite{Bardeen1957}, high-temperature superconductivity is caused by attraction between electrons \cite{?}. 
 However it remains unclear how this attraction arises, when it is sizable and when it is not, and what factors are detrimental to superconductivity.
 
-The high-T$_c$ cuprates have complex phase diagrams with many competing ground states with quantum phase transitions between them \cite{Chakravarty2011}.
+The high-T$_c$ cuprate superconductors have complex phase diagrams with many competing ground states and quantum phase transitions between them \cite{Chakravarty2011}.
 Parent compounds of copper based superconductors start out as insulators and become superconductors when doped with additional charge carriers.
-Depending on the compound, superconductivity such charge carriers can be either electrons or holes.
+Depending on the compound, superconducting charge carriers can be either electrons or holes.
 We show a simplified phase diagram for several cuprate superconductors in Figure \ref{fig:CuPhaseDiag} which highlights some of common characteristics between them.
-In the \textit{underdoped} regime the parent compounds form ordered crystalline structures and exhibit antiferromagnetism below a certain temperature $T_N$.
-This antiferromagnetic phase is rapidly suppresed by doping giving rise to superconductivity.
-Antiferromagnetism and superconductivity appear to be excluyent \cite{?}, however they appear in close proximity.
-After the antiferromagnetism is suppressed, the superconducting transition temperature T$_c$ rises with doping until reaching a maximum value and then decrease to zero.
-In addition to the interplay between antiferromagnetism and superconductivity there is another phase present below a temperature T* which has a rich phenomenology and seems to precede superconductivity and antiferromagnetism for a large part of the phase diagram.
-It is called the \textit{pseudogap} phase.
+For low charge carriers concentration the parent compounds form ordered crystalline structures and exhibit antiferromagnetism below a certain temperature $T_N$ \cite{?}.
+This antiferromagnetic phase is rapidly suppresed by charge doping giving rise to superconductivity.
+Antiferromagnetism and superconductivity seem to be excluyent \cite{?}, however they appear in close proximity in the phase diagram.
+After the antiferromagnetism is suppressed, the superconducting transition temperature (T$_c$) rises with doping until it reaches a maximum value for some optimal doping level finally decreasing to zero for greater dopings.
 
 \begin{figure}[ht]
   \centering
@@ -26,53 +22,48 @@ It is called the \textit{pseudogap} phase.
   \label{fig:CuPhaseDiag}
 \end{figure}
 
-% - Early theories (RVB,...?) neglect the lattice effects mainly due to the zero isotope effect at T_c^{max}.
-% - Electronic models haven't been completely successful.
-% - The parent compounds for the cuprate superconductors exhibit lattice and electronic inhomogeneities in the region dubbed *pseudogap phase* which precedes superconductivity for a great part of the phase diagram.
-% - The *polaronic* behaviour at the pseudogap phase suggests the importance of treating coupled charge-lattice dynamics.
-% - We review the several anomalies in the pseudogap phase suggesting that charge-lattice coupling is fundamental.
-% - This charge-lattice dynamic is inaccessible within the Born-Oppenheimer approximation, thus an exact treatment is necessary.
+In addition to the interplay between antiferromagnetism and superconductivity there is another phase present below a temperature T* which has a rich phenomenology and seems to precede superconductivity for a large part of the phase diagram.
+One defining property of a superconductor, within the band energy approximation, is the presence of an energy gap, but early experiments could not find its characteristic signatures in cuprate superconductors.
+Instead of abruptly finding a zero density of states below a certain energy at the superconducting transition temperature there was only a partial depression of excitations appearing at a much higher temperature T*.
+This region of phase space has been identified as the \textit{pseudogap phase} and there is evidence for its presence in all cuprate superconductor families and there is evidence for its presence in all cuprate superconductor families \cite{Timusk1999,Muller2007}. 
 
-These are \textit{Mott insulators} because it is a strong repulsive Coulomb interaction that makes them insulators.
-Soon after their discovery Anderson proposed \cite{Anderson1987} that the parent compounds are in a \textit{quantum spin liquid} phase that do not break any symmetries. 
-In this theory, also called the \textit{resonating valence bond} (RVB), he argues that
-\begin{quote}
-The preexisting magnetic singlet pairs of the insulating state become charged superconducting pairs when the insulator is doped sufficiently strongly. The mechanism for superconductivity is hence predominantly electronic and magnetic, although weak phonon interactions may favor the state.
-\end{quote} 
-% talk a bit about how many theories, like this one, neglect the lattice effects in superconductivity.
-
-However,  in compounds like La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ and La$_{2}$CuO$_{4.1}$, the dopant atoms necessary to achieve a superconducting compound are not placed at the crystal symmetry allowed sites yielding to intrinsically structurally inhomogeneous systems\cite{Poccia2011}. 
-While in other cases, like YBCO$_{6+\delta}$, extra dopant atoms reside in crystal symmetric positions but the departure from stoichiometry yields compositional disorder\cite{Chen1988} \cite{Andersen1990} with the same consequence. 
+There are also lattice inhomogeneities in the pseudogap phase, for example in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ and La$_{2}$CuO$_{4.1}$, the dopant atoms, necessary for superconductivity, do not reside at the crystal symmetric sites making these compounds structurally inhomogeneous \cite{Poccia2011}.
+In other cases, like YBa$_2$Cu$_3$O$_{7-\delta}$ (YBCO) the dopant atoms reside in crystal symmetric positions but the departure from stoichiometry produces compositional disorder \cite{Chen1988,Andersen1990} making YBCO also an inhomogeneous system.
+Even though the dopant atoms are at fixed positions, these structural inhomogeneities have a dynamical character \cite{Mihailovic2005,Bianconi1996}.
+Such a dynamical inhomogeneity is present even in some compounds with perfect crystallographic symmetry like HoBa$_{2}$Cu$_{4}$O$_{8}$ \cite{RubioTemprano2000}.
+Although from the structural inhomogeneity does not necessarily follow an inhomogeneous electronic ground state, for some regions of the phase diagram, depending on the dopant concentation, such state is realized.
 In these systems the crystalline translational symmetry is broken. 
-Although from the structural inhomogeneity does not necessarily follow an inhomogeneous electronic ground state, for some regions of the phase diagram, depending on the dopant concentration, such state is realized. 
-This region of phase space has been identified as the pseudogap phase\cite{Kresin2009} \cite{Muller2007} \cite{Timusk1999}. 
-An important consideration is that, although the dopant atoms are at fixed positions, the structural inhomogeneity has a dynamical character\cite{Mihailovic2005} \cite{Bianconi1996} and is present even in compounds with perfect crystallographic symmetry like HoBa$_{2}$Cu$_{4}$O$_{8}$\cite{RubioTemprano2000}. 
+
 In addition to the breaking of the crystalline translational symmetry the pseudogap phase exhibits other broken symmetries. 
 Time-reversal symmetry breaking was found using angular resolved photoemission spectroscopy with circularly polarized photons in Bi$_{2}$Sr$_{2}$CaCu$_{2}$O$_{8+\delta}$\cite{Kaminski2002}. 
 It was also found, by x-ray absorption spectroscopy, that the crystalline rotational symmetry is broken locally in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ with alternating regions of tetragonal and orthorhombic symmetry \cite{Bianconi1996}. 
-A perspective of the observation of broken symmetries in high-T$_{c}$ superconductors, emphasizing that some of these broken symmetries are hidden from common observational techniques, is discussed in ref.\cite{Chakravarty2011}. The clues provided by these broken symmetries should yield an understanding of the ground state in this pseudogap phase, its elementary excitations and the appearance of superconductivity at temperatures below the onset of the pseudogap. 
+A perspective of the observation of broken symmetries in high-T$_{c}$ superconductors, emphasizing that some of these broken symmetries are hidden from common observational techniques, is discussed in ref.\cite{Chakravarty2011}. 
+The clues provided by these broken symmetries should yield an understanding of the ground state in this pseudogap phase, its elementary excitations and the appearance of superconductivity at temperatures below the onset of the pseudogap. 
 
-However, experiments show that the insulating phase has broken symmetries.
-One is the simple antiferromagnetism, present for a range of doping, in which the spins are arranged in antiparallel manner before becoming superconductors. 
-% Some more about ferromagnetism is needed here
+This \textit{inherent inhomogeneity} in HTSC observed by many techniques (see paragraph 2 of \cite{Bussmann-Holder2005}).
+\cite{Kresin2009}: ``Electron-lattice interaction and its impact in high-T$_c$ superconductivity'' (polaronic nature of the carriers)
 
-There are also lattice inhomogeneities, for example in compounds like La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ and La$_{2}$CuO$_{4.1}$, the dopant atoms, necessary for superconductivity, do not reside at the crystal symmetry allowed sites making these compounds structurally inhomogeneous systems \cite{Poccia2011}.
-In other cases, like YBa$_2$Cu$_3$O$_{6+\delta}$ (YBCO), although the dopant atoms reside in crystal symmetric positions the departure from stoichiometry produce a compositional disorder \cite{Chen1988,Andersen1990} making YBCO also an inhomogeneous system.
-Interestengly, even though the dopant atoms are at fixed positions, these structural inhomogeneities have a dynamical character \cite{Mihailovic2005,Bianconi1996}.
-Such a dynamical inhomogeneity is present even in some compounds with perfect crystallographic symmetry like HoBa$_{2}$Cu$_{4}$O$_{8}$ \cite{RubioTemprano2000}.
-Although from the structural inhomogeneity does not necessarily follow an inhomogeneous electronic ground state, for some regions of the phase diagram, depending on the dopant concentation, such state is realized.
-This region of phase space has been identified as the \textit{pseudogap phase} \cite{Kresin2009,Muller2007,Timusk1999}.
+In the remainder of this introduction we briefly review the manifestation of the lattice inhomogeneity and the charge-lattice coupling in several experimental techniques.
 
-In addition to the breaking of the crystalline translational symmetry the pseudogap phase exhibits other broken symmetries. 
-Time-reversal symmetry breaking was found using angular resolved photoemission spectroscopy with circularly polarized photons in Bi$_{2}$Sr$_{2}$CaCu$_{2}$O$_{8+\delta}$ \cite{Kaminski2002}.
-It was also found, by x-ray absorption spectroscopy, that the crystalline rotational symmetry is broken locally in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ with alternating regions of tetragonal and orthorhombic symmetry \cite{Bianconi1996}.
-A perspective of the observation of broken symmetries in high-T$_{c}$ superconductors, emphasizing that some of these broken symmetries are hidden from common observational techniques, is discussed in \cite{Chakravarty2011}.
+This charge-lattice dynamic is inaccessible within the Born-Oppenheimer approximation, thus an exact treatment is necessary.
+We focus on a small but important subsytem and study a model hamiltonian for it that explains some of the experimental evidence
 
-\cite{Chakravarty2008}
 
+\section{Purely electronic theories}
+\label{sec:electronicTheories}
 
 In contrast to the BCS theory \cite{Bardeen1957}, the pairing mechanism in the \textit{unconventional superconductors} (cuprates, iron-based and heavy fermion \cite{Pfleiderer2009}) is unknown.
 Two leading theories: resonating-valence-bond \cite{?} and spin fluctuation \cite{Scalapino2012} rely heavily on magnetic interactions while mostly ignoring the lattice effects.
+
+Soon after their discovery Anderson proposed \cite{Anderson1987} that the parent compounds are in a \textit{quantum spin liquid} phase that do not break any symmetries. 
+
+In this theory, also called the \textit{resonating valence bond} (RVB), he argues that
+\begin{quote}
+  The preexisting magnetic singlet pairs of the insulating state become charged superconducting pairs when the insulator is doped sufficiently strongly. 
+The mechanism for superconductivity is hence predominantly electronic and magnetic, although weak phonon interactions may favor the state.
+\end{quote} 
+
+\cite{Chakravarty2008}: Breaking of RVB
 
 The clues provided by these broken symmetries should yield an understanding of the ground state in this pseudogap phase, its elementary excitations and the appearance of superconductivity at temperatures below the onset of the pseudogap. 
 
@@ -80,8 +71,6 @@ The clues provided by these broken symmetries should yield an understanding of t
 ARPES review: \cite{Damascelli2003}
 
 Pseudogap review: \cite{Timusk1999}
-
-\textit{Inherent inhomogeneity} in HTSC observed by many techniques (see paragraph 2 of \cite{Bussmann-Holder2005}).
 
 The remainder of this introductory chapter is devoted to reviewing some of the experimental results pointing to the importance of considering the lattice and electronic inhomogeneities in the description of superconductivity. 
 We start, in section \ref{sec:dynamic_dist} with an overview of the dynamic local lattice distortions in cuprates incluiding the important feature of stripes. 
@@ -151,9 +140,7 @@ This correlation between structure and electrical properties has also been shown
 Other metastable effects are induced by illumination, such as persistent photoconductivity, where after exposure to visible light conductivity and, in superconducting samples, critical temperature show a metastable increase.
 \end{quote}
 
-\subsection{Stripes}
-
-Review: \cite{Kivelson2003}
+Stripes review: \cite{Kivelson2003}
 
 \section{Electronic inhomogeneity}
 \label{sec:electronic_inhomogeneity}
@@ -196,7 +183,7 @@ That is, there can be \textit{phononic} excitations without a measurable isotopi
 
 V.g. \cite{Basov2005} \cite{Smallwood2012} ( http://www.photonics.com/Article.aspx?AID=51474 )
 
-\section{Scope of this thesis}
+\section{Scope and outline of this thesis}
 \label{sec:scope}
 
 % Lattice inhomogeneities limit the applicability of $k$-space formalism.
@@ -228,7 +215,4 @@ It is indeed beyond the capability of such a simple model to address the nature 
 However, it is possible that the polaronic objects in the Cu(1)-O(1,4) chains are capable of providing a pairing mechanism for the Cooper pairs in the Cu(2)-O(2,3) planes.
 This will point to a \textit{two component superconductivity} theory similar to some current proposals \cite{?}
 
-\section{Thesis outline}
-\label{sec:outline}
-
-% I need to rewrite this section once I finish everything else...
+% Thesis outline here
