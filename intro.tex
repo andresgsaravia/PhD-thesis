@@ -2,30 +2,13 @@
 \label{chap:introduction}
 
 Altough high temperature superconductivity has been known for almost three decades \cite{Bednorz1986}, a satisfactory explanation of this phenomenom still remains as one of the major unsolved problems in theoretical condensed matter physics. 
-It is known that, similarly to BCS theory \cite{Bardeen1957}, high-temperature superconductivity is caused by attraction between electrons \cite{?}. 
-However it remains unclear how this attraction arises, when it is sizable and when it is not, and what factors are detrimental to superconductivity.
-
-In contrast to the BCS theory \cite{Bardeen1957}, the pairing mechanism in the \textit{unconventional superconductors} (cuprates, iron-based and heavy fermion \cite{Pfleiderer2009}) is unknown.
-Two leading theories: resonating-valence-bond \cite{?} and spin fluctuation \cite{Scalapino2012} rely heavily on magnetic interactions while mostly ignoring the lattice effects.
-
-Soon after their discovery Anderson proposed \cite{Anderson1987} that the parent compounds are in a \textit{quantum spin liquid} phase that do not break any symmetries. 
-
-In this theory, also called the \textit{resonating valence bond} (RVB), he argues that
-\begin{quote}
-  The preexisting magnetic singlet pairs of the insulating state become charged superconducting pairs when the insulator is doped sufficiently strongly. 
-The mechanism for superconductivity is hence predominantly electronic and magnetic, although weak phonon interactions may favor the state.
-\end{quote} 
-
-\cite{Chakravarty2008}: Breaking of RVB
-
-The high-T$_c$ cuprate superconductors have complex phase diagrams with many competing ground states and quantum phase transitions between them \cite{Chakravarty2011}.
-Parent compounds of copper based superconductors start out as insulators and become superconductors when doped with additional charge carriers.
-Depending on the compound, superconducting charge carriers can be either electrons or holes.
-We show a simplified phase diagram for several cuprate superconductors in Figure \ref{fig:CuPhaseDiag} which highlights some of common characteristics between them.
-For low charge carriers concentration the parent compounds form ordered crystalline structures and exhibit antiferromagnetism below a certain temperature $T_N$ \cite{?}.
-This antiferromagnetic phase is suppresed by charge doping giving rise to superconductivity.
-Antiferromagnetism and superconductivity seem to be excluyent \cite{?}, however they appear in close proximity in the phase diagram.
-After the antiferromagnetism is suppressed, the superconducting transition temperature (T$_c$) rises with doping until it reaches a maximum value for some optimal doping level finally decreasing to zero for greater dopings.
+The discovery of superconductivity in the ceramic copper oxides was a surprising result since ceramic materials, such as the undoped copper oxides, are typically insulators.
+However, when doped they can become poor metals and high-temperature superconductors depending on the temperature (See Figure \ref{fig:CuPhaseDiag}). 
+The doping is provided either by chemical substitution (e.g. in La$_{2-x}$Sr$_x$CuO$_4$ \cite{Cava1987}) or by changing the oxygen content (as in YBa$_2$Cu$_3$O$_{7-\delta}$ \cite{Wu1987}). 
+Doping leads to the appearance of carriers in the Cu-O planes which can be either electrons or holes.
+Increasing the carrier concentration leads to conductivity and, for greater carrier concentrations, to superconductivity. 
+The value of the superconducting transition temperature (T$_c$) depends strongly on the carrier concentration.
+There is characteristic value of carrier concentration that leads to a maximum T$_c$ such that greater dopings produce a decrease in T$_c$.
 
 \begin{figure}[ht]
   \centering
@@ -35,42 +18,62 @@ After the antiferromagnetism is suppressed, the superconducting transition tempe
   \label{fig:CuPhaseDiag}
 \end{figure}
 
-One defining property of a superconductor, within the band energy approximation, is the presence of an energy gap, but early experiments could not find its characteristic signatures in cuprate superconductors.
-Instead of abruptly finding a zero density of states below a certain energy at the superconducting transition temperature there was only a partial depression of excitations appearing at a much higher temperature T*.
-This region of phase space has been identified as the \textit{pseudogap phase} and there is evidence for its presence in all cuprate superconductor families \cite{Timusk1999,Muller2007}.
-This phase seems to precede superconductivity for a large part of the phase diagram but its relationship to superconductivity still remains unclear \cite{?}.
+Since electrons must be bound together to form Cooper pairs, it was unexpected to find strong electron-electron correlations in copper oxide superconductors. 
+One example is given by La$_2$CuO$_4$ which becomes superconducting by replacing some of the trivalent La in with the divalent Sr. 
+This insulating material at zero doping becomes a superconductor which is a surprise since band-structure calculations based on the local-density approximation predict the undoped parent compound La$_2$CuO$_4$ to be metallic but it is found to be an antiferromagnetic insulator \cite{Timusk1999}.
+This discrepancy is a consecuence of the failure of the independent-particle picture assumed in band calculations and suggests that the undoped parent compounds of the cuprate superconductors are \textit{Mott-Hubbard insulators} \cite{Mott1949}.
 
-In addition to the partial gap, the pseudogap phase presents many interesting characteristics. 
-One of them is the observation of lattice inhomogeneities breaking the crystalline translational symmetry.
+Another remarkable feature of the cuprate high-temperature superconductors is the temperature dependence of the normal state resistivity.
+In optimally doped materials resistivity shows a linear variation with temperature from T$_c$ to high temperatures (600-1000K) extrapolating to zero resistance at zero degrees \cite{Gurvitch1987}.
+In contrast, conventional metals show a resitivity linearly dependent on temperature only for a limited range of temperatures, have an intercept on the temperature axis at some value grater than zero and saturate at high temperatures \cite{Timusk1999}.
+The dependency of the resistivity with temperature is different depending on the doping. 
+We provide a more detailed review later in this introductory chapter (section \ref{sec:resistivity}) but we emphasize that these resistivity measurements point further to the non-applicability of Fermi-liquid theory\footnote{Fermi-liquid theory describes the excitations in terms of an interacting gas of renormalized quasiparticles.} and of the single-particle picture \cite{Orenstein2000}.
+
+One of the defining properties of a superconductor, within the band energy approximation, is the presence of an energy gap, but early experiments could not find this characteristic signatures in cuprate superconductors.
+Instead of abruptly finding a zero density of states below a certain energy at the superconducting transition temperature there was only a partial depression of excitations appearing at a much higher temperature T*.
+This region in the phase diagram has been called the \textit{pseudogap phase} and there is evidence for its presence in all cuprate superconductor families \cite{Timusk1999,Muller2007}.
+Within the band-theory approximation, a \textit{pseudogap} occurs when some regions of the Fermi surface become gapped while other parts remain conductive. 
+With increased doping the gapped portion decreases and the compounds become more metallic. 
+The pseudogap seems a fundamental property of underdoped copper oxides however, although it precedes superconductivity for a large part of the phase diagram, its relationship to superconductivity still remains unclear \cite{Basov2005}.
+
+Cuprate superconductors are instrinsically inhomogeneous systems.
 For example in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ and La$_{2}$CuO$_{4.1}$, the dopant atoms, necessary for superconductivity, do not reside at the crystal symmetric sites making these compounds structurally inhomogeneous \cite{Poccia2011}.
 In YBa$_2$Cu$_3$O$_{7-\delta}$ (YBCO) the dopant atoms reside in crystal symmetric positions but the departure from stoichiometry produces compositional disorder \cite{Chen1988,Andersen1990} making YBCO also an inhomogeneous system.
-Even though the dopant atoms are at fixed positions, these structural inhomogeneities have a dynamical character \cite{Mihailovic2005,Bianconi1996}.
+Furthermore, even though the dopant atoms are at fixed positions, these structural inhomogeneities have a dynamical character \cite{Mihailovic2005,Bianconi1996}.
 Such a dynamical inhomogeneity is present even in some compounds with perfect crystallographic symmetry like HoBa$_{2}$Cu$_{4}$O$_{8}$ \cite{RubioTemprano2000}.
-Although from the structural inhomogeneity does not necessarily follow an inhomogeneous electronic ground state, for some regions of the phase diagram, depending on the dopant concentation, such state is realized \cite{?}.
 
 In addition to the breaking of the crystalline translational symmetry the pseudogap phase exhibits other broken symmetries. 
+The crystalline rotational symmetry is broken locally in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ with alternating regions of tetragonal and orthorhombic symmetry \cite{Bianconi1996} according to X-ray absorption spectroscopy. 
 Time-reversal symmetry breaking was found using angular resolved photoemission spectroscopy with circularly polarized photons in Bi$_{2}$Sr$_{2}$CaCu$_{2}$O$_{8+\delta}$ \cite{Kaminski2002}. 
-The crystalline rotational symmetry is broken locally in La$_{1.85}$Sr$_{0.15}$CuO$_{4}$ with alternating regions of tetragonal and orthorhombic symmetry \cite{Bianconi1996} according to x-ray absorption spectroscopy. 
-
 The clues provided by these broken symmetries should yield an understanding of the ground state in this pseudogap phase, its elementary excitations and the appearance of superconductivity at temperatures below the onset of the pseudogap. 
 
-% Polaronic nature of the carriers
-Carriers are polaronic objects \cite{Zhao1997}
-\begin{quote}
-  Here we report the results of magnetization and thermal expansion measurements on samples of the copper oxide superconductor La$_{2-x}$Sr$_x$CuO$_4$ which characterizes the oxygen-isotope effect on the carrier density and on the in-plane penetration depth. We find a neglible isotope effect on the former, but a large on the latter. Specific quantitative features of the results show that polaronic charge carriers exist and condense into Cooper pairs in the copper oxide superconductors.
-\end{quote}
+One strong motivation for Bednorz and M\"{u}ller to search for superconductivity in Ba$_x$La$_{5-x}$Cu$_5$O$_{5(3-y)}$ was the possibility of strong electron-phonon interactions in oxides due to polaron formation \cite{Bednorz1986}.
+Later X-ray absorption experiments found a large oxygen-isotope effect on the pseudogap onset temperature T* which is sign reversed in respect to the isotope effect on T$_c$.
+It was also found that there were local deviations on the Cu-O bond lengths appearing at T*.
+These is evidence of the significance of electron-lattice interactions in the pseudogap phase and was explained in terms of polaron formation \cite{MustredeLeon1992}.
+The formation of polaronic states is a nonadiabatic phenomenon which breaks the Born-Oppenheimer approximation \cite{Born1927}.
+Thus, for a complete description of cuprate superconductors, it is impossible to separate the ionic and the electronic motions.
 
-\cite{Kresin2009}: ``Electron-lattice interaction and its impact in high-T$_c$ superconductivity'' 
-This charge-lattice dynamic is inacessible within the Born-Oppenheimer approximation, thus an exact treatment is necessary.
-We focus on a small but important subsytem and study a model hamiltonian for it that explains some of the experimental evidence
+The Bardeen-Cooper-Schrieffer (BCS) theory of superconductivity \cite{Bardeen1957} was developed for and successfully applied to metals within the Fermi-liquid approximation, as such, it seems to lack an appropriate foundation to describe high-temperature superconductivity in copper oxides \cite{Damascelli2003}.
+The strong electron-electron correlations prevent successful band structure calculations with independent quasiparticles.
+Furthermore the presence of polaronic objects and the observation of lattice and electronic inhomogeneities point to the inadequacy of the Born-Oppenheimer approximation and the reciprocal space formalism.
+Such approximations may still remain useful in understanding some aspects of cuprate oxide superconductors but it is clear that there are important features that they are unable to explain.
+
+One approach to explore the electron-lattice dynamics in an inhomogeneous system away from the Born-Oppenheimer (adiabatic) approximation is through model hamiltonians involving both charge and atomic degrees of freedom in real space.
+Unfortunately the computationally resources required to deal with such hamiltonians rapidly increase with each degree of freedom introduced thus making unfeasible to explore large systems with many variables.
+As such, we are forced to focus on small subsystems in the copper oxide superconductors.
+Since there is strong evidence for polaronic behaviour in the O(4)-Cu(1)-O(4) cluster \cite{MustredeLeon1992,Salkola1994} in the YBCO superconductor it seems essential to correctly describe this subsystem using a non-adiabatic hamiltonian in real space.
+Furthermore, some models have considered the interaction between fermionic \textit{pairs} and bipolaronic bosonic objects \cite{Bussmann-Holder2005,Mihailovic2001,Bar-Yam1991,doi:10.1142/S0217979200003812} explaining several properties of the normal state in the pseudogap region. 
+The bipolaronic objects could arise from the O(4)-Cu(1)-O(4) cluster and couple to fermionic carriers on the CuO$_2$ planes thus raising the importance of correctly describing this subsystem.
+A particular model hamiltonian has been used to successfully describe the local inhomogeneities and optical signatures in this cluster as a consecuence of polaron formation \cite{MustredeLeon1992, Salkola1994, Salkola1995,DeLeon1999, Leon2008, MirandaMena2007,Mena2006,MustredeLeon2000}.
+Although there is a considerable amount of work on this model hamiltonian, the effect of the polaron formation on the \textit{electronic}\footnote{The departure from the Born-Oppenheimer approximation means that the excitations in the model can not be identifyed as having either a lattice or electronic origin but are always in a \textit{mixed} state of both. Thus, when we refer to an \textit{electronic} excitation we mean an excitation that in the absence of electron-lattice coupling would correspond to the electronic degrees of freedom in the model.} excitations of the model has not been throughly explored.
+In this thesis we describe in detail this model hamiltonian and many of its lowest excitations incluiding the electronic excitations.
 
 The remainder of this introductory chapter is devoted to reviewing some of the experimental results pointing to the importance of considering the lattice and electronic inhomogeneities in the description of superconductivity. 
-We start, in section \ref{sec:dynamicDistortions} with an overview of the dynamic local lattice distortions in cuprates incluiding the important feature of stripes. 
-Afterwards, in section \ref{sec:electronic_inhomogeneity}, we turn our attention to electronic inhomogeneities. 
-In sections \ref{sec:phonon_spectra} and \ref{sec:specific_heat} we present some experimental anomalies in the phonon spectra and specific heat respectively and speculate about their possible origin in the mentioned inhomogeneities. 
-Next we duscuss some of the controversial experimental results in isotopic effects and ultrafast spectroscopy in sections \ref{sec:isotopic_effects} and \ref{sec:ultrafast_spect} respectively.
-
-In the last part of this introduction we limit the scope of this thesis and present our motivation and approach at describing these dynamic effects (sec. \ref{sec:scope}) and provide an outline of the next chapters.
+We start, in section \ref{sec:dynamicDistortions} with an overview of the dynamic local lattice distortions in cuprates. 
+Afterwards, in section \ref{sec:electronicInhomogeneity}, we turn our attention to electronic inhomogeneities. 
+In sections \ref{sec:phonon_spectra} and \ref{sec:specific_heat} we present some experimental anomalies in the phonon spectra and specific heat respectively.
+Finally we duscuss some of the experimental results in isotopic effects and ultrafast spectroscopy in sections \ref{sec:isotopic_effects} and \ref{sec:ultrafast_spect} respectively.
 
 
 \section{Dynamic local lattice distortions}
@@ -135,15 +138,33 @@ In this region the electronic behavior can be described in terms of free fermion
 %Very nice review about electrodynamics in High-Tc superconductors: \cite{Basov2005} 
 
 \section{Electronic inhomogeneity}
-\label{sec:electronic_inhomogeneity}
+\label{sec:electronicInhomogeneity}
 
-STM observations of electronic inhomogeneity in Bi$_2$Sr$_2$CaCu$_2$O$_{8+\delta}$ \cite{Pan2001} \begin{quote}The inhomogeneity is manifested as spatial variations in both the local density of states spectrum and the superconducting energy gap. These variations are correlated spatially and vary on the surprisingly short length scale of approximately 14 \AA. \end{quote}
+In addition to the lattice inhomogeneities there is evidence for inhomogeneities in the electronic structure of cuprate superconductors.
+For example, scanning tunneling miscroscopy measurements performed on Bi$_2$Sr$_2$CaCu$_2$O$_{8+\delta}$ manifested spatial variations in both the local density of states and the superconducting energy gap varying on the length scale of approximately 14 \AA \cite{Pan2001}. 
+
+\cite{Bianconi1996}: ``Cu K-edge EXAFS in La1.85Sr0.15CuO4 shows two orders of the CuO$_6$ octahedra below 100K assigned to two types of stripes with different order. In fact the large tilting and the elongation of the in-plane Cu-O distances in the distorted Cu sites indicates that the electronic structure in the D stripes is different from that in the U stripes.''
+
+\cite{Bianconi1996a} ``The modulated structure of the CuO2 plane in Bi2Sr2CaCu2O8?y superconductor has been solved by Cu K-edge anomalous x-ray diffraction. The displacement of Cu ions along the c axis shows the largest amplitude
+and anharmonic character. The results show flat stripes of CuO2 lattice of width L?15.5 Å with long Cu-Bi distances that are separated by stripes of bent CuO2 plane and shorter Cu-Bi distances. In each CuO2 bilayer the flat stripes in a first layer are close to the bent stripes in the second layer, suppressing the electronic coupling between the two adjacent planes.''
 
 NMR shows charge density variations (stripes) in YBa$_2$Cu$_3$O$_{7-\delta}$ \cite{Haase2003}
 
-See introduction of this article: \cite{Ivanov1995}
-
 ARPES review: \cite{Damascelli2003}
+\begin{quote}
+  angle-resolved photoemission spectroscopy (ARPES) plays a major role because it is the most direct method of studying the electronic structure of solids (see Sec. II). Its large impact on the development of many-body theories stems from the fact that this technique provides information on the single-particle Green’s function, which can be calculated starting from a microscopic Hamiltonian.
+\end{quote}
+
+\cite{Kivelson2003}: ``it has been possible to establish the existence of stripe-ordered phases in a wide range of members of the lanthanum cuprate family of high-temperature superconductors:
+La1.6?xNd0.4SrxCuO4 over the whole range of doped hole concentrations30 from 0.05?x?0.2, La2?xBaxCuO4 (Fujita et al., 2002), La2?xSrxCuO4 for31 0.02?x?0.13, and La2CuO4?
+? (Lee et al., 1999) (including optimally doped material with a doped hole concentration ?0.15
+and a superconducting Tc of 42 K). Exciting preliminary evidence of charge-stripe order has been recently reported, as well, from elastic neutron scattering studies
+on underdoped YBa2Cu3O6?y [with y?0.35 and Tc ?39 K (Mook et al., 2002)] and optimally doped
+YBa2Cu3O6?y [with y?0.93 and Tc?93 K (Mook, 2002)]. And, it is worth mentioning, stripe order has also been similarly detected in a number of nonsuperconducting doped antiferromagnets,32
+including La2?xSrxNiO4? ? and the colossal magnetoresistance
+manganites.33 Conversely, it is important to note that so far no evi-
+dence of stripe order, or incipient stripe order, has been found in any of the electron-doped cuprate superconductors.''
+This reference also reviews experimental issues and considerations about detecting stripes
 
 Raman spectra says: pseudogap is s-wave; superconducting gap is d-wave \cite{Sakai2013}.
 Pseudogap is not incipient superconductivity but another kind of order \cite{He2011}
@@ -157,23 +178,27 @@ Anomalous ir conductivity in the pseudogap phase \cite{Basov1996}
 
 ``Phonon contributions to the specific heat as a function of Co content correlate closely with observed anomalies in calorimetric measurements, indicating that phonons contribute intrinsically to the transition mechanism, e.g. via Bose condensation of structural bipolarons.'' \cite{Obhi1990} 
 
-
-
-\section{Electric resistivity}
-\label{sec:resistivity}
-
-T vs T$^2$. See v.g. \cite{Timusk1999}
-
-For a Fermi liquid the dc resistance varies as T$^2$.
-
-\cite{Muller2007}: \textit{At optimum doping, i.e- T$_c$ maximum, and in the normal state, the resistivity increases linearly with temperature}
-
 \section{Specific heat}
 \label{sec:specific_heat}
 
 Specific heat: \cite{Loram1993}
 
 For a Fermi liquid the specific heat rises linearly with the temperature.
+
+\section{Electric resistivity}
+\label{sec:resistivity}
+
+T vs T$^2$ \cite{Timusk1999}!!
+
+For a Fermi liquid the dc resistance varies as T$^2$.
+
+\cite{Muller2007}: \textit{At optimum doping, i.e T$_c$ maximum, and in the normal state, the resistivity increases linearly with temperature}
+
+\cite{Damascelli2003}
+\begin{quote}
+Even though the approximate T$^2$ dependence of the resistivity observed in the overdoped metallic regime was taken as evidence for Fermi-liquid behavior, the applicability of Fermi-liquid theory (which describes electronic excitations in terms of an interacting gas of renormalized quasiparticles) to the ``normal'' metallic state of high-temperature superconductors is questionable, because many properties do not follow canonical Fermi-liquid behavior (Orenstein and Millis, 2000).
+On top of this complexity, it has long been recognized that also the interplay between electronic and lattice degrees of freedom as well as the tendencies towards phase separation are strong in these componds (Sigmund and Muller, 1993; Muller, 2000). 
+\end{quote}
 
 \section{Isotopic effects}
 \label{sec:isotopic_effects}
