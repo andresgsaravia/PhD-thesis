@@ -89,7 +89,7 @@ sympy-plots-for-*.tex/
 *.xdy
 
 # final document
-main.pdf
+# main.pdf
 
 # Emacs autosaves
 .#*
