@@ -1,12 +1,12 @@
 \chapter{Peierls-Hubbard model}
 \label{chap:model}
 
-As mentioned in section \ref{sec:overview}, treatments based in the adiabatic and antiadiabatic approximations are unable to describe properly the correlated electron-lattice motion in cuprate's Cu-O bonds.
+As mentioned in section \ref{sec:overview}, treatments based in the adiabatic and antiadiabatic approximations are unable to describe properly the correlated charge-ion motion in cuprate's Cu-O bonds.
 An alternative to overcome this limitation is an exact treatment of a reduced system.
 In this thesis we focus on the O(4)-Cu(1)-O(4) cluster in YBa$_2$Cu$_3$O$_7$.
 We approximate this local environment as a three site cluster with two holes. 
 Such approximation is justified as the Cu(1)-O(4) bond length (1.83 \AA) is far shorter than the Cu(2)-O(4) bond length ($\sim 2.41$ \AA) (see figure \ref{fig:YBCO_structure}), making charge transfer outside the cluster a much slower process than the charge dynamics inside the cluster. 
-Although we cannot directly identify the three site cluster proposed in this model with a particular structure of the CuO plane, the general approach of charge transfer between hole rich regions and hole poor regions in the plane coupled to the lattice degrees of freedom is still valid, hence the general conclusions we draw from this model applicable to describe the structure of the CuO plane.
+Although we cannot directly identify the three site cluster proposed in this model with a particular structure of the CuO plane, the general approach of charge transfer between hole rich regions and hole poor regions in the plane coupled to the lattice degrees of freedom is still valid, hence the general conclusions we draw from this model are applicable to describe the structure of the CuO plane.
 
 This thesis is based in a thorough analysis of that model hamiltonian so we devote this chapter to a detailed description of its components.
 In section \ref{sec:hamiltonian-and-basis} we describe the hamitlonian and the basis used. 
@@ -20,7 +20,7 @@ Finally, appendix \ref{chap:comp_details} gives some computational details about
 \section{Hamiltonian and basis set}
 \label{sec:hamiltonian-and-basis}
 
-To describe two holes in the O(4)-Cu(1)-O(4) cluster with an electron-lattice (phonon) correlated movement we use a hamiltonian consisting of three parts:
+To describe two holes in the O(4)-Cu(1)-O(4) cluster with an charge-ion (phonon) correlated movement we use a hamiltonian consisting of three parts:
 %
 \begin{equation}
   \label{eq:full-hamiltonian}
@@ -98,11 +98,11 @@ With
   \label{eq:coupling-constants}
   \lambda_R=\tilde{\lambda_R}(\hbar/2m_R\omega_R)^{1/2},\ \ \lambda_{ir}=\tilde{\lambda_{ir}}(\hbar/2m_{ir}\omega_{ir})^{1/2}
 \end{equation}
-From the definition of $H_{el-ph}$ we can observe that the electrons will be coupled to the infrared (antisimmetric) mode only when one oxygen is located at the copper site and the other in an oxygen.
+From the definition of $H_{el-ph}$ we can observe that the electrons will be coupled to the infrared (antisymmetric) mode only when one charge is located at the copper site and the other in an oxygen.
 However, there will be electron-lattice coupling with the Raman (symmetric) mode in all cases.
 
 One simple basis set for this system can be denoted as $\{\ket{e_1,e_2,ir,R}: e_1,e_2=1,2,3; ir,R=1,2,\ldots\}$ with $e_k$ being the position of the $k$-th hole, $ir$ the number of \textit{infrared} phonons and $R$ the number of \textit{Raman} phonons. 
-This basis is infinite dimensional however, as discussed in appendix \ref{chap:comp_details}, for the lower energy excitations the eigenvalues and eigenvectors are well described using a basis with only a few phononic labels.
+This basis is infinite dimensional however, as discussed in appendix \ref{chap:comp_details}, for the lower energy excitations the eigenvalues and eigenvectors are well described using a basis with only a few phononic excitations.
 
 \section{Lattice distortions}
 \label{sec:lattice-distortions}
@@ -229,7 +229,7 @@ To find the most probable cluster distortion $d$ we can find the value of $u_{ir
 \label{sec:chargeLocalization}
 
 Eigenstates of the hamltonian (\ref{eq:full-hamiltonian}), in general, have delocalized charges.
-To understand charge dynamics according for each excitation it is useful to project the eigenstates into the definite charge occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
+To understand charge dynamics for each excitation it is useful to project the eigenstates into the definite charge occupation basis states discussed in section \ref{sec:hamiltonian-and-basis}.
 The basis set we are using ($\{\ket{e_1,e_2,ir,R}\}$) has sharp values for the hole number operator on each site for a given number of infrared $ir$ and Raman $R$ phonons. 
 Thus, to find the probability $P(e_1,e_2)$ of finding one hole in site $e_1$ and the other on site $e_2$, we need only to sum over the infrared and Raman phonons of the system,
 %
@@ -264,9 +264,9 @@ Since the model hamiltonian (\ref{eq:full-hamiltonian}) does not distinguish spi
 The effects of isotopic substitutions in cuprate superconductors have been extensively studied and can reveal fundamental properties of the material (see section \ref{sec:isotopic_effects}). 
 It is, therefore, of interest to model these effects on the three sites cluster we are studying.
 
-Changing the atomic mass in any of the three atomic should change the phonon frequencies $(\omega_{ir},\omega_R$) in (\ref{eq:phonon-part}).
-To calculate this chagne in frequencies we continue to model the infrared and Raman vibrational modes in the O(4)-Cu(1)-O(4) cluster as harmonic oscillators.
-In this section we consider a classical model of three masses ($m_i,\ i=1,2,3$ with $i=1,3$ for the oxygen and $i=2$ for the copper atoms) attached by springs of constants $k_1$ and $k_2$ (see figure \ref{fig:3-masses-2-springs}) and find the dependency of the normal vibrational modes on the mass of each atom.
+Changing the atomic mass in any of the three atomic sites should change the phonon frequencies $(\omega_{ir},\omega_R$) in (\ref{eq:phonon-part}).
+To calculate this change in frequencies we continue to model the infrared and Raman vibrational modes in the O(4)-Cu(1)-O(4) cluster as harmonic oscillators.
+In this section we consider a classical model of three masses ($m_i,\ i=1,2,3$ with $i=1,3$ for the oxygen and $i=2$ for the copper atoms) attached by springs of constants $k_1$ and $k_2$ (see figure \ref{fig:3-masses-2-springs}) and find the dependence of the normal vibrational modes on the mass of each atom.
 In our particular case we are interested in $m_1=m_3$ and $k_1=k_2$, but we start from the slightly more general case.
 
 \begin{figure}[ht]
@@ -364,7 +364,7 @@ In order to have a non-trivial solution we require the determinant of that matri
   \end{split}
 \end{equation}
 %
-which is a third order alebraic equation for $\omega^2$ with 3 solutions for $\omega$.
+which is a third order algebraic equation for $\omega^2$ with 3 solutions for $\omega$.
 To simplify the calculation we take now into consideration the details of our problem, that is, we consider $m_1 = m_3 \equiv m_O$, $m_2 \equiv m_{Cu}$ and $k_1 = k_2 \equiv k$. 
 With this considerations, (\ref{eq:det}) simplifies to
 %
@@ -398,7 +398,7 @@ from here we obtain the uninteresting $\omega^2=0$ and
 \end{equation}
 
 This is the frequency of the asymmetric (infrared) vibrational mode, denoted by $\omega_{ir}$ in (\ref{eq:phonon-part}).
-Summarizing this part, we have found the dependency of the phonon frequencies $\omega_{ir}$ and $\omega_R$ with the atomic masses for the oxygen $m_O$ and copper $m_{Cu}$ atoms in the following way
+Summarizing this part, we have found the dependence of the phonon frequencies $\omega_{ir}$ and $\omega_R$ with the atomic masses for the oxygen $m_O$ and copper $m_{Cu}$ atoms in the following way
 %
 \begin{equation}
   \label{eq:omegaR}
@@ -423,7 +423,7 @@ From here we identify the reduced masses for each vibrational mode\footnote{We u
   m_{ir} \equiv \frac{m_Om_{Cu}}{m_{Cu}+2m_O} \simeq 10.64\ u \simeq 1.7668 \times 10^{-26}kg
 \end{equation}
 
-From equations (\ref{eq:coupling-constants},\ref{eq:omegaR}, \ref{eq:omegair}) it can be seen that an oxygen isotpe substitution $^{16}$O $\rightarrow$ $^{18}$O ammounts to a change in the frequencies  $(\omega_{ir}$, $\omega_R)$ and the coupling constants $(\lambda_{ir},\lambda_R)$.
+From equations (\ref{eq:coupling-constants},\ref{eq:omegaR}, \ref{eq:omegair}) it can be seen that an oxygen isotope substitution $^{16}$O $\rightarrow$ $^{18}$O ammounts to a change in the frequencies  $(\omega_{ir}$, $\omega_R)$ and the coupling constants $(\lambda_{ir},\lambda_R)$.
 Denoting as $\omega^{(16)}$ and $\omega^{(18)}$ the phonon frequencies for a cluster with $^{16}$O and $^{18}$O respectively, we can find the ratios
 %
 \begin{align}\label{eq:omega-isot}
@@ -501,7 +501,7 @@ We also use a single hopping parameter $t$ and ignore hopping between the two ox
 Since only the coupling between the asymmetric mode and the charge motion leads to a measurable lattice distortion, with two Cu–O bond lengths, we only consider the effect of the variation in the electron–lattice coupling constant with the antisymmetric mode, $\lambda_{ir}$, and we set the electron-lattice coupling with the symmetric mode, $\lambda_R$ , as zero \cite{Salkola1995}. 
 The inclusion of those considerations in the model, or other choices of parameters produce very similar results (e.g. \cite{Salkola1994, Salkola1995}).
 The relevant value for the coupling $\lambda_{ir}$ is determined using equation \ref{eq:dvsuir}; it is chosen such that the ground state has a maximum probability density at a $u_{ir}$ that reproduces the observed lattice distortion of 0.13 \AA\ \cite{MustredeLeon1991}.
-In this work we use the same parameters as \cite{DeLeon1999, Leon2008, MirandaMena2007,Mena2006}, namely:
+In this work we use the same parameters as in Refs. \cite{DeLeon1999, Leon2008, MirandaMena2007,Mena2006}, namely:
 
 \begin{itemize*}
 \item On-site Coulomb repulsion for O(4) and Cu(1) sites: $U=7$ eV
@@ -511,7 +511,7 @@ In this work we use the same parameters as \cite{DeLeon1999, Leon2008, MirandaMe
 \item Bare phonon frequency for the infrared mode: $\omega_{ir}=612.4$ cm$^{-1}$
 \end{itemize*}
 
-As previously stated, some variation in the parameter space has been explored without changes in the basic phenomenology. Table \ref{tab:parameters} shows the parameters for this model used in other publications\footnote{It seems that the reported values for the phonon frequencies in \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed, for example, in Fig. 1 of \cite{Salkola1994} at $\lambda_{ir}=0$.}.
+As previously stated, some variation in the parameter space has been explored without changes in the basic phenomenology. Table \ref{tab:parameters} shows the parameters for this model used in other publications\footnote{It seems that the reported values for the phonon frequencies in Refs. \cite{Salkola1994, Salkola1995} are erroneous since they show $\omega_R > \omega_{ir}$ and they are inconsistent from what can be observed, for example, in Fig. 1 of Ref. \cite{Salkola1994} at $\lambda_{ir}=0$.}.
 
 \begin{table}[ht]
   \centering
