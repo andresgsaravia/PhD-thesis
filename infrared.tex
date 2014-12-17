@@ -5,7 +5,6 @@ In this chapter we present some general observations and discuss with more detai
 We start with section \ref{sec:classification} describing the general nature of the different excitations. 
 In section \ref{sec:irSpectra} we analyze some features that should be present in the infrared spectra followed, in section \ref{sec:irIsotopicShifts}, by a description of the effects that the isotopic $^{16}$O$\rightarrow ^{18}$O substitution has in the spectra. 
 Finally we conclude in section \ref{sec:irPhononProj} with some observations about the projections into the phonon coordinates of these infrared-active states.
-We defer to appendix \ref{chap:comp_details} some specific details about the calculations, such as the algorithm used and the numerical errors introduced by the truncation in the basis.
 
 \section{Classification of the excitations}
 \label{sec:classification}
@@ -100,7 +99,7 @@ It is interesting to notice that isotopic shift of the excitations with 3 infrar
 
 The first infrared excitation is peculiar since it has a negative isotopic shift for $\lambda > \sim 0.1$ eV with a value of $\sim -5.2$\% for $\lambda_{ir}=0.1263$ eV.
 This negative isotopic shift is a signal of polaronic behaviour in the system since harmonic and anharmonic potentials all predict positive isotopic shifts \cite{MustredeLeon2000,Pali1998}.
-For large coupling values this isotopic shift remains negative but seems to stabilize near 25\% however, there could be some numerical instabilities in this specific isotopic shift attibutable to float-point arithmetic limitations in the calculations since we are dealing with numbers very close to zero\footnote{See section \ref{sec:numericalInstabilities} in the appendix}.
+For large coupling values this isotopic shift remains negative but seems to stabilize near 25\% however, there could be some numerical instabilities in this specific isotopic shift attibutable to float-point arithmetic limitations in the calculations since we are dealing with numbers very close to zero\footnote{See https://research-engine.appspot.com/37001/notebooks/2001/4844104634597376 for details.}.
 
 In Table \ref{tab:irIsotShifts} we show the calculated energies for these excitations in the $^{16}$O and $^{18}$O cases as well as the isotopic shift $\Delta_i$ for the $\lambda_{ir}=0.1263$ eV case. It can be seen that all the shifts are smaller than the harmonic prediction. However the strongest deviation is in the eigenstate with one infrared phonon where $\Delta_i$ is negative.
 

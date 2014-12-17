@@ -15,7 +15,7 @@ In section \ref{sec:lattice-distortions} we discuss a method of calculating real
 Next, in section \ref{sec:chargeLocalization}, we describe a projection into definite charge occupation states.
 Section \ref{sec:model-parameters} reviews some literature suggesting possible choices of parameters and lists the parameters used in this work.
 We review in section \ref{sec:classification} a method for identifying and classifiying the different excitations in this model.
-Finally, appendix \ref{chap:comp_details} gives some computational details about our calculations.
+Computational details about the calculations can be found online\footnote{https://research-engine.appspot.com/37001/notebooks/2001}.
 
 \section{Hamiltonian and basis set}
 \label{sec:hamiltonian-and-basis}
@@ -102,7 +102,7 @@ From the definition of $H_{el-ph}$ we can observe that the electrons will be cou
 However, there will be electron-lattice coupling with the Raman (symmetric) mode in all cases.
 
 One simple basis set for this system can be denoted as $\{\ket{e_1,e_2,ir,R}: e_1,e_2=1,2,3; ir,R=1,2,\ldots\}$ with $e_k$ being the position of the $k$-th hole, $ir$ the number of \textit{infrared} phonons and $R$ the number of \textit{Raman} phonons. 
-This basis is infinite dimensional however, as discussed in appendix \ref{chap:comp_details}, for the lower energy excitations the eigenvalues and eigenvectors are well described using a basis with only a few phononic excitations.
+This basis is infinite dimensional however for the lower energy excitations the eigenvalues and eigenvectors are well described using a basis with only a few phononic excitations.
 
 \section{Lattice distortions}
 \label{sec:lattice-distortions}
@@ -238,7 +238,7 @@ Thus, to find the probability $P(e_1,e_2)$ of finding one hole in site $e_1$ and
   P(e_1,e_2)=\sum_{ir,R} \left| \braket{e_1,e_2,ir,R}{\psi} \right|^2
 \end{equation}
 %
-From the labeling convention stated in (\ref{eq:label}) we can visualize the nine possible combinations of hole occupancy. 
+From the labeling convention we use\footnote{$l = e_1 + 3(e_2 - 1) + 9ir + 9R(N_{ir} + 1)$} we can visualize the nine possible combinations of hole occupancy. 
 Denoting, for example, $e_1$ as $\uparrow$ and $e_2$ as $\downarrow$ we have the following combinations:
 %
 \begin{equation}
