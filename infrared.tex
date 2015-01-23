@@ -16,7 +16,7 @@ However, the deviation from this behaviour is smooth in the coupling parameter $
 That is, a hamiltonian with a small $\lambda_{ir}$ value will have only slighty different eigenstates from the uncoupled hamiltonian.
 These slightly mixed eigenstates in the small couping regime can be thought of as largely \textit{phononic} or \textit{electronic} in nature.
 For larger coupling values the eigenstates are very different from their uncoupled counterparts.
-As an illustration of this we show, in figure \ref{fig:electr-proj}, the first electronic excitation for different $\lambda_{ir}$ values, $\psi_{el}(\lambda_{ir})$ projected unto itself for the uncoupled system, $\psi_{el}(\lambda_{ir}=0)$.
+As an illustration of this we show, in figure \ref{fig:electr-proj}, the first electronic excitation for different $\lambda_{ir}$ values, $\psi_{el}(\lambda_{ir})$ projected unto the first electronic state on the uncoupled system, $\psi_{el}(\lambda_{ir}=0)$.
 From this projection we can see that for small coupling values $\psi_{el}$ remains largely unchanged, that is, it remains \textit{electronic} in nature.
 In the middle coupling regime the change is the strongest with the projection approaching asymptotically to zero at large couplings.
 The vertical line in \ref{fig:electr-proj} at $\lambda_{ir}=0.1263$ eV, as discussed in section \ref{sec:grd-phonon-proj}, represents the $\lambda_{ir}$ value that reproduces the experimentally observed cluster distortion of 0.13 \AA.
@@ -43,15 +43,15 @@ We will omit any further discussion about these excitations and ignore them for 
 \label{sec:irSpectra}
 
 The Peierls-Hubbard model (\ref{eq:full-hamiltonian}) applied to the O(4)-Cu(1)-O(4) cluster in YBa$_2$Cu$_3$O$_7$ should be able to predict some features of the c-axis infrared spectra by looking at its infrared-active excitations.
-An excitation is infrared-active only when it has a opposite parity to the ground state.
-At $\lambda_{ir}=0$ the excitations are harmonic and have a opposite parity if the number of infrared phonons is even or odd, this means that only the excitations with an odd number of infrared phonons are infrared-active.
+An excitation is infrared-active only when it has an opposite parity to the ground state.
+At $\lambda_{ir}=0$ the excitations are harmonic and have an opposite parity if the number of infrared phonons is even or odd, this means that only the excitations with an odd number of infrared phonons are infrared-active.
 Furthermore, since the coupling $\lambda_{ir}$ can be varied smoothly, the hamiltonian eigenstates will not change parity as a function of $\lambda_{ir}$ so it can be concluded that the infrared-active excitations, for any $\lambda_{ir}$, will be those that, at $\lambda_{ir}=0$, have an \textit{odd} number of phonons.
 
-Figure \ref{fig:irSpectra} shows the infrared excitations for a representative range of $\lambda_{ir}$ values.
+Figure \ref{fig:irSpectra} shows the frequencies of the infrared excitations for a representative range of $\lambda_{ir}$ values.
 For $\lambda_{ir}=0$ we have excitations corresponding to the phononic part of the hamiltonian alone.
 As can be observed, the behaviour of each excitation depends on the number of infrared phonons at zero coupling.
 The number of Raman phonons only displaces the excitation in multiples of $\omega_R=500$ cm$^{-1}$.
-That is, all the red lines in Fig. \ref{fig:irSpectra} correspond to one infrared phonon and, in ascending order, have zero, one and two Raman phonons.
+That is, all the red lines in Fig.\ \ref{fig:irSpectra} correspond to one infrared phonon and, in ascending order, have zero, one and two Raman phonons.
 This is similarly true for the excitations with two (green lines) and three (blue lines) infrared phonons.
 Notice that the excitations with two infrared phonons are not infrared-active since they have the same symmetry as the ground state.
 %
@@ -71,7 +71,7 @@ However the excitations with two and three infrared phonons converge to the infr
 This recovery of an harmonic behaviour at large $\lambda_{ir}$ is similiar to what was discussed in section \ref{sec:grd-phonon-proj} for the ground and first excited states which can be interpreted as a recovery of the harmonic behaviour but with a displaced equilibrium position.
 
 It is interesting to notice that the infrared spectra at $\lambda_{ir}=0$ eV and at the relevant coupling, $\lambda_{ir}=0.1263$ eV, are very similar albeit with some noticeable differences.
-The peak centered at 612.4 cm$^{-1}$ seems to be slightly shifted to 641.4 cm$^{-1}$ with an asymetry produced by the excitation with three infrared phonons at 774.2 cm$^{-1}$ (see inset of Fig. 2 in \cite{MustredeLeon1992} and Fig. 2 in \cite{Salkola1994}).
+The peak centered at 612.4 cm$^{-1}$ seems to be slightly shifted to 641.4 cm$^{-1}$ with an asymetry produced by the excitation with three infrared phonons at 774.2 cm$^{-1}$ \cite{MustredeLeon1992,Salkola1994}.
 It should be noted that calculations using a rigid double-well potential for the O(4)-Cu(1)-O(4) cluster are unable to produce this asymmetry.
 Also in the $\lambda_{ir}=0.1263$ eV case there is an aditional excitation at 142.4 cm$^{-1}$ which has not yet been observed since other absorption processes in this range, e. g. a large Drude contribution in the D. C. conductivity, difficult its detection.
 
@@ -99,7 +99,8 @@ It is interesting to notice that isotopic shift of the excitations with 3 infrar
 
 The first infrared excitation is peculiar since it has a negative isotopic shift for $\lambda > \sim 0.1$ eV with a value of $\sim -5.2$\% for $\lambda_{ir}=0.1263$ eV.
 This negative isotopic shift is a signal of polaronic behaviour in the system since harmonic and anharmonic potentials all predict positive isotopic shifts \cite{MustredeLeon2000,Pali1998}.
-For large coupling values this isotopic shift remains negative but seems to stabilize near 25\% however, there could be some numerical instabilities in this specific isotopic shift attibutable to float-point arithmetic limitations in the calculations since we are dealing with numbers very close to zero\footnote{See https://research-engine.appspot.com/37001/notebooks/2001/4844104634597376 for details.}.
+For large coupling values this isotopic shift remains negative but seems to stabilize near 25\%.
+However, there could be some numerical instabilities in this specific isotopic shift attibutable to float-point arithmetic limitations in the calculations since we are dealing with numbers very close to zero\footnote{See https://research-engine.appspot.com/37001/notebooks/2001/4844104634597376 for details.}.
 
 In Table \ref{tab:irIsotShifts} we show the calculated energies for these excitations in the $^{16}$O and $^{18}$O cases as well as the isotopic shift $\Delta_i$ for the $\lambda_{ir}=0.1263$ eV case. It can be seen that all the shifts are smaller than the harmonic prediction. However the strongest deviation is in the eigenstate with one infrared phonon where $\Delta_i$ is negative \cite{GarciaSaraviaOrtizdeMontellano2014}.
  
