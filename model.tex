@@ -1,7 +1,7 @@
 \chapter{Peierls-Hubbard model}
 \label{chap:model}
 
-As mentioned in section \ref{sec:overview}, treatments based in the adiabatic and anti-adiabatic approximations are unable to describe properly the correlated charge-ion motion in cuprate's Cu-O bonds.
+As mentioned in section \ref{sec:overview}, treatments based in the adiabatic and anti-adiabatic approximations\footnote{The \textit{adiabatic} approximation describes a system by considering uncoupled charge and lattice degrees of freedom and then introduces a small coupling perturbatively. On the other hand the \textit{anti-adiabatic} approximation considers a strong charge-lattice interaction and makes a unitary transform to an uncoupled description of a renormalized system. These approximations describe the small and large coupling regimes respectively but leave the middle coupling regime unexplored.} are unable to describe properly the correlated charge-ion motion in cuprate's Cu-O bonds.
 An alternative to overcome this limitation is an exact treatment of a reduced system.
 In this thesis we focus on the O(4)-Cu(1)-O(4) cluster in YBa$_2$Cu$_3$O$_7$.
 We approximate this local environment as a three site cluster with two holes. 
@@ -391,7 +391,7 @@ The other two frequencies are obtained from the remaining factor in \ref{eq:omeg
   \end{split}
 \end{equation}
 %
-from here we obtain the uninteresting $\omega^2=0$ and
+from here we obtain $\omega^2=0$, which corresponds to a uniform cluster displacement, and
 %
 \begin{equation}
   \omega^2 = \frac{k(m_{Cu}+2m_O)}{m_Om_{Cu}}
@@ -475,8 +475,6 @@ From this definition, using (\ref{eq:omegaR}, \ref{eq:omegair}), we can calculat
 %
 Strong deviations from these values are indicative of a more complex behaviour.
 
-% Discuss how anharmonic potentials give only positive isotopic shifts so negative values could mean polaronic behaviour.
-
 For the ground state we define the energy isotopic shift $\Delta_g$ in a similar way but with the energies measured relative to the uncoupled system, that is, the system with $\lambda_{ir}=\lambda_R=0$,
 %
 \begin{equation}
@@ -494,7 +492,7 @@ To choose values for this model we take representative values guided from local-
 In particular Ref. \cite{DeWeert1989}, using a tight-binding model, reports a band energy of $E_0$ = 0.35 eV and a hopping parameter of $t=0.43-0.74$ eV, for Cu(1)-O(4) sites.
 The on-site Coulomb repulsion in La$_2$CuO$_4$, $U$  is estimated to be in the range $4.0-10.5$ eV, \cite{Hybertsen1989}. 
 
-The bare phonon frequency for the Raman vibrational mode is fixed to the value found experimentally in optical and inelastic neutron scattering experiments for YBa$_2$Cu$_3$O$_7$, namely $\omega_R = 500$ cm$^{-1}$ \cite{Thomsen1988,Cardona1988} and $\omega_{ir}$ is chosen such that the ratio $\omega_{ir}/\omega_R$ given by (\ref{eq:omegaR}-\ref{eq:omegair}) holds, which in this case gives $\omega_{ir} = 612.4$ cm$^{-1}$. \footnote{Although it is customary to give the phonon frequencies, $\omega$, in cm$^{-1}$ units, they refer to $\omega/c$ with c being the speed of light. In terms of s$^{-1}$ the phonon frequencies are $\omega_R=1.5\times 10^{13}$ s$^{-1}$ and $\omega_{ir}=1.8\times 10^{13}$ s$^{-1}$. In energy units they are $\hbar\omega_R=62$ meV and $\hbar\omega_{ir}=76$ meV.}
+The bare phonon frequency for the Raman vibrational mode is fixed to the value found experimentally in optical and inelastic neutron scattering experiments for YBa$_2$Cu$_3$O$_7$, namely $\omega_R = 500$ cm$^{-1}$ \cite{Thomsen1988,Cardona1988} and $\omega_{ir}$ is chosen such that the ratio $\omega_{ir}/\omega_R$ given by (\ref{eq:omegaR}-\ref{eq:omegair}) holds, which in this case gives $\omega_{ir} = 612.4$ cm$^{-1}$. \footnote{Although it is customary to give the phonon frequencies, $\omega$, in cm$^{-1}$ units, they actually refer to the ratio $\omega/c$ with c being the speed of light. In terms of s$^{-1}$ the phonon frequencies are $\omega_R=1.5\times 10^{13}$ s$^{-1}$ and $\omega_{ir}=1.8\times 10^{13}$ s$^{-1}$. In energy units they are $\hbar\omega_R=62$ meV and $\hbar\omega_{ir}=76$ meV.}
 
 In order to consider the simplest possible model we make the further assumption of taking the on-site Coulomb repulsion in the copper and oxygen sites to be equal with no nearest neighbor Coulomb repulsion. 
 We also use a single hopping parameter $t$ and ignore hopping between the two oxygen sites. 
