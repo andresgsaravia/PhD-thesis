@@ -6,6 +6,17 @@ We took $\lambda_{ir}$ values in the representative range from 0 eV to 0.25 eV.
 This range allowed us to explore the behaviour of the system in the small, middle and strong coupling regimes. 
 Besides the eigenvalues and eigenvectors of the hamiltonian we also calculated the mean phonon number with their dispersions and the projections into phonon coordinates $(u_{ir}, u_R)$ (see section \ref{sec:lattice-distortions}).
 
+As described at the end of section \ref{sec:hamiltonian-and-basis} the basis for our model, which is denoted by $\{\ket{e_1,e_2,ir,R}: e_1,e_2=1,2,3; ir,R=1,2,\ldots\}$, is infinite-dimentional due to the infinite number of phonons.
+However, since only a few of the lowest eigenvalues are relevant to describe this system, we can truncate the basis considering only a finite number of infrared and Raman phonons.
+Generally, a larger computational basis set is needed for calculations with larger charge-lattice coupling values.
+We found that, for the largest charge-coupling value under consideration, the calculations converge well considering only 40 phonons of each kind in the computational basis.
+Increasing the basis size further leave the results unchanged.
+This consideration gives a basis size of 15129 states producing a hamiltonian matrix with $\sim 2.3\times 10^{8}$ elements.
+However, only $\sim 7.5 \times 10^{4}$ ($\sim 0.03 \%$) of them are different from zero making this a sparse matrix.
+This allows the use of algorithms specially tailored to handle efficiently sparse matrices.
+Fortunately the \textit{Octave}\footnote{Freely available at https://www.gnu.org/software/octave/} package provides many algorithms for computing with sparse matrices.
+In particular, it provides a diagonalization routine based on the Lanczos algorithm which produces reliable results.
+
 In this chapter we turn our attention to the ground and first excited states of the system since only the first excitation in the (\ref{eq:full-hamiltonian}) hamiltonian has a sufficiently low energy to be significantly occuppied in the temperature range where the pseudogap phase is present.
 All other excitations have an energy above $T=\omega_i/k_B \sim 550$ K (see Figure \ref{fig:irSpectra}).
 First we calculate the difference in Cu-O bond lengths (if any) as a function of the $\lambda_{ir}$ coupling parameter.
